@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/4ec79785b5.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @font-face {
+        font-family: "Pretendard-Regular";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+          format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+      /* 🚩 */
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: "Pretendard-Regular";
+      }
+      header {
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 1050px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+      .logo img {
+        width: 150px;
+      }
+      .search {
+        padding-left: 5px;
+        width: 400px;
+        height: 45px;
+        border: 1px solid black;
+        border-radius: 5px;
+      }
+      .search i {
+        font-size: 18px;
+        cursor: pointer;
+      }
+      .search input {
+        border: 0;
+        outline: none;
+        font-size: 16px;
+        padding: 0;
+        height: 44px;
+        width: 340px;
+        margin-right: 20px;
+      }
+      .user i {
+        text-decoration: none;
+        color: black;
+        font-size: 25px;
+        padding: 10px;
+      }
+      .user i:hover {
+        color: rgb(113, 113, 113);
+      }
+      /* 🚩 */
+      nav {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        min-width: 1050px;
+        height: 50px;
+        margin: 0 auto;
+        line-height: 50px;
+        background-color: rgb(255, 255, 255);
+        z-index: 10;  /*무조건 맨 위로 오도록*/
+        box-shadow: 0 4px 4px -3px rgb(210, 210, 210);  /*그림자 아래에만 적용*/
+      }
+      .navbar {
+        width: 1200px;
+        font-size: 18px;
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 auto;
+
+      }
+      .navbar a{
+        text-decoration: none;
+        color: black;
+      }
+      .navbar li:hover{
+        color: rgb(98, 98, 98);
+      }
+      /* 🚩 */
+
+      /* 상세페이지 시작 */
+
+      .product_wrap{
+        width: 1200px;
+        height: 1250px;
+        margin: 100px auto;
+        margin-bottom: 50px;
+      }
+      .product{
+        width: 1200px;
+        height: 850px;
+        display: flex;
+      }
+      .product_head{
+        height: 850px;
+        width: 400px;
+        margin: 0 auto;
+      }
+      .product_txt{
+        height: 150px;
+        position: relative;
+      }
+      .product_txt span{
+        border-bottom: 1px solid black;
+        padding-bottom: 5px;
+        font-size: 20px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+      .product_txt p{
+        font-size: 30px;
+        position: absolute;
+        top: 50px;
+        left: 10px;
+      }
+      .product_txt img{
+        width: 25px;
+        border: solid 1px black;
+        padding: 10px;
+        border-radius: 50%;
+        transition: 0.5s;
+      }
+      .product_txt .heart{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+      .product_txt .heart:hover{
+        transform: scale(1.05);
+        content: url(image/details/heart2.png);
+      }
+      .product_txt .ruler{
+        position: absolute;
+        right: 10px;
+        top: 70px;
+      }
+      .product_txt .ruler:hover{
+        transform: scale(1.05) rotateZ(90deg);
+        content: url(image/details/ruler2.png);
+      }
+      .product_watch{
+        height: 650px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+      }
+      .product_watch a{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 330px;
+        height: 50px;
+        border-radius: 5px;
+        color: white;
+        background-color: black;
+        font-size: 16px;
+        padding: 0px 15px;
+        margin-top: 60px;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+      }
+      .product_watch img{
+        transition: 0.3s ease-in-out;
+      }
+      .product_watch .watch_icon{
+        width: 100%;
+        height: 130px;
+        margin-top: 10px;
+      }
+      .product_watch a:hover{
+        transform: scale(1.02);
+      }
+      .product_watch a:hover img{
+        transform:rotateZ(30deg);
+      }
+      .product_watch a img{
+        filter: invert(100%);
+      }
+      .product_img{
+        height: 850px;
+        overflow:scroll;
+        overflow-x: hidden;
+      }
+      .product_img img{
+        width: 100%;
+        height: 800px;
+      }
+      .product_img::-webkit-scrollbar{
+        width: 5px;
+        
+      }
+      .product_img::-webkit-scrollbar-thumb{
+        background:gray;
+        border-radius: 5px;
+      }
+      .product_img::-webkit-scrollbar-track{
+        background: lightgray;
+        border-radius: 5px;
+      } 
+      .product_details{
+        display: flex;
+        justify-content: space-between;
+      }
+      .details1{
+        margin-top: 60px;
+        margin-left: 10px;
+      }
+      .details1 span{
+        font-size: 40px;
+      }
+      .details1 p{
+        margin-top: 40px;
+        margin-left: 5px;
+      }
+      .details1 img{
+        margin-top: 20px;
+        margin-left: -5px;
+      }
+      .details2{
+        margin-top: 40px;
+      }
+      /* 상세페이지 끝 */
+
+      /* 🚩 */
+      footer{
+        width: 100%;
+      }
+      #info{
+        width: 1200px;
+        padding-top: 30px;
+        margin: 30px auto;
+      }
+
+      .qbox{
+        display: flex;
+      }
+      #call{
+        margin-bottom: 30px;
+      }
+      #callnumber{
+        font-size: 28px;
+      }
+      #call span{
+        margin-right: 10px;
+      }
+      .qbox{
+        padding: 5px 0px;
+      }
+      .qbox div{
+        color: gray;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      .qbox button{
+        width: 180px;
+        height: 40px;
+        margin-right: 20px;
+        border:1px solid rgb(206, 206, 206);
+        padding: 8px 40px;
+        background-color: white;
+        cursor: pointer;
+      }
+      footer h2{
+        padding: 20px 0;
+      }
+      #info{
+        display: flex;
+        justify-content: space-between;
+
+      }
+      #info2 ul{
+        padding: 20px 0 20px 0;
+        list-style: none;
+        display: flex;
+        margin-bottom: 50px;
+        
+      }
+      #info2 ul li{
+        margin-right: 15px;
+      }
+      #info2 p{
+        font-size: 13px;
+        color: gray;
+        padding: 4px;
+      }
+
+      #icons{
+        font-size: 30px;
+        color: gray;
+        margin-top: 20px;
+      }
+      #copyright{
+        height: 100px;
+        line-height: 100px;
+        background-color: rgb(238, 238, 238);
+        text-align: center;
+        padding: 0 30px 0 30px;
+        font-size: 12px;
+        color: rgb(122, 122, 122);
+        margin-top: 30px;
+      }
+    
+    </style>
+
+    <script>
+      //검색 시작
+      function search(obj){
+      let search = obj.previousElementSibling.value;
+      console.log(search);
+
+      switch(search){
+        case '신상품':
+        location.href = 'newList.html';
+        break;
+        case '베스트':
+        location.href = 'bestList.html';
+        break;
+        case '여성시계':
+        location.href = 'womensList.html';
+        break;
+        case '남성시계':
+        location.href = 'mensList.html';
+        break;
+        case '아동시계':
+        location.href = 'childList.html';
+        break;
+        default:
+        alert('상품이 존재하지 않습니다');
+        break;
+        }
+      }
+      //검색 끝
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="home.html"> <img src="image/logo.png" alt="" /> </a>
+        <span>Acorn watch </span>
+      </div>
+      <div class="search">
+        <input type="text"/>
+        <i onclick="search(this)" class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="user">
+        <a href="login.html"><i class="fa-solid fa-user"></i></a>
+        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+      </div>
+    </header>
+    <nav>
+      <ul class="navbar">
+        <a href="newList.html"><li>신상품</li></a>
+        <a href="bestList.html"><li>베스트</li></a>
+        <a href="womensList.html"><li>여성시계</li></a>
+        <a href="mensList.html"><li>남성시계</li></a>
+        <a href="childList.html"><li>아동시계</li></a>
+      </ul>
+    </nav>
+
+
+    <main>
+      <!-- 상세페이지 시작 -->
+        <div class="product_wrap">
+            <div class="product">
+                <div class="product_head">
+                    <div class="product_txt">
+                        <span>HAPPY NEW YEAR</span><p>YEAR OF THE RABBIT</p>
+                        <img class="heart" src="image/details/heart.png">
+                        <img class="ruler" src="image/details/ruler.png">
+                    </div>
+                    <div class="product_watch">
+                        <img class="watch"src="image/details/product.webp" width="400px">
+                        <a><span>132,000원</span><img src="image/details/bag.svg" width="20px"></a>
+                        <img class="watch_icon" src="image/details/icon1.PNG">
+                    </div>
+                    <div></div>
+                </div>
+                <div class="product_img">
+                    <img src="image/details/details1.jpg" alt="">
+                    <img src="image/details/details2.png" alt="">
+                    <img src="image/details/details3.webp" alt="">
+                    <img src="image/details/details4.png" alt="">
+                    <img src="image/details/details5.webp" alt="">
+                    <img src="image/details/details6.jpg" alt="">
+                </div>
+            </div>
+            <div class="product_details">
+                <div class="details1">
+                  <span>YEAR OF THE RABBIT</span>
+                  <p>이 시계는 '토끼'의 해인 2023년 설날을 기념하는 스페셜 에디션으로, 스트랩<br>
+                    루프에 골드 컬러의 토끼 귀 디테일을 더한 유쾌한 디자인이 특징입니다.<br>
+                    또한, 레드와 블랙 컬러 프린트로 새해 분위기를 자아내는 골드 미러 다이얼에 <br>
+                    토끼 귀와 같은 골드 핸즈로 재치를 더했습니다.
+                  </p>
+                  <img src="image/details/watch_number.PNG">
+                </div>
+                <div class="details2">
+                  <img src="image/details/icon2.PNG">
+                </div>
+            </div>
+        </div>
+        <!-- 상세페이지 끝 -->
+    </main>
+
+
+
+    <footer>
+      <div id="info">
+        <div id="info1">
+          <h2>고객행복센터</h2>
+            <div id="call"><span id="callnumber"><strong>1644-1107</strong></span><span>월~토요일 오전7시 - 오후 6시</span></div>
+            <div class="qbox">
+            <button>카카오톡 문의</button>
+            <div>
+              월~토요일| 오전7시 - 오후 6시<br>
+              일~공휴일| 오전7시 - 오후 1시
+            </div>
+          </div>
+          <div class="qbox">
+            <a href="service.html"><button>1:1  문의</button></a>
+            <div>
+              365일<br>
+              고객센터 운영시간에 순차적으로 답변드리겠습니다.
+            </div>
+          </div>
+          <div class="qbox">
+            <a href="service.html"><button>대량주문 문의</button></a>
+            <div>
+              월~금요일| 오전9시 - 오후 6시<br>
+              점심시간| 오후1시 - 오후 2시
+            </div>
+          </div>
+        </div>
+        <div id="info2">
+          <ul>
+            <li>에이콘소개</li>
+            <li>에이콘소개영상</li>
+            <li>인재채용</li>
+            <li>이용약관</li>
+            <li>개인정보처리방침</li>
+            <li>이용안내</li>
+          </ul>
+          <p>법인명(상호):주식회사 에이콘 | 사업자 등록번호:61-254-25225 사업자 정보확인</p>
+          <P>통신판매업:제2018-서울강남-55566호 | 개인정보보호책임자:이원준</P>
+          <P>주소:서울특별시 강남구 테헤란로 133,18층(역삼동) | 대표이사:양양양</P>
+          <P>입점문의:입점문의하기| 제휴문의:ksjfdlssfljk@dlkjdl.com</P>
+          <p>채용문의:sksdkf@kdfjsld.com</p>
+          <p>팩스: 070-555-5545</p>
+          <div id="icons">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-youtube"></i>
+
+          </div>
+        </div>
+      </div>
+      <div id="copyright">
+        에이콘에서 판매되는 상품중에는 에이콘에 입접한 개별 판매자가 판매하는 오픈 마켓 상품이 포함되어 있습니다.
+        ACORN CORP.ALL RIGHT RESERVED
+      </div>
+    </footer>

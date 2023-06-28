@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeCss(){
+            //alert("dkdkfk");
+            //1.태그정보 얻어오기 (대상선택)
+           let  wrap = document.getElementById("wrap");
+           //alert(wrap);
+            //2. 태그정보 (속성)얻어오기
+            //3. 태그정보 (속성) 변경하기
+           alert(wrap.innerHTML);
+           wrap.innerHTML="<h2>내용 변경합니다</h2>"
+           wrap.style.color="red";
+           wrap.style.border = "1px solid #000000" ;
+           wrap.style.width="200px";
+        }
+
+    </script>
+</head>
+<body>
+    
+    <div id="wrap">
+        내용입니다.
+    </div>
+
+    <button  onclick="changeCss()">내용바꾸기</button>
+</body>
+</html>

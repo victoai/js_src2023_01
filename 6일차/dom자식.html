@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function selectChild(){
+            let acorn = document.querySelector("#acorn");
+            let c1 = acorn.firstElementChild;            
+            alert( c1.innerHTML);
+
+           let c2  =  c1.nextElementSibling ;
+           alert( c2.innerHTML);
+          // let c3 = c1.nextElementSibling.nextElementSibling;
+           let c3 = c2.nextElementSibling;
+           alert( c3.innerHTML);
+
+           let c4 = acorn.lastElementChild ;
+           alert( c4.innerHTML);   
+
+        }
+    </script>
+</head>
+<body>
+    <div id="acorn">
+             <p>과정1</p>
+             <p>과정2</p>
+             <p>과정3</p>
+             <p>과정4</p>            
+    </div>
+
+    <button  onclick="selectChild()"> 클릭</button>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    /* header영역*/
+        header{
+            height: 100px;          
+            position: relative;             
+        }
+        .title{            
+            left: 10px;
+            top:10px;
+            position: absolute;
+        }
+        .search{
+            right: 20px;
+            bottom: 20px;
+            position: absolute;
+            border:1px solid rgb(187, 187, 192);
+            display: flex;
+        }
+
+        .btn{
+            width:30px;
+            height: 30px;
+            
+            background-image: url('images/search.png');
+            background-size: cover;
+            background-position: center;
+           
+        }
+
+        .search .search_text{
+            border: 0px;
+            outline: 0px;
+            padding-left: 10px;
+        } 
+
+        /*  nav 영역*/
+        nav{
+            height: 30px;
+            
+        }
+
+        nav a{
+            text-decoration: none;
+            color: black;
+            padding-left: 20px;
+        }
+        
+        /*  section  영역*/
+        section{
+            height: 500px;
+            
+        }
+           
+        ul{            
+            width: 1000px;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+                     
+        }
+
+        ul li{
+            border: 1px solid rgb(242, 233, 233);
+            width: 300px;
+            height: 300px;
+            margin: 5px;
+            text-align: center;
+            padding: 5px;
+        }
+        
+        section img{
+            width: 200px;
+            height: 200px;
+        }
+        
+
+        /*footer 영역*/
+         footer{           
+            display: flex;
+          }
+
+        footer .item{          
+            height: 60px;
+            width:33%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        
+ 
+ 
+    </style>
+</head>
+
+<body>
+
+    <!--header-->
+    <header>
+        <!-- title영역-->
+        <div class="title">
+             <img src="images/logo.png">
+        </div>
+
+        
+        <!--검색바영역-->
+        <div class="search">
+            <input type="text"  class="search_text">
+            <div class="btn"></div>
+        </div>
+    </header>
+
+    <!--nav-->
+    <nav>  
+        <a href="#">로그인</a>
+        <a href="#">회원가입</a>
+        <a href="#">게시판</a>
+    </nav>
+
+    <!-- section-->
+   <section>
+    <ul>
+        <li>
+            <img src="images/01.png">
+            <p>상품명</p>
+            <p>15000</p>
+        </li>
+        <li>
+            <img src="images/01.png">
+            <p>상품명</p>
+            <p>15000</p>
+        </li>
+        <li>
+            <img src="images/01.png">
+            <p>상품명</p>
+            <p>15000</p>
+        </li>       
+    </ul>
+  </section>
+
+  <!-- footer-->
+  <footer>
+    <div class="item"><img src="images/logo2.png"></div>
+    <div class="item"> (주)에이콘이츠 에이콘아카데미(홍대)</div>
+    <div class="item"> COPYRIGHT(C) HBILAB ALL RIGHTS RESERVED</div> 
+</footer>   
+</body>
+</html>

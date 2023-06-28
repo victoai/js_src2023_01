@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+        body{
+            font-family: 'Jua', sans-serif;
+        }
+        header{
+            height: 200px;
+            position: relative;
+            
+        }
+        header h1{
+            position: absolute;
+            font-size: 50px;
+            color: rgb(31, 2, 58);
+            top: 30px;
+            left: 40%;
+           
+        }
+        #home{
+            position: absolute;
+            right: 100px;
+            top: 30px;
+        }
+        
+        #home_img, #home a{
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        section{
+            height: 400px;
+            background: violet; 
+            background: linear-gradient(to bottom, violet, white 30%, blue) ;
+            background: -webkit-linear-gradient(top, violet, white 30% blue);
+            background: -moz-linear-gradient(bottom, violet, white 30% blue);
+            background: -o-linear-gradient(to bottom,violet, white 30% blue);
+            position: sticky;
+        }
+        #wrap {
+            padding-top: 00px;
+            margin: 0 auto;
+            text-align: center;
+           
+        }
+        #wrap div {
+            display: flex;
+            justify-content: center;
+        }
+        #wrap p {
+            font-size: 50px;
+            font-weight: bolder;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            line-height: 200px;
+            margin-left: 30px;
+            color: aliceblue;
+         }
+         .p1{
+            background-color: blue;
+         }
+         .p2{
+            background-color: rgb(234, 234, 23);
+         }
+         .p3{
+            background-color: red;
+         }
+         /* .p4{
+            background-color: lightgray;
+         } */
+         section button{
+            margin: 0 auto;
+            border: 0px;
+            background-color: blueviolet;
+            height:50px;
+            width: 100px;
+            margin-top: 30px;
+            border-radius: 5px;
+            font-size: 20px;
+            color: aliceblue;
+         }
+         section button:hover{
+            cursor: pointer;
+         }
+         #header_background, #footer_background{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url(images/배경.png);
+            background-size: 100% auto;
+            background-position: center;
+            opacity: 0.7;
+            z-index: -1;
+        }
+        
+        
+        footer{
+            height: 200px;
+            position: relative;
+        }
+        #footer_contents{
+            width: 700px;
+            font-size: 20px;
+            color: rgb(16, 42, 43);
+            margin: 30px auto;
+            text-align: center;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        #buttons{
+            display: flex;
+            justify-content: space-around;
+            width: 300px;
+            margin: 0 auto;
+            padding-top: 10px;
+            opacity: 1;
+        }
+        #buttons button{
+            border-radius: 10px;
+            border: 2px rgb(88, 147, 224) solid;
+            box-shadow: 3px 4px rgb(58, 34, 38);
+        }
+    </style>
+    <script>
+       
+    </script>
+
+</head>
+<body>
+    <header>
+        <div id="header_background">
+                <h1>행운 당첨 번호~ </h1>
+                 <!--위치는 h1 css로 조정  -->
+        </div>
+        <a href="index.html" id="home"><img src="images/house.png" id="home_img"></a>
+
+    </header>
+    <section>
+    <div id="wrap">
+        
+        <div>
+            <p class="p1"></p>
+            <p class="p2"></p>
+            <p class="p3"></p>
+           
+            
+           
+        </div>
+        <button onclick="window.location.reload()">추첨</button>
+    </div>
+</section>
+<footer>
+    <div id="footer_background"></div>
+    <div id="buttons">
+        <button id="outline" onclick="change_outline()">게임 개요</button>
+        <button id="game_rules" onclick="change_game_rules()">게임 방법</button>
+        <button id="game_implement" onclick="change_game_implement()">여담</button>
+    </div>
+    <div id="footer_contents">
+        난수 만들기를 이용하여 숫자 추첨으로 <br> 당첨자를 선정하는 게임입니다.
+    </div>
+</footer>
+   
+    <script>
+        let game = [];
+        for(let i=1; i<=10; i++){
+            game.push(i); 
+        }
+        console.log(game);
+        for(let i=1; i<4; i++){
+            let num = Math.floor(Math.random()*game.length);
+            document.querySelector(`p:nth-child(${i})`).innerHTML = game[num];
+            game.splice(num,1);
+        }
+
+        let footer_contents = document.querySelector("#footer_contents");
+
+function change_outline(){
+    footer_contents.innerHTML=" 난수 만들기를 이용하여 숫자 추첨으로 <br> 당첨자를 선정하는 게임입니다.";
+
+}
+function change_game_rules(){
+    footer_contents.innerHTML="가운데 추첨 버튼을 누르면 임의의 숫자가 나타납니다.";
+
+}
+function change_game_implement(){
+    footer_contents.innerHTML="";
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+#header-nav{
+    /* background-color: blueviolet;
+    border: 1px solid black; */
+   /* border-bottom: 2px solid #f36f63; */
+   border-bottom: 2px solid #125393;
+}
+#header-nav .meunbar{
+    width: 1200px;
+    height: 100px; 
+    margin: 0 auto;  
+    position: relative; 
+    /* border: 1px solid black;  
+    background-color: aqua; 
+     */
+}
+.meunbar__items-menus h4{
+    padding: 0px 10px;
+    color: #125393;
+    font-size: 21px;
+}
+/*영역 크게 삼분할 */
+.meunbar{
+    width: 120px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.meunbar__items{
+    width: 33%; height: 100%;
+    line-height: 100px;
+}
+/*첫번째 박스*/
+.meunbar__items:first-child{
+    padding-left: 50px;
+}
+.meunbar__headimg{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/acon-header.png);
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: left;
+    /* background-color: black; */
+}
+/*세번째 박스*/
+.meunbar__items:nth-child(3){
+    text-align: right;
+    height: 40px;
+    line-height: 40px;
+    padding-right: 10px;
+}
+.meunbar__items a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #125393;
+;
+}
+.meunbar__items span{
+    display: inline-block;
+    margin: 0px 5px;
+    padding: 5px 0px;
+}
+.meunbar__items-search {
+    display: inline-block;
+    position: absolute;
+    top: 40px;; right:0px;
+    width: 20px;
+    height: 20px;
+    background-image: url(images/acon-search.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/*두번째 박스 - 메뉴 full*/
+#header-nav ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+#header-nav .meunbar__items-ul{
+    display: flex;
+    justify-content: space-between;
+}
+#header-nav .items-menu {
+    display: none;
+    border-top: 2px solid  rgb(36, 86, 143);
+}
+#header-nav .meunbar__items-menus:hover .items-menu {
+    display: block;
+    position: fixed;
+    left:0px;
+    top: 100px;
+    width:100%;
+    
+    /* background-color: red;
+    opacity: 0.5; */
+    /* text-align:center;  호열수정*/
+    
+    text-align: left;
+    height: 180px;
+    z-index: 10;
+    background-color: white;
+    border-bottom: 1px solid rgb(36, 86, 143);
+}
+.items-menu li {
+    /* padding: 5px;
+    width: 25%; 
+    호열 수정
+    */
+    font-weight: bold;
+    color: rgba(45, 107, 179, 0.5);
+    width: 100%; height: 40px; 
+    padding-left: 80px;
+    display: flex;
+    justify-content: center; 
+    font-size: 16px;
+
+}
+.items-menu li div{    
+    width: 160px; 
+}
+
+header  .bold{
+    color: rgb(36, 86, 143);
+    font-weight: bolder;
+    font-size: 18px;
+    
+    
+    
+}

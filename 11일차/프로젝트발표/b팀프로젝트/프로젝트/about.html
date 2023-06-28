@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        width: 100%;
+        position: relative;
+        /* border: solid 3px black; */
+        height: 80px;
+        z-index: 20;
+      }
+      .menu1 {
+        left: 90px;
+        /* border: solid 1px red; */
+        top: 15px;
+        text-align: center;
+        position: fixed;
+        align-items: flex-start;
+      }
+      .mainlogo{
+        /* border: solid 1px green; */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+        position: center;
+      }
+      .menu2 {
+        right: 90px;
+        /* border: solid 1px blue; */
+        top: 15px;
+        text-align: center;
+        position: fixed;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+      }
+      nav li {
+        padding: 0px 25px 3px 0;
+        line-height: 50px;
+        height: 50px;
+        display: inline-block;
+        position: relative;
+        font-size: 13px;
+      }
+      nav a, footer a {
+        text-decoration: none;
+        color: rgb(123, 111, 111);
+        font-weight: bold;
+      }
+      nav a:hover {
+        color: rgb(201, 201, 201);
+        cursor: pointer;
+      }
+      .btn1 {
+        background-color: white;
+        border: solid 0px;
+      }
+      @media screen and (max-width: 1500px) {
+        .menu1,
+        .menu2 {
+          display: none;
+        }
+      }
+      .sidebar {
+        /* border: solid 1px red; */
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        right: 0px;
+      }
+      .sidetext {
+        height: 22px;
+        line-height: 22px;
+      }
+      .about{
+        /* border: 1px solid red; */
+        height: 500px;
+        margin: 70px 0px 100px 0px;
+        text-align: center;
+        padding-top: 100px;
+      }
+    span{
+      font-size: 11px;
+     
+    }
+    footer{
+        width: 100%;
+        height: 70px;
+        /* border: 1px solid red; */
+        text-align: center;
+      }
+      .inst a{
+        font-weight: normal;
+        color: black;
+        font-size: 13px;
+        padding: 10px;
+      }
+      .inst a:hover{
+        cursor: pointer;
+        color: grey;
+      }
+      .page1{
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        font-size: 12px;
+        color: gray;
+      }
+      .page1 h4{
+        margin-bottom: 10px;
+        color: black;
+        font-size: 14px;
+      }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="menu1">
+      <ul>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="collection.html">COLLECTION</a></li>
+        <li><a href="#">STOCKIST</a></li>
+        <li><a href="#">COMMUNITY</a></li>
+      </ul>
+    </div>
+    <div class="mainlogo">
+      <a href="index.html"><img src="./미디어/toplogo.png" /></a>
+    </div>
+    <div class="menu2">
+      <ul>
+        <li><a href="login.html">LOGIN</a></li>
+        <li><a href="#">MY PAGE</a></li>
+        <li><a href="cart.html">CART</a></li>
+        <li>
+          <button class="btn1">
+            <img src="./미디어/btn_search_icon.png" width="13px" />
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="sidebar">
+      <ul>
+        <li class="sidetext"><a href="섹션부분.html">22FW</a></li>
+        <li class="sidetext"><a href="섹션부분.html">22SS</a></li>
+        <li class="sidetext"><a href="섹션부분.html">New Arrivals</a></li>
+        <li class="sidetext"><a href="섹션부분.html">Outwear</a></li>
+        <li class="sidetext"><a href="섹션부분.html">Top</a></li>
+        <li class="sidetext"><a href="섹션부분.html">Bottom</a></li>
+        <li class="sidetext"><a href="섹션부분.html">Accessories</a></li>
+        <li class="sidetext"><a href="섹션부분.html">Slelcted Brand</a></li>
+        <li class="sidetext"><a href="섹션부분.html">SALE</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="about">
+  <span>'Art if acts'는 복식사 전반에서의 인상적인 모티프(motif)를<Br>
+
+    기반으로 동서양 문화를 아우르는 의복을 디자인합니다.<br>
+    
+    예술(art), 뜻밖의 경우(if) 그리고 사건들(acts)이 시대적 흐름에 맞게<Br>
+    
+    변화하는 모습 그 자체를 브랜드의 모티브로 하며,<Br>
+    
+    자연스럽고 이지적인 분위기를 구현하기 위해 입체적인 실루엣,<br>
+    
+    구조적 디테일 그리고 담담한 색상과 우수한 소재를 활용한 의복을 매 시즌 선보이고 있습니다.
+    <Br>
+    <Br>
+    <Br>
+    Art if acts is an fashion brand motivated from memorable moment of fashion history and culture.<br>
+    
+    Influenced by art, unusual phenomenon and specific events,<Br>
+    
+    we are continually finding out our motif from the stream of times.<br>
+    
+    Our every products are pursuing comfortable and intellectual feeling of daily life.</span>
+  </div>
+    <footer>
+      <div class="last">
+          <div class="inst">
+            <a href="https://www.instagram.com/artifacts_official/"><img src="./미디어/ins2.png" width="17px" /></a>
+          </dlv>
+         <div>
+          <a href="index1.html">home</a>
+          <a>shop guide</a>
+          <a>terms df use</a>
+          <a>privacy policy</a>
+        </div>
+      </div>
+    </footer>
+    <div class="page1">
+      <h4>02-6207-0666</h4>
+      <p>국민은행 730601-04-085253 (주)이티씨컴퍼니</p>
+      <p>고객센터 운영시간 MON-FRI AM 11:00 ~ PM 18:00</p>
+      <p>contact@artifacts.co.kr</p>
+
+
+    </div>
+  </body>
+</html>

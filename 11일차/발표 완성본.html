@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      header{
+        height: 200px;         
+        position: relative;
+        }
+      header h1{
+        font-size: 50px;
+        color: rgb(31, 2, 58);
+        text-align: center;
+        margin-top: 20px;
+      }
+      body{
+        background-image: url(/images/big.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .main{
+        background-image: url(images/white.jpg);
+        background-position: center;
+        background-size: cover;
+
+        border: 1px solid black;
+        width: 1550px;
+        margin: 0 auto;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(15, 1fr);
+        grid-template-rows: repeat(11, 100px);
+        grid-template-areas:
+          " start box1 box1 box1 box1 box1 box1 box1 box1 box16 box2 box2 box2 box2 box2_2 "
+          " . . . . . . . . . . . . . . box3 "
+          " box4 box4 box4 box4 box4 box4 box4 box4 box4 box4 box4 box4 box4. box5 "
+          " box6 . . . . . . . . . . . . . box7 "
+          " . . box8 box8 box8 box8 box8 box8 box8 box8 box8 box8 box8 box8 box8 "
+          " . box9 . . . . . . . . . . . . . "
+          " . . . box10 box10 box10 box10 box10 box10 box10 box10 box10 box10 box10 . "
+          " box11 box11 box11 . . . . . . . . . . . . "
+          " box17 box13 box13 . box12 box12 box12 box12 box12 box12 box12 box12 box12 box12 box12 "
+          " . . . . . . . . . . . . . . . "
+          " box14 box14 box14 box14 box14 box14 box14 box14 box14 box14 box14 box14 finish box15 box15 ";
+      }
+      audio{
+        margin-top: 46px;
+      }
+      .box {
+        /* border: 1px solid red; */
+        height: 100px;
+        margin: 0;
+        padding: 0;
+        /* background-color: gray; */
+      }
+
+      #start {
+        grid-area: start;
+        text-align: center;
+        margin-top: 30px;
+        color: red;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      #finish {
+        grid-area: finish;
+        text-align: center;
+        margin-top: 30px;
+        color: red;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .box1 {
+        grid-area: box1;
+        background-color: gray;
+      }
+      .box2 {
+        grid-area: box2;
+        background-color: gray;
+      }
+
+      .box2_2 {
+        /* border: 1px solid red; */
+        grid-area: box2_2;
+        background-color: whitesmoke;
+        display: grid;
+        grid-template-areas:
+          " restart up . "
+          " left down right ";
+      }
+
+      #restart{
+        grid-area: restart;
+        display: none;
+        color: rgba(255, 0, 0, 0.11);
+        background-color: whitesmoke;
+        border: 0.5px solid rgba(238, 230, 230, 0.096);
+        outline: 1px solid rgba(238, 230, 230, 0.096);
+        z-index: 1;
+      }
+      #restart:hover{
+        cursor: pointer;
+      }
+
+      #up {
+        grid-area: up;
+      }
+      #left {
+        grid-area: left;
+      }
+      #right {
+        grid-area: right;
+      }
+      #down {
+        grid-area: down;
+      }
+      button {
+        width: 50px;
+        height: 50px;
+      }
+
+      .box3 {
+        grid-area: box3;
+        background-color: gray;
+      }
+      .box4 {
+        grid-area: box4;
+        background-color: gray;
+      }
+      .box5 {
+        grid-area: box5;
+        background-color: gray;
+      }
+      .box6 {
+        grid-area: box6;
+        background-color: gray;
+      }
+      .box7 {
+        grid-area: box7;
+        background-color: gray;
+      }
+      .box8 {
+        grid-area: box8;
+        background-color: gray;
+      }
+      .box9 {
+        grid-area: box9;
+        background-color: gray;
+      }
+      .box10 {
+        grid-area: box10;
+        background-color: gray;
+      }
+      .box11 {
+        grid-area: box11;
+        background-color: gray;
+      }
+      .box12 {
+        grid-area: box12;
+        background-color: gray;
+      }
+      .box13 {
+        grid-area: box13;
+        background-color: gray;
+      }
+      .box14 {
+        grid-area: box14;
+        background-color: gray;
+      }
+      .box15 {
+        grid-area: box15;
+        background-color: gray;
+      }
+
+      .box16 {
+        grid-area: box16;
+        background-image: url(images/png-transparent-cylinder-yellow-treasure-chest-yellow-and-brown-chest-illustration-piracy-treasure-buried-treasure.png);
+        background-size: cover;
+        background-position: center;
+      }
+      .box17 {
+        grid-area: box17;
+        background-image: url(images/png-transparent-cylinder-yellow-treasure-chest-yellow-and-brown-chest-illustration-piracy-treasure-buried-treasure.png);
+        background-size: cover;
+        background-position: center;
+      }
+
+      #box18 {
+        width: 50px;
+        height: 50px;
+        background-image: url(images/12856db09720692cf725a41251e754bcd05c10bbac7b3343e25396a8acf7997dea06bfe981695a056bcbc6d927b6430fd74070476bfd3f9c13724929aff71f2ea8ccc808090c75a5d3f73a5ef618d416.png);
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        border: 0.5px solid rgba(128, 128, 128, 0.267);
+        border-radius: 30%;
+      }
+
+      #box19{
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+        position: absolute;
+        left: 100px;
+        top: 0px;
+        border-radius: 50%;
+        animation: anima1 3s infinite normal linear;
+      }
+      #box20{
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+        position: absolute;
+        left: 300px;
+        top: 0px;
+        border-radius: 50%;
+        animation: anima2 2s infinite normal linear;
+      }
+      #box21{
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+        position: absolute;
+        left: 500px;
+        top: 0px;
+        border-radius: 50%;
+        animation: anima3 1s infinite normal linear;
+      }
+      #box22{
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+        position: absolute;
+        left: 700px;
+        top: 0px;
+        border-radius: 50%;
+        animation: anima4 3s infinite normal linear;
+      }
+      #box23{
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+        position: absolute;
+        left: 900px;
+        top: 0px;
+        border-radius: 50%;
+        animation: anima5 2s infinite normal linear;
+      }
+      #box24{
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+        position: absolute;
+        left: 1100px;
+        top: 0px;
+        border-radius: 50%;
+        animation: anima6 1s infinite normal linear;
+      }
+      #box25{
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+        position: absolute;
+        left: 1300px;
+        top: 0px;
+        border-radius: 50%;
+        animation: anima7 3s infinite normal linear;
+      }
+      #box26{
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+        position: absolute;
+        left: 1500px;
+        top: 0px;
+        border-radius: 50%;
+        animation: anima8 2s infinite normal linear;
+      }
+      #box27{
+        width: 800px;
+        height: 20px;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        left: 600px;
+        top: 400px;
+        /* border: 1px solid black; */
+        animation: anima9 5s infinite normal ease-in-out;
+      }
+      #box28{
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+        border-radius: 50%;
+      }
+      #box29{
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+        border-radius: 50%;
+      }
+      #box19_1{
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+        position: absolute;
+        left: 100px;
+        top: 0px;
+        border-radius: 50%;
+        animation: anima1_1 3s infinite normal linear;
+      }
+      #box20_1{
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+        position: absolute;
+        left: 100px;
+        top: 0px;
+        border-radius: 50%;
+        animation: anima2_1 2s infinite normal linear;
+      }
+      #box21_1{
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+        position: absolute;
+        left: 100px;
+        top: 0px;
+        border-radius: 50%;
+        animation: anima3_1 1s infinite normal linear;
+      }
+      #box22_1{
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+        position: absolute;
+        left: 100px;
+        top: 0px;
+        border-radius: 50%;
+        animation: anima4_1 3s infinite normal linear;
+      }
+      #box23_1{
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+        position: absolute;
+        left: 100px;
+        top: 0px;
+        border-radius: 50%;
+        animation: anima5_1 2s infinite normal linear;
+      }
+      #box24_1{
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+        position: absolute;
+        left: 100px;
+        top: 0px;
+        border-radius: 50%;
+        animation: anima6_1 1s infinite normal linear;
+      }
+      #box25_1{
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+        position: absolute;
+        left: 100px;
+        top: 0px;
+        border-radius: 50%;
+        animation: anima7_1 3s infinite normal linear;
+      }
+      #box26_1{
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+        position: absolute;
+        left: 100px;
+        top: 0px;
+        border-radius: 50%;
+        animation: anima8_1 2s infinite normal linear;
+      }
+      #box27_1{
+        width: 800px;
+        height: 20px;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        left: 600px;
+        top: 400px;
+        animation: anima9_1 5s infinite normal ease-in-out;
+      }
+      #box28_1{
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+        border-radius: 50%;
+      }
+      #box29_1{
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+        border-radius: 50%;
+      }
+      #box30{
+        width: 40px;
+        height: 20px;
+        background-color: red;
+        color: black;
+        position: absolute;
+        top: 900px;
+        left: 0px;
+        animation: anima10 10s infinite normal ease-in-out;
+      }
+      #box30_1{
+        width: 40px;
+        height: 20px;
+        background-color: red;
+        color: black;
+        position: absolute;
+        top: 900px;
+        left: 0px;
+        animation: anima10_1 10s infinite normal ease-in-out;
+      }
+
+      @keyframes anima1{
+        0%{left: 100px; top: 0px;}
+        100%{left: 100px; top:1080px}
+      }
+      @keyframes anima1_1{
+        0%{left: 100px; top: 1080px;}
+        100%{left: 100px; top:0px}
+      }
+
+      @keyframes anima2{
+        0%{left: 300px; top: 0px;}
+        100%{left: 300px; top:1080px}
+      }
+      @keyframes anima2_1{
+        0%{left: 300px; top: 1080px;}
+        100%{left: 300px; top:0px}
+      }
+
+      @keyframes anima3{
+        0%{left: 500px; top: 0px;}
+        100%{left: 500px; top:1080px}
+      }
+      @keyframes anima3_1{
+        0%{left: 500px; top: 1080px;}
+        100%{left: 500px; top:0px}
+      }
+
+      @keyframes anima4{
+        0%{left: 700px; top: 0px;}
+        100%{left: 700px; top:1080px}
+      }
+      @keyframes anima4_1{
+        0%{left: 700px; top: 1080px;}
+        100%{left: 700px; top:0px}
+      }
+
+      @keyframes anima5{
+        0%{left: 900px; top: 0px;}
+        100%{left: 900px; top:1080px}
+      }
+      @keyframes anima5_1{
+        0%{left: 900px; top: 1080px;}
+        100%{left: 900px; top:0px}
+      }
+
+      @keyframes anima6{
+        0%{left: 1100px; top: 0px;}
+        100%{left: 1100px; top:1080px}
+      }
+      @keyframes anima6_1{
+        0%{left: 1100px; top: 1080px;}
+        100%{left: 1100px; top:0px}
+      }
+
+      @keyframes anima7{
+        0%{left: 1300px; top: 0px;}
+        100%{left: 1300px; top:1080px}
+      }
+      @keyframes anima7_1{
+        0%{left: 1300px; top: 1080px;}
+        100%{left: 1300px; top:0px}
+      }
+
+      @keyframes anima8{
+        0%{left: 1500px; top: 0px;}
+        100%{left: 1500px; top:1080px}
+      }
+      @keyframes anima8_1{
+        0%{left: 1500px; top: 1080px;}
+        100%{left: 1500px; top:0px}
+      }
+
+      @keyframes anima9{
+        0%{rotate: 0deg;}
+        100%{rotate: 360deg;}
+      }
+      @keyframes anima9_1{
+        0%{rotate: 0deg;}
+        100%{rotate: -360deg;}
+      }
+
+      @keyframes anima10{
+        0%{left: 0px; top: 900px;}
+        25%{left: 1510px; top: 900px;}
+        50%{left: 1510px; top: 980px;}
+        75%{left: 0px; top: 980px;}
+        100%{left: 0px; top: 900px;}
+      }
+      @keyframes anima10_1{
+        0%{left: 0px; top: 900px;}
+        25%{left: 0px; top: 980px;}
+        50%{left: 1510px; top: 980px;}
+        75%{left: 1510px; top: 900px;}
+        100%{left: 0px; top: 900px;}
+      }
+
+      a{
+        text-decoration: none;
+      }
+      .game_box img{
+        width: 100%;
+        height: 60%;
+      }
+      #real{
+        opacity: 0.2;
+      }
+      #header_background, #footer_background{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url(images/game.jpg);
+        background-size: 100% auto;
+        background-position: center;
+        opacity: 0.7;
+        z-index: -1;
+      }
+        
+      footer{
+        height: 200px;
+        position: relative;
+      }
+      #footer_contents{
+        width: 700px;
+        font-size: 20px;
+        color: rgb(16, 42, 43);
+        margin: 30px auto;         
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      #buttons{
+        display: flex;
+        justify-content: space-around;          
+        width: 300px;
+        margin: 0 auto;
+        padding-top: 10px;
+        opacity: 1;
+      }
+      #buttons button{
+        border-radius: 10px;          
+        border: 2px rgb(88, 147, 224) solid;
+        box-shadow: 3px 4px rgb(58, 34, 38);
+      }
+    </style>
+
+    <script>
+
+      function moving_box(box1, box2){
+        let distance1 =box2.getBoundingClientRect().y -box1.getBoundingClientRect().y;
+        let distance2 =box2.getBoundingClientRect().x -box1.getBoundingClientRect().x;
+        
+        if( (distance2<=50 && distance2>-20) && (distance1<=50 && distance1>=0) ){
+            dontmove = true;
+            boxbox();
+            alert("풋!! 닿았다!!");
+            restart1();
+          }
+      }
+
+      function boxbox(){
+        let boxbox = document.querySelectorAll(".boxbox");
+
+        for( let i = 0; i < boxbox.length; i++){
+          boxbox[i].style.animationPlayState = "paused";
+        }
+      }
+
+        setInterval(
+        function moving(){
+        let box18 = document.getElementById("box18");
+        let box19 = document.getElementById("box19");
+        let box19_1 = document.getElementById("box19_1");
+        let box20 = document.getElementById("box20");
+        let box20_1 = document.getElementById("box20_1");
+        let box21 = document.getElementById("box21");
+        let box21_1 = document.getElementById("box21_1");
+        let box22 = document.getElementById("box22");
+        let box22_1 = document.getElementById("box22_1");
+        let box23 = document.getElementById("box23");
+        let box23_1 = document.getElementById("box23_1");
+        let box24 = document.getElementById("box24");
+        let box24_1 = document.getElementById("box24_1");
+        let box25 = document.getElementById("box25");
+        let box25_1 = document.getElementById("box25_1");
+        let box26 = document.getElementById("box26");
+        let box26_1 = document.getElementById("box26_1");
+        let box27 = document.getElementById("box27");
+        let box27_1 = document.getElementById("box27_1");
+        let box28 = document.getElementById("box28");
+        let box28_1 = document.getElementById("box28_1");
+        let box29 = document.getElementById("box29");
+        let box29_1 = document.getElementById("box29_1");
+        let box30 = document.getElementById("box30");
+        let box30_1 = document.getElementById("box30_1");
+
+        moving_box(box18, box19);
+        moving_box(box18, box19_1);
+        moving_box(box18, box20);
+        moving_box(box18, box20_1);
+        moving_box(box18, box21);
+        moving_box(box18, box21_1);
+        moving_box(box18, box22);
+        moving_box(box18, box22_1);
+        moving_box(box18, box23);
+        moving_box(box18, box23_1);
+        moving_box(box18, box24);
+        moving_box(box18, box24_1);
+        moving_box(box18, box25);
+        moving_box(box18, box25_1);
+        moving_box(box18, box26);
+        moving_box(box18, box26_1);
+        moving_box(box18, box27);
+        moving_box(box18, box27_1);
+        moving_box(box18, box28);
+        moving_box(box18, box28_1);
+        moving_box(box18, box29);
+        moving_box(box18, box29_1);
+        moving_box(box18, box30);
+        moving_box(box18, box30_1);
+        },1
+      );
+
+
+      function restart1(){
+        let restart = document.getElementById("restart")
+        restart.style.display = "inline-block"
+        restart.focus();
+        restart.style.transform = "scale(4) translate(-170px, 100px)"
+        restart.style.transition = "2s"
+      }
+
+
+      let dontmove = false;
+      function movestop(move1, move2){
+        dontmove = true;
+        if (move1 <= 95 && move1 >= -50 && move2 <= 990 && move2 >= 860) {
+          boxbox();
+          changeImg();
+          setTimeout( function(){
+            alert("die!!");
+            alert("다시 시작하세요!!");
+          }, 1000);
+
+        }
+        else if(move1 <= 1095 && move1 >= 955 && move2 <= 1290 && move2 >= 1160){
+          boxbox();
+
+          setTimeout( function(){
+            alert("congratulations");
+            alert("다시 하시겠습니까?")
+          }, 1000);
+        }
+        else if( 
+        (move1 <= 95 && move1 >= -50 && move2 <= 860 && move2 >= 60)||
+        (move1 <= 95 && move1 >= -50 && move2 <= 1545 && move2 >= 990)||
+        (move1 <= 295 && move1 >= 155 && move2 <= 1290 && move2 >= -45)||
+        (move1 <= 495 && move1 >= 95 && move2 <= 1545 && move2 >= 1360)||
+        (move1 <= 395 && move1 >= 295 && move2 <= 90 && move2 >= -45)||
+        (move1 <= 495 && move1 >= 355 && move2 <= 1360 && move2 >= 160)||
+        (move1 <= 595 && move1 >= 455 && move2 <= 195 && move2 >= 60)||
+        (move1 <= 695 && move1 >= 555 && move2 <= 1395 && move2 >= 260)||
+        (move1 <= 795 && move1 >= 655 && move2 <= 295 && move2 >= -45)||
+        (move1 <= 895 && move1 >= 795 && move2 <= 295 && move2 >= 60)||
+        (move1 <= 895 && move1 >= 755 && move2 <= 1545 && move2 >= 360)||
+        (move1 <= 1095 && move1 >= 955 && move2 <= 1190 && move2 >= -45)||
+        (move1 <= 1095 && move1 >= 955 && move2 <= 1545 && move2 >= 1260)
+        ){
+          boxbox();
+          setTimeout( function(){
+            alert("닿았다!!");
+            alert("다시 시작하세요!!")
+          }, 1000);
+        
+        }
+        else{
+          dontmove = false
+        }
+
+        if(dontmove == true){
+          boxbox();
+          restart1();
+        }
+
+      } 
+      
+      let treasure =true;
+      function Treasure_Hunter(move1, move2){
+      if (move1 <= 895 && move1 >= 750 && move2 <= 90 && move2 >= -45 && treasure == true) {
+          changeImg2();
+          alert("wow!! 보물이다!!");
+          treasure = false;
+        }
+      }
+
+
+
+      function moveUp() {
+        if(dontmove == false){
+        let box = document.getElementById("box18");
+        let move1 = parseInt(box.style.top.substring(0, box.style.top.length - 2)) - 5;
+        let move2 = parseInt(box.style.left.substring(0, box.style.left.length - 2));
+        if (isNaN(move1)) {
+          box.style.top = "-5px";
+        }
+        if (isNaN(move2)) {
+          box.style.left = "0px";
+        }
+        box.style.top = move1.toString() + "px";
+        console.log(box.style.top);
+
+        movestop(move1, move2);
+        Treasure_Hunter(move1, move2);
+
+        }
+      }
+
+      function moveLeft() {
+        if(dontmove==false){
+        let box = document.getElementById("box18");
+        let move2 = parseInt(box.style.left.substring(0, box.style.left.length - 2)) - 5;
+        let move1 = parseInt(box.style.top.substring(0, box.style.top.length - 2));
+        if (isNaN(move2)) {
+          box.style.left = "-5px";
+        }
+        if (isNaN(move1)) {
+          box.style.top = "0px";
+        }
+        box.style.left = move2.toString() + "px";
+        console.log(box.style.left);
+
+        movestop(move1, move2);
+        Treasure_Hunter(move1, move2);
+        }
+      }
+
+      function moveRight() {
+        if(dontmove==false){
+        let box = document.getElementById("box18");
+        let move2 = parseInt(box.style.left.substring(0, box.style.left.length - 2)) + 5;
+        let move1 = parseInt(box.style.top.substring(0, box.style.top.length - 2));
+        if (isNaN(move2)) {
+          box.style.left = "5px";
+        }
+        if (isNaN(move1)) {
+          box.style.top = "0px";
+        }
+        box.style.left = move2.toString() + "px";
+        console.log(box.style.left);
+
+        movestop(move1, move2);
+        Treasure_Hunter(move1, move2);
+        }
+      }
+      function moveDown() {
+        if(dontmove==false){
+        let box = document.getElementById("box18");
+        let move1 = parseInt(box.style.top.substring(0, box.style.top.length - 2)) + 5;
+        let move2 = parseInt(box.style.left.substring(0, box.style.left.length - 2));
+        if (isNaN(move1)) {
+          box.style.top = "5px";
+        }
+        if (isNaN(move2)) {
+          box.style.left = "0px";
+        }
+        box.style.top = move1.toString() + "px";
+        console.log(box.style.top);
+
+        movestop(move1, move2);
+        Treasure_Hunter(move1, move2);
+        }
+      }
+
+      function changeImg() {
+        let img = document.querySelector(".box16");
+        img.style.background =
+          "url(images/png-transparent-bomb-explosion-nuclear-weapon-bomb-weapon-time-bomb-ticking-time-bomb-scenario-thumbnail.png)";
+        img.style.backgroundPosition = "center";
+        img.style.backgroundSize = "cover";
+        img.style.transform = "scale(9) translate(-20px, 45px)";
+        img.style.transition = "2s"
+      }
+
+      function changeImg2() {
+        let img = document.querySelector(".box17");
+        img.style.background =
+          "url(images/Wooden-Treasure-Chest-PNG-Photo-Image.png)";
+        img.style.backgroundPosition = "center";
+        img.style.backgroundSize = "cover";
+        img.animate([
+          {transform : 'translate(0px, 0px) scale(1)'},
+          {transform : 'translate(700px, -400px) scale(6)'},
+          {transform : 'translate(0px, 0px) scale(1)'}],
+           5000)}
+
+      document.addEventListener("keydown", (event) => {
+        switch (event.key) {
+          case "ArrowUp":
+            event.preventDefault();
+            moveUp();
+            break;
+          case "ArrowLeft":
+            event.preventDefault();
+            moveLeft();
+            break;
+          case "ArrowRight":
+            event.preventDefault();
+            moveRight();
+            break;
+          case "ArrowDown":
+            event.preventDefault();
+            moveDown();
+            break;
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div id="header_background">
+              <h1>
+                HTML CSS와 SCRIPT을 이용한 <br>
+                공피하며 미로찾기 게임
+              </h1>
+      </div>
+  </header>
+
+    <section>
+      
+      <div class="main">
+
+        <div class="box box1">
+         <audio autoplay="true" controls loop>
+             <source src="music/donx27t-look-down-the-basement-true-crime-thriller-loopable-music-132133.mp3" type="audio/mp3">
+         </audio>
+        </div>
+
+        <div class="box box2"></div>
+
+        <div class="box box2_2">
+          <button id="restart" onclick="window.location.reload()">restart</button>
+          <button id="up" onclick="moveUp()">up</button>
+          <button id="left" onclick="moveLeft()">left</button>
+          <button id="right" onclick="moveRight()">right</button>
+          <button id="down" onclick="moveDown()">down</button>
+        </div>
+
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+        <div class="box box6"></div>
+        <div class="box box7"></div>
+        <div class="box box8"></div>
+        <div class="box box9"></div>
+        <div class="box box10"></div>
+        <div class="box box11"></div>
+        <div class="box box12"></div>
+        <div class="box box13"></div>
+        <div class="box box14"></div>
+        <div class="box box15"></div>
+
+        <div class="box box16"></div>
+        <div class="box box17"></div>
+
+        <div id="box18"></div>
+
+        <div class="box" id="start">시작</div>
+        <div class="box" id="finish">도착</div>
+
+        <div class="boxbox" id="box19"></div>
+        <div class="boxbox" id="box19_1"></div>
+
+        <div class="boxbox" id="box20"></div>
+        <div class="boxbox" id="box20_1"></div>
+
+        <div class="boxbox" id="box21"></div>
+        <div class="boxbox" id="box21_1"></div>
+
+        <div class="boxbox" id="box22"></div>
+        <div class="boxbox" id="box22_1"></div>
+
+        <div class="boxbox" id="box23"></div>
+        <div class="boxbox" id="box23_1"></div>
+
+        <div class="boxbox" id="box24"></div>
+        <div class="boxbox" id="box24_1"></div>
+
+        <div class="boxbox" id="box25"></div>
+        <div class="boxbox" id="box25_1"></div>
+
+        <div class="boxbox" id="box26"></div>
+        <div class="boxbox" id="box26_1"></div>
+
+        <div class="boxbox" id="box27">
+          <div id="box28"></div>
+          <div id="box29"></div>
+        </div>
+
+        <div class="boxbox" id="box27_1">
+          <div id="box28_1"></div>
+          <div id="box29_1"></div>
+        </div>
+
+        <div class="boxbox" id="box30">
+          BOSS
+        </div>
+
+        <div class="boxbox" id="box30_1">
+          BOSS
+        </div>
+
+
+      </div>
+    </section>
+    <footer>
+      <div id="footer_background"></div>
+      <div id="buttons">
+          <button id="outline" onclick="change_outline()">게임 <br> 개요</button>
+          <button id="game_rules" onclick="change_game_rules()">게임 <br> 방법</button>
+          <button id="game_implement" onclick="change_game_implement()">여담</button>
+      </div>
+      <div id="footer_contents">
+          여태까지 배운 HTML CSS와 SCRIPT를 사용하여 만든 게임입니다. <br>
+          아직 조잡하고 부족한게 많지만 많은 도움을 받으면 만들었습니다. <br>
+          잼있게 즐겨주시길!!
+      </div>
+  </footer>
+
+  <script>
+    let footer_contents = document.querySelector("#footer_contents");
+
+    function change_outline(){
+        footer_contents.innerHTML= 
+        "여태까지 배운 HTML CSS와 SCRIPT를 사용하여 만든 게임입니다. <br>" +
+        "아직 조잡하고 부족한게 많지만 많은 도움을 받으면 만들었습니다 <br>" +
+        "잼있게 즐겨주시길!!";
+    
+    }
+    function change_game_rules(){
+        footer_contents.innerHTML=
+        "방향키 버튼(키보드 입력도 받음)으로 이동합니다.<br>"+
+        "움직이는 공을 피하며 도착지점에 도착하시면 됩니다. <br>"+
+        "당연히! 벽에 닿으시면 안됩니다. <br>"+
+        "중간 중간에 있는 보물을 찾아주세요. <br>"+
+        "아!! 함정도 있답니다.";
+
+    }
+    function change_game_implement(){
+        footer_contents.innerHTML=
+        "grid를 이용해 자리를 잡고 각각의 좌표를 찾기위한...노가다... <br>"+
+        "이게바로 인간이 갈리는것인가... <br>"+
+        "노가다는 위대하다...!!!";
+    }
+</script>
+  </body>
+</html>

@@ -1,0 +1,3228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./main.css" rel="stylesheet">
+    
+    <style>
+        .btn{
+            background-color: rgb(235, 230, 230);
+            color: rgb(129, 123, 123);
+            border-radius: 40%;
+            padding:10px;
+            margin: 5px;
+            text-align: center;
+            font-size: 14px;
+            cursor:pointer;
+
+        }
+        .bye{
+            width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+            font-weight: bold;
+            margin-bottom: 100px;
+        }
+        .wrap_1{
+            width: 1200px;
+            display: flex;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+        .button{          
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            font-weight: bold;
+        }
+        .button_1{
+            width: 20%;
+            position: relative;
+        }
+        .cardfinder{
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+        .cardfinder img{
+            width: 120px;
+            height: 60px;
+        }
+        .sp1{
+            display: block;
+            color: rgb(192,192,192,0);
+            font-size: 12px;
+            margin-bottom: -15px;
+            margin-top: 10px;
+        }
+        .sp2{
+            display: block;
+            color: rgb(158, 151, 151);
+            margin-bottom: -35px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .cards{
+            width: 1200px;
+            margin: 0 auto;
+            border-bottom: 1px solid silver;
+        }
+        .cards h3{
+            margin-bottom: 0px;
+            font-size: 20px;
+        }
+        .cards h1{
+            margin-top: 70px;
+            margin-left: 50px;
+            margin-bottom: 40px;
+            font-size: 45px;
+        }
+        .cards button{
+            color: rgb(255,255,255,0);
+            height: 280px;
+            width: 180px;
+            border: none;
+            text-align: left;
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 10px;
+            padding-left: 20px;
+            padding-top: 60px;
+        }
+        .Amex button{
+            color: rgb(255,255,255,0);
+            height: 180px;
+            width: 280px;
+            border: none;
+            text-align: left;
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 10px;
+            padding-left: 20px;
+            padding-top: 60px;
+        }
+        .cards button:hover{
+            color: rgb(231, 218, 218);
+            filter: brightness(70%);
+            cursor:pointer;
+
+        }
+        .cards button:hover span{
+            color: rgb(192,192,192);
+        }
+        .cards a{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 13px;
+        }
+        .cards ul{
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .cards li{
+            height: 500px;
+            margin: 10px 35px 5px 15px;
+        }
+        .welcome{
+            color: rgb(73, 71, 71);
+            background-color: rgb(228, 222, 222);
+            width: 130px;
+            height: 20px;
+            text-align: center;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+        #card_26{
+            background-color: white;
+            border: 1px solid black;
+            padding: 10px;
+        }
+        #card_26 img{
+            width: 100px;
+            height: 15px;
+        }
+        .c1 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_TBE3_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c2 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_TPE3_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c3 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_TRE5_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c4 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_TGE2_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c5 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_TPI_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c6 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MXB_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c7 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_M3PBT_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c8 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_M3PBT_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c9 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_M3PBT_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c10 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_XE3_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c11 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_XE3_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c12 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_XE3_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c13 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_ZF_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c14 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_ZW_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c15 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_ZO_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c16 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MZROE2_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c17 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MZROE2_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c18 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MZROE2_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c19 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MZROE2_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c20 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_LTTDHC_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c21 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_LTTDHCP_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c22 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_HDSHHC_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c23 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_YSHC_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c24 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MSPSE3_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c25 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MHIMTE3_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c26 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MHMMOE3T_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c27 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MCJE2_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c55 button{
+            background-image: url();
+            background-position: center;
+            background-size: cover;
+        }        
+        .c56 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MRDED2_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c57 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MRDEV_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c58 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MRDSC_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c59 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MRDSCR_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c60 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_NVHC_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c61 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_NXHCV_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c62 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_NXHC_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c63 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_NXHCK_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c64 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_KALT4_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c65 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_KALT3_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c66 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_KALT2_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c67 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_KALT2_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c68 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MSSHC_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c69 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_BMHC_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c70 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_SBHC_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c71 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_SCHC_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c72 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_EMTE2_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c73 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_HGEHC_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c74 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_ESPCLB_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c75 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_ESPCLB_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c76 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_ESPS_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c77 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_CSTC_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c78 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_CSTC_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c79 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_HMHCP_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c80 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_HMHC_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c81 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_HSCHC_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c82 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_HSCHC_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c83 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_HEHC_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c84 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_HMCV_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c85 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_HMCV_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c86 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_AMPT.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c87 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_AMGL.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c88 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_AMGR.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c89 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_GCE2_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c90 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_SGE2_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c91 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MMBPF_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c92 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MMBPF_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c93 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MMBPF_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c94 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MMBPF_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c95 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MMBPF_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c96 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MMBPF_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c106 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_CMH_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c107 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_CXH_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c108 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_CMC_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c109 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_CXC_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c110 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MFLYE2_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c111 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MBFLYE2_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c112 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MQFLYE2_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c113 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MPFLYE2_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c114 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MPBFLYE2_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c115 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MPQFLYE2_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c116 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_MHHIFLYE2_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c117 button{
+            background-image: url(https://img.hyundaicard.com/img/com/card/card_EMPLY_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c118 button{
+            background-image: url(https://www.hyundaicard.com/img/com/card/card_gift_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .c119 button{
+            background-image: url(https://www.hyundaicard.com/img/com/card/card_hipass_h.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+    
+    </style>
+    <script>
+        
+        function init(){
+            let  card_all = document.getElementById("card_all");
+            let   card_1 = document.getElementById("card_1");
+            let   card_2 = document.getElementById("card_2");
+            let   card_3 = document.getElementById("card_3");
+            let   card_4 = document.getElementById("card_4");
+            let   card_5 = document.getElementById("card_5");
+            let   card_6 = document.getElementById("card_6");
+            let   card_7 = document.getElementById("card_7");
+            let   card_8 = document.getElementById("card_8");
+            let   card_9 = document.getElementById("card_9");
+            let   card_10 = document.getElementById("card_10");
+            let   card_11 = document.getElementById("card_11");
+            let   card_12 = document.getElementById("card_12");
+            let   card_13 = document.getElementById("card_13");
+            let   card_14 = document.getElementById("card_14");
+            let   card_15 = document.getElementById("card_15");
+            let   card_16 = document.getElementById("card_16");
+            let   card_17 = document.getElementById("card_17");
+            let   card_18 = document.getElementById("card_18");
+            let   card_19 = document.getElementById("card_19");
+            let   card_20 = document.getElementById("card_20");
+            let   card_21 = document.getElementById("card_21");
+            let   card_22 = document.getElementById("card_22");
+            let   card_23 = document.getElementById("card_23");
+            let   card_24 = document.getElementById("card_24");
+            let   card_25 = document.getElementById("card_25");
+            let   card_all_info = document.getElementById(" card_all_info");
+            let    card_1_info = document.getElementById("card_1_info");
+            let   card_2_info = document.getElementById("card_2_info");
+            let   card_3_info = document.getElementById("card_3_info");
+            let   card_4_info = document.getElementById("card_4_info");
+            let   card_5_info = document.getElementById("card_5_info");
+            let   card_6_info = document.getElementById("card_6_info");
+            let   card_7_info = document.getElementById("card_7_info");
+            let   card_8_info = document.getElementById("card_8_info");
+            let   card_9_info = document.getElementById("card_9_info");
+            let   card_10_info = document.getElementById("card_10_info");
+            let   card_11_info = document.getElementById("card_11_info");
+            let   card_12_info = document.getElementById("card_12_info");
+            let   card_13_info = document.getElementById("card_13_info");
+            let   card_14_info = document.getElementById("card_14_info");
+            let   card_15_info = document.getElementById("card_15_info");
+            let   card_16_info = document.getElementById("card_16_info");
+            let   card_17_info = document.getElementById("card_17_info");
+            let   card_18_info = document.getElementById("card_18_info");
+            let   card_19_info = document.getElementById("card_19_info");
+            let   card_20_info = document.getElementById("card_20_info");
+            let   card_21_info = document.getElementById("card_21_info");
+            let   card_22_info = document.getElementById("card_22_info");
+            let   card_23_info = document.getElementById("card_23_info");
+            let   card_24_info = document.getElementById("card_24_info");
+            let   card_25_info = document.getElementById("card_25_info");
+            //card_all_info.style.display = "block"
+            card_all.addEventListener( "click",  card_all_change);
+            card_1.addEventListener( "click", card_1_change);
+            card_2.addEventListener( "click", card_2_change);
+            card_3.addEventListener( "click", card_3_change);
+            card_4.addEventListener( "click", card_4_change);
+            card_5.addEventListener( "click", card_5_change);
+            card_6.addEventListener( "click", card_6_change);
+            card_7.addEventListener( "click", card_7_change);
+            card_8.addEventListener( "click", card_8_change);
+            card_9.addEventListener( "click", card_9_change);
+            card_10.addEventListener( "click", card_10_change);
+            card_11.addEventListener( "click", card_11_change);
+            card_12.addEventListener( "click", card_12_change);
+            card_13.addEventListener( "click", card_13_change);
+            card_14.addEventListener( "click", card_14_change);
+            card_15.addEventListener( "click", card_15_change);
+            card_16.addEventListener( "click", card_16_change);
+            card_17.addEventListener( "click", card_17_change);
+            card_18.addEventListener( "click", card_18_change);
+            card_19.addEventListener( "click", card_19_change);
+            card_20.addEventListener( "click", card_20_change);
+            card_21.addEventListener( "click", card_21_change);
+            card_22.addEventListener( "click", card_22_change);
+            card_23.addEventListener( "click", card_23_change);
+            card_24.addEventListener( "click", card_24_change);
+            card_25.addEventListener( "click", card_25_change);           
+        }
+        function card_all_change(){
+            card_all_info.style.display = "block"
+            card_1_info.style.display = "block"
+            card_2_info.style.display = "block"
+            card_3_info.style.display = "block"
+            card_4_info.style.display = "block"
+            card_5_info.style.display = "block"
+            card_6_info.style.display = "block"
+            card_7_info.style.display = "block"
+            card_8_info.style.display = "block"
+            card_9_info.style.display = "block"
+            card_10_info.style.display = "block"
+            card_11_info.style.display = "block"
+            card_12_info.style.display = "block"
+            card_13_info.style.display = "block"
+            card_14_info.style.display = "block"
+            card_15_info.style.display = "block"
+            card_16_info.style.display = "block"
+            card_17_info.style.display = "block"
+            card_18_info.style.display = "block"
+            card_19_info.style.display = "block"
+            card_20_info.style.display = "block"
+            card_21_info.style.display = "block"
+            card_22_info.style.display = "block"
+            card_23_info.style.display = "block"
+            card_24_info.style.display = "block"
+            card_25_info.style.display = "block"
+        }
+        function card_1_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "block"
+            card_2_info.style.display = "none"
+            card_3_info.style.display = "none"
+            card_4_info.style.display = "none"
+            card_5_info.style.display = "none"
+            card_6_info.style.display = "none"
+            card_7_info.style.display = "none"
+            card_8_info.style.display = "none"
+            card_9_info.style.display = "none"
+            card_10_info.style.display = "none"
+            card_11_info.style.display = "none"
+            card_12_info.style.display = "none"
+            card_13_info.style.display = "none"
+            card_14_info.style.display = "none"
+            card_15_info.style.display = "none"
+            card_16_info.style.display = "none"
+            card_17_info.style.display = "none"
+            card_18_info.style.display = "none"
+            card_19_info.style.display = "none"
+            card_20_info.style.display = "none"
+            card_21_info.style.display = "none"
+            card_22_info.style.display = "none"
+            card_23_info.style.display = "none"
+            card_24_info.style.display = "none"
+            card_25_info.style.display = "none"
+        }
+        function card_2_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "none"
+            card_2_info.style.display = "block"
+            card_3_info.style.display = "none"
+            card_4_info.style.display = "none"
+            card_5_info.style.display = "none"
+            card_6_info.style.display = "none"
+            card_7_info.style.display = "none"
+            card_8_info.style.display = "none"
+            card_9_info.style.display = "none"
+            card_10_info.style.display = "none"
+            card_11_info.style.display = "none"
+            card_12_info.style.display = "none"
+            card_13_info.style.display = "none"
+            card_14_info.style.display = "none"
+            card_15_info.style.display = "none"
+            card_16_info.style.display = "none"
+            card_17_info.style.display = "none"
+            card_18_info.style.display = "none"
+            card_19_info.style.display = "none"
+            card_20_info.style.display = "none"
+            card_21_info.style.display = "none"
+            card_22_info.style.display = "none"
+            card_23_info.style.display = "none"
+            card_24_info.style.display = "none"
+            card_25_info.style.display = "none"
+        }
+        function card_3_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "none"
+            card_2_info.style.display = "none"
+            card_3_info.style.display = "block"
+            card_4_info.style.display = "none"
+            card_5_info.style.display = "none"
+            card_6_info.style.display = "none"
+            card_7_info.style.display = "none"
+            card_8_info.style.display = "none"
+            card_9_info.style.display = "none"
+            card_10_info.style.display = "none"
+            card_11_info.style.display = "none"
+            card_12_info.style.display = "none"
+            card_13_info.style.display = "none"
+            card_14_info.style.display = "none"
+            card_15_info.style.display = "none"
+            card_16_info.style.display = "none"
+            card_17_info.style.display = "none"
+            card_18_info.style.display = "none"
+            card_19_info.style.display = "none"
+            card_20_info.style.display = "none"
+            card_21_info.style.display = "none"
+            card_22_info.style.display = "none"
+            card_23_info.style.display = "none"
+            card_24_info.style.display = "none"
+            card_25_info.style.display = "none"
+        }
+        function card_4_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "none"
+            card_2_info.style.display = "none"
+            card_3_info.style.display = "none"
+            card_4_info.style.display = "block"
+            card_5_info.style.display = "none"
+            card_6_info.style.display = "none"
+            card_7_info.style.display = "none"
+            card_8_info.style.display = "none"
+            card_9_info.style.display = "none"
+            card_10_info.style.display = "none"
+            card_11_info.style.display = "none"
+            card_12_info.style.display = "none"
+            card_13_info.style.display = "none"
+            card_14_info.style.display = "none"
+            card_15_info.style.display = "none"
+            card_16_info.style.display = "none"
+            card_17_info.style.display = "none"
+            card_18_info.style.display = "none"
+            card_19_info.style.display = "none"
+            card_20_info.style.display = "none"
+            card_21_info.style.display = "none"
+            card_22_info.style.display = "none"
+            card_23_info.style.display = "none"
+            card_24_info.style.display = "none"
+            card_25_info.style.display = "none"
+        }
+        function card_5_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "none"
+            card_2_info.style.display = "none"
+            card_3_info.style.display = "none"
+            card_4_info.style.display = "none"
+            card_5_info.style.display = "block"
+            card_6_info.style.display = "none"
+            card_7_info.style.display = "none"
+            card_8_info.style.display = "none"
+            card_9_info.style.display = "none"
+            card_10_info.style.display = "none"
+            card_11_info.style.display = "none"
+            card_12_info.style.display = "none"
+            card_13_info.style.display = "none"
+            card_14_info.style.display = "none"
+            card_15_info.style.display = "none"
+            card_16_info.style.display = "none"
+            card_17_info.style.display = "none"
+            card_18_info.style.display = "none"
+            card_19_info.style.display = "none"
+            card_20_info.style.display = "none"
+            card_21_info.style.display = "none"
+            card_22_info.style.display = "none"
+            card_23_info.style.display = "none"
+            card_24_info.style.display = "none"
+            card_25_info.style.display = "none"
+        }
+        function card_6_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "none"
+            card_2_info.style.display = "none"
+            card_3_info.style.display = "none"
+            card_4_info.style.display = "none"
+            card_5_info.style.display = "none"
+            card_6_info.style.display = "block"
+            card_7_info.style.display = "none"
+            card_8_info.style.display = "none"
+            card_9_info.style.display = "none"
+            card_10_info.style.display = "none"
+            card_11_info.style.display = "none"
+            card_12_info.style.display = "none"
+            card_13_info.style.display = "none"
+            card_14_info.style.display = "none"
+            card_15_info.style.display = "none"
+            card_16_info.style.display = "none"
+            card_17_info.style.display = "none"
+            card_18_info.style.display = "none"
+            card_19_info.style.display = "none"
+            card_20_info.style.display = "none"
+            card_21_info.style.display = "none"
+            card_22_info.style.display = "none"
+            card_23_info.style.display = "none"
+            card_24_info.style.display = "none"
+            card_25_info.style.display = "none"
+        }
+        function card_7_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "none"
+            card_2_info.style.display = "none"
+            card_3_info.style.display = "none"
+            card_4_info.style.display = "none"
+            card_5_info.style.display = "none"
+            card_6_info.style.display = "none"
+            card_7_info.style.display = "block"
+            card_8_info.style.display = "none"
+            card_9_info.style.display = "none"
+            card_10_info.style.display = "none"
+            card_11_info.style.display = "none"
+            card_12_info.style.display = "none"
+            card_13_info.style.display = "none"
+            card_14_info.style.display = "none"
+            card_15_info.style.display = "none"
+            card_16_info.style.display = "none"
+            card_17_info.style.display = "none"
+            card_18_info.style.display = "none"
+            card_19_info.style.display = "none"
+            card_20_info.style.display = "none"
+            card_21_info.style.display = "none"
+            card_22_info.style.display = "none"
+            card_23_info.style.display = "none"
+            card_24_info.style.display = "none"
+            card_25_info.style.display = "none"
+        }
+        function card_8_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "none"
+            card_2_info.style.display = "none"
+            card_3_info.style.display = "none"
+            card_4_info.style.display = "none"
+            card_5_info.style.display = "none"
+            card_6_info.style.display = "none"
+            card_7_info.style.display = "none"
+            card_8_info.style.display = "block"
+            card_9_info.style.display = "none"
+            card_10_info.style.display = "none"
+            card_11_info.style.display = "none"
+            card_12_info.style.display = "none"
+            card_13_info.style.display = "none"
+            card_14_info.style.display = "none"
+            card_15_info.style.display = "none"
+            card_16_info.style.display = "none"
+            card_17_info.style.display = "none"
+            card_18_info.style.display = "none"
+            card_19_info.style.display = "none"
+            card_20_info.style.display = "none"
+            card_21_info.style.display = "none"
+            card_22_info.style.display = "none"
+            card_23_info.style.display = "none"
+            card_24_info.style.display = "none"
+            card_25_info.style.display = "none"
+        }
+        function card_9_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "none"
+            card_2_info.style.display = "none"
+            card_3_info.style.display = "none"
+            card_4_info.style.display = "none"
+            card_5_info.style.display = "none"
+            card_6_info.style.display = "none"
+            card_7_info.style.display = "none"
+            card_8_info.style.display = "none"
+            card_9_info.style.display = "block"
+            card_10_info.style.display = "none"
+            card_11_info.style.display = "none"
+            card_12_info.style.display = "none"
+            card_13_info.style.display = "none"
+            card_14_info.style.display = "none"
+            card_15_info.style.display = "none"
+            card_16_info.style.display = "none"
+            card_17_info.style.display = "none"
+            card_18_info.style.display = "none"
+            card_19_info.style.display = "none"
+            card_20_info.style.display = "none"
+            card_21_info.style.display = "none"
+            card_22_info.style.display = "none"
+            card_23_info.style.display = "none"
+            card_24_info.style.display = "none"
+            card_25_info.style.display = "none"
+        }
+        function card_10_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "none"
+            card_2_info.style.display = "none"
+            card_3_info.style.display = "none"
+            card_4_info.style.display = "none"
+            card_5_info.style.display = "none"
+            card_6_info.style.display = "none"
+            card_7_info.style.display = "none"
+            card_8_info.style.display = "none"
+            card_9_info.style.display = "none"
+            card_10_info.style.display = "block"
+            card_11_info.style.display = "none"
+            card_12_info.style.display = "none"
+            card_13_info.style.display = "none"
+            card_14_info.style.display = "none"
+            card_15_info.style.display = "none"
+            card_16_info.style.display = "none"
+            card_17_info.style.display = "none"
+            card_18_info.style.display = "none"
+            card_19_info.style.display = "none"
+            card_20_info.style.display = "none"
+            card_21_info.style.display = "none"
+            card_22_info.style.display = "none"
+            card_23_info.style.display = "none"
+            card_24_info.style.display = "none"
+            card_25_info.style.display = "none"
+        }
+        function card_11_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "none"
+            card_2_info.style.display = "none"
+            card_3_info.style.display = "none"
+            card_4_info.style.display = "none"
+            card_5_info.style.display = "none"
+            card_6_info.style.display = "none"
+            card_7_info.style.display = "none"
+            card_8_info.style.display = "none"
+            card_9_info.style.display = "none"
+            card_10_info.style.display = "none"
+            card_11_info.style.display = "block"
+            card_12_info.style.display = "none"
+            card_13_info.style.display = "none"
+            card_14_info.style.display = "none"
+            card_15_info.style.display = "none"
+            card_16_info.style.display = "none"
+            card_17_info.style.display = "none"
+            card_18_info.style.display = "none"
+            card_19_info.style.display = "none"
+            card_20_info.style.display = "none"
+            card_21_info.style.display = "none"
+            card_22_info.style.display = "none"
+            card_23_info.style.display = "none"
+            card_24_info.style.display = "none"
+            card_25_info.style.display = "none"
+        }
+        function card_12_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "none"
+            card_2_info.style.display = "none"
+            card_3_info.style.display = "none"
+            card_4_info.style.display = "none"
+            card_5_info.style.display = "none"
+            card_6_info.style.display = "none"
+            card_7_info.style.display = "none"
+            card_8_info.style.display = "none"
+            card_9_info.style.display = "none"
+            card_10_info.style.display = "none"
+            card_11_info.style.display = "none"
+            card_12_info.style.display = "block"
+            card_13_info.style.display = "none"
+            card_14_info.style.display = "none"
+            card_15_info.style.display = "none"
+            card_16_info.style.display = "none"
+            card_17_info.style.display = "none"
+            card_18_info.style.display = "none"
+            card_19_info.style.display = "none"
+            card_20_info.style.display = "none"
+            card_21_info.style.display = "none"
+            card_22_info.style.display = "none"
+            card_23_info.style.display = "none"
+            card_24_info.style.display = "none"
+            card_25_info.style.display = "none"
+        }
+        function card_13_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "none"
+            card_2_info.style.display = "none"
+            card_3_info.style.display = "none"
+            card_4_info.style.display = "none"
+            card_5_info.style.display = "none"
+            card_6_info.style.display = "none"
+            card_7_info.style.display = "none"
+            card_8_info.style.display = "none"
+            card_9_info.style.display = "none"
+            card_10_info.style.display = "none"
+            card_11_info.style.display = "none"
+            card_12_info.style.display = "none"
+            card_13_info.style.display = "block"
+            card_14_info.style.display = "none"
+            card_15_info.style.display = "none"
+            card_16_info.style.display = "none"
+            card_17_info.style.display = "none"
+            card_18_info.style.display = "none"
+            card_19_info.style.display = "none"
+            card_20_info.style.display = "none"
+            card_21_info.style.display = "none"
+            card_22_info.style.display = "none"
+            card_23_info.style.display = "none"
+            card_24_info.style.display = "none"
+            card_25_info.style.display = "none"
+        }
+        function card_14_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "none"
+            card_2_info.style.display = "none"
+            card_3_info.style.display = "none"
+            card_4_info.style.display = "none"
+            card_5_info.style.display = "none"
+            card_6_info.style.display = "none"
+            card_7_info.style.display = "none"
+            card_8_info.style.display = "none"
+            card_9_info.style.display = "none"
+            card_10_info.style.display = "none"
+            card_11_info.style.display = "none"
+            card_12_info.style.display = "none"
+            card_13_info.style.display = "none"
+            card_14_info.style.display = "block"
+            card_15_info.style.display = "none"
+            card_16_info.style.display = "none"
+            card_17_info.style.display = "none"
+            card_18_info.style.display = "none"
+            card_19_info.style.display = "none"
+            card_20_info.style.display = "none"
+            card_21_info.style.display = "none"
+            card_22_info.style.display = "none"
+            card_23_info.style.display = "none"
+            card_24_info.style.display = "none"
+            card_25_info.style.display = "none"
+        }
+        function card_15_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "none"
+            card_2_info.style.display = "none"
+            card_3_info.style.display = "none"
+            card_4_info.style.display = "none"
+            card_5_info.style.display = "none"
+            card_6_info.style.display = "none"
+            card_7_info.style.display = "none"
+            card_8_info.style.display = "none"
+            card_9_info.style.display = "none"
+            card_10_info.style.display = "none"
+            card_11_info.style.display = "none"
+            card_12_info.style.display = "none"
+            card_13_info.style.display = "none"
+            card_14_info.style.display = "none"
+            card_15_info.style.display = "block"
+            card_16_info.style.display = "none"
+            card_17_info.style.display = "none"
+            card_18_info.style.display = "none"
+            card_19_info.style.display = "none"
+            card_20_info.style.display = "none"
+            card_21_info.style.display = "none"
+            card_22_info.style.display = "none"
+            card_23_info.style.display = "none"
+            card_24_info.style.display = "none"
+            card_25_info.style.display = "none"
+        }
+        function card_16_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "none"
+            card_2_info.style.display = "none"
+            card_3_info.style.display = "none"
+            card_4_info.style.display = "none"
+            card_5_info.style.display = "none"
+            card_6_info.style.display = "none"
+            card_7_info.style.display = "none"
+            card_8_info.style.display = "none"
+            card_9_info.style.display = "none"
+            card_10_info.style.display = "none"
+            card_11_info.style.display = "none"
+            card_12_info.style.display = "none"
+            card_13_info.style.display = "none"
+            card_14_info.style.display = "none"
+            card_15_info.style.display = "none"
+            card_16_info.style.display = "block"
+            card_17_info.style.display = "none"
+            card_18_info.style.display = "none"
+            card_19_info.style.display = "none"
+            card_20_info.style.display = "none"
+            card_21_info.style.display = "none"
+            card_22_info.style.display = "none"
+            card_23_info.style.display = "none"
+            card_24_info.style.display = "none"
+            card_25_info.style.display = "none"
+        }
+        function card_17_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "none"
+            card_2_info.style.display = "none"
+            card_3_info.style.display = "none"
+            card_4_info.style.display = "none"
+            card_5_info.style.display = "none"
+            card_6_info.style.display = "none"
+            card_7_info.style.display = "none"
+            card_8_info.style.display = "none"
+            card_9_info.style.display = "none"
+            card_10_info.style.display = "none"
+            card_11_info.style.display = "none"
+            card_12_info.style.display = "none"
+            card_13_info.style.display = "none"
+            card_14_info.style.display = "none"
+            card_15_info.style.display = "none"
+            card_16_info.style.display = "none"
+            card_17_info.style.display = "block"
+            card_18_info.style.display = "none"
+            card_19_info.style.display = "none"
+            card_20_info.style.display = "none"
+            card_21_info.style.display = "none"
+            card_22_info.style.display = "none"
+            card_23_info.style.display = "none"
+            card_24_info.style.display = "none"
+            card_25_info.style.display = "none"
+        }
+        function card_18_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "none"
+            card_2_info.style.display = "none"
+            card_3_info.style.display = "none"
+            card_4_info.style.display = "none"
+            card_5_info.style.display = "none"
+            card_6_info.style.display = "none"
+            card_7_info.style.display = "none"
+            card_8_info.style.display = "none"
+            card_9_info.style.display = "none"
+            card_10_info.style.display = "none"
+            card_11_info.style.display = "none"
+            card_12_info.style.display = "none"
+            card_13_info.style.display = "none"
+            card_14_info.style.display = "none"
+            card_15_info.style.display = "none"
+            card_16_info.style.display = "none"
+            card_17_info.style.display = "none"
+            card_18_info.style.display = "block"
+            card_19_info.style.display = "none"
+            card_20_info.style.display = "none"
+            card_21_info.style.display = "none"
+            card_22_info.style.display = "none"
+            card_23_info.style.display = "none"
+            card_24_info.style.display = "none"
+            card_25_info.style.display = "none"
+        }
+        function card_19_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "none"
+            card_2_info.style.display = "none"
+            card_3_info.style.display = "none"
+            card_4_info.style.display = "none"
+            card_5_info.style.display = "none"
+            card_6_info.style.display = "none"
+            card_7_info.style.display = "none"
+            card_8_info.style.display = "none"
+            card_9_info.style.display = "none"
+            card_10_info.style.display = "none"
+            card_11_info.style.display = "none"
+            card_12_info.style.display = "none"
+            card_13_info.style.display = "none"
+            card_14_info.style.display = "none"
+            card_15_info.style.display = "none"
+            card_16_info.style.display = "none"
+            card_17_info.style.display = "none"
+            card_18_info.style.display = "none"
+            card_19_info.style.display = "block"
+            card_20_info.style.display = "none"
+            card_21_info.style.display = "none"
+            card_22_info.style.display = "none"
+            card_23_info.style.display = "none"
+            card_24_info.style.display = "none"
+            card_25_info.style.display = "none"
+        }
+        function card_20_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "none"
+            card_2_info.style.display = "none"
+            card_3_info.style.display = "none"
+            card_4_info.style.display = "none"
+            card_5_info.style.display = "none"
+            card_6_info.style.display = "none"
+            card_7_info.style.display = "none"
+            card_8_info.style.display = "none"
+            card_9_info.style.display = "none"
+            card_10_info.style.display = "none"
+            card_11_info.style.display = "none"
+            card_12_info.style.display = "none"
+            card_13_info.style.display = "none"
+            card_14_info.style.display = "none"
+            card_15_info.style.display = "none"
+            card_16_info.style.display = "none"
+            card_17_info.style.display = "none"
+            card_18_info.style.display = "none"
+            card_19_info.style.display = "none"
+            card_20_info.style.display = "block"
+            card_21_info.style.display = "none"
+            card_22_info.style.display = "none"
+            card_23_info.style.display = "none"
+            card_24_info.style.display = "none"
+            card_25_info.style.display = "none"
+        }
+        function card_21_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "none"
+            card_2_info.style.display = "none"
+            card_3_info.style.display = "none"
+            card_4_info.style.display = "none"
+            card_5_info.style.display = "none"
+            card_6_info.style.display = "none"
+            card_7_info.style.display = "none"
+            card_8_info.style.display = "none"
+            card_9_info.style.display = "none"
+            card_10_info.style.display = "none"
+            card_11_info.style.display = "none"
+            card_12_info.style.display = "none"
+            card_13_info.style.display = "none"
+            card_14_info.style.display = "none"
+            card_15_info.style.display = "none"
+            card_16_info.style.display = "none"
+            card_17_info.style.display = "none"
+            card_18_info.style.display = "none"
+            card_19_info.style.display = "none"
+            card_20_info.style.display = "none"
+            card_21_info.style.display = "block"
+            card_22_info.style.display = "none"
+            card_23_info.style.display = "none"
+            card_24_info.style.display = "none"
+            card_25_info.style.display = "none"
+        }
+        function card_22_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "none"
+            card_2_info.style.display = "none"
+            card_3_info.style.display = "none"
+            card_4_info.style.display = "none"
+            card_5_info.style.display = "none"
+            card_6_info.style.display = "none"
+            card_7_info.style.display = "none"
+            card_8_info.style.display = "none"
+            card_9_info.style.display = "none"
+            card_10_info.style.display = "none"
+            card_11_info.style.display = "none"
+            card_12_info.style.display = "none"
+            card_13_info.style.display = "none"
+            card_14_info.style.display = "none"
+            card_15_info.style.display = "none"
+            card_16_info.style.display = "none"
+            card_17_info.style.display = "none"
+            card_18_info.style.display = "none"
+            card_19_info.style.display = "none"
+            card_20_info.style.display = "none"
+            card_21_info.style.display = "none"
+            card_22_info.style.display = "block"
+            card_23_info.style.display = "none"
+            card_24_info.style.display = "none"
+            card_25_info.style.display = "none"
+        }
+        function card_23_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "none"
+            card_2_info.style.display = "none"
+            card_3_info.style.display = "none"
+            card_4_info.style.display = "none"
+            card_5_info.style.display = "none"
+            card_6_info.style.display = "none"
+            card_7_info.style.display = "none"
+            card_8_info.style.display = "none"
+            card_9_info.style.display = "none"
+            card_10_info.style.display = "none"
+            card_11_info.style.display = "none"
+            card_12_info.style.display = "none"
+            card_13_info.style.display = "none"
+            card_14_info.style.display = "none"
+            card_15_info.style.display = "none"
+            card_16_info.style.display = "none"
+            card_17_info.style.display = "none"
+            card_18_info.style.display = "none"
+            card_19_info.style.display = "none"
+            card_20_info.style.display = "none"
+            card_21_info.style.display = "none"
+            card_22_info.style.display = "none"
+            card_23_info.style.display = "block"
+            card_24_info.style.display = "none"
+            card_25_info.style.display = "none"
+        }
+        function card_24_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "none"
+            card_2_info.style.display = "none"
+            card_3_info.style.display = "none"
+            card_4_info.style.display = "none"
+            card_5_info.style.display = "none"
+            card_6_info.style.display = "none"
+            card_7_info.style.display = "none"
+            card_8_info.style.display = "none"
+            card_9_info.style.display = "none"
+            card_10_info.style.display = "none"
+            card_11_info.style.display = "none"
+            card_12_info.style.display = "none"
+            card_13_info.style.display = "none"
+            card_14_info.style.display = "none"
+            card_15_info.style.display = "none"
+            card_16_info.style.display = "none"
+            card_17_info.style.display = "none"
+            card_18_info.style.display = "none"
+            card_19_info.style.display = "none"
+            card_20_info.style.display = "none"
+            card_21_info.style.display = "none"
+            card_22_info.style.display = "none"
+            card_23_info.style.display = "none"
+            card_24_info.style.display = "block"
+            card_25_info.style.display = "none"
+        }
+        function card_25_change(){
+            card_all_info.style.display = "none"
+            card_1_info.style.display = "none"
+            card_2_info.style.display = "none"
+            card_3_info.style.display = "none"
+            card_4_info.style.display = "none"
+            card_5_info.style.display = "none"
+            card_6_info.style.display = "none"
+            card_7_info.style.display = "none"
+            card_8_info.style.display = "none"
+            card_9_info.style.display = "none"
+            card_10_info.style.display = "none"
+            card_11_info.style.display = "none"
+            card_12_info.style.display = "none"
+            card_13_info.style.display = "none"
+            card_14_info.style.display = "none"
+            card_15_info.style.display = "none"
+            card_16_info.style.display = "none"
+            card_17_info.style.display = "none"
+            card_18_info.style.display = "none"
+            card_19_info.style.display = "none"
+            card_20_info.style.display = "none"
+            card_21_info.style.display = "none"
+            card_22_info.style.display = "none"
+            card_23_info.style.display = "none"
+            card_24_info.style.display = "none"
+            card_25_info.style.display = "block"
+        }
+    </script>
+</head>
+<body onload="init()">
+    <div class="wrap">
+        <!--헤더영역-->
+        <header>
+            <a href="./index.html" class="header_logo"></a>
+            <div class="menu">
+                <!--메뉴-->
+                <ul class="menu_wrap">
+                    <!--상위메뉴-->
+                    <li class="first">
+                        <!--이름영역-->
+                        <div class="menu_item">My Account</div>
+                        
+                        <!--숨김메뉴-->
+                        <div class="item_contents">
+                                <div class="contents_menu">이용내역
+                                    <div class="small">
+                                        <p>이용대금명세서</p>
+                                        <p>카드 이용내역(매출전표조회)</p>
+                                        <p>카드이용알림서비스</p>
+                                        <p>금융 이용내역</p>
+                                        <p>유료상품 가입정보</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">이용대금결제
+                                    <div class="small">
+                                        <p>즉시결제</p>
+                                        <p>분할납부</p>
+                                        <p>결제연기</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">내 카드관리
+                                    <div class="small">
+                                        <p>내 카드 목록</p>
+                                        <p>카드 비밀번호 설정.변경</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">케어 및 안심 서비스
+                                    <div class="small">
+                                        <p>해외이용제한/해제서비스</p>
+                                        <p>해외원화결제차단서비스</p>
+                                        <p>이용내역안내메일서비스</p>
+                                        <p>카드본인확인서비스</p>
+                                        <p>케어서비스</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">한도관리
+                                    <div class="small">
+                                        <p>이용한도 조회.변경</p>
+                                        <p>특별한도 조회.신청</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">생활요금납부서비스
+                                    <div class="small">
+                                        <p>정기결제</p>
+                                        <p>수시결제</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">결제정보 관리
+                                    <div class="small">
+                                        <p>명세서 수신 방법 조회.변경</p>
+                                        <p>결제계좌 조회.변경</p>
+                                        <p>결제일 조회.변경</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">소득공제 및 서류발급
+                                    <div class="small">
+                                        <p>소득공제내역</p>
+                                        <p>입금내역</p>
+                                        <p>개인사업자 이용내역</p>
+                                        <p>서류발급</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </li>
+                    <li class="first">
+                        <!--이름영역-->
+                        <div class="menu_item" onClick="location.href='card.html'">카드</div>
+
+                        <!--숨김메뉴-->
+                        <div class="item_contents">
+                            
+                                <div class="contents_menu">3층 시스템
+                                    <div class="small">
+                                        <p>3층 시스템 안내</p>
+                                        <p>2층구독</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">카드 안내 및 신청
+                                    <div class="small">
+                                        <p>카드 신청</p>
+                                        <p>카드파인더</p>
+                                        <p>바로발급서비스</p>
+                                        <p>카드 발급 조회</p>
+                                        <p>카드 수령 등록</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">기타 카드
+                                    <div class="small">
+                                        <p>가족카드</p>
+                                        <p>Gift카드</p>
+                                        <p>후불하이패스카드</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </li>
+                    
+                    <li class="first">
+                        <!--이름영역-->
+                        <div class="menu_item" onClick="location.href='good.html'">혜택</div>
+
+                        <!--숨김메뉴-->
+                        <div class="item_contents">
+                                <div class="contents_menu">나만의 혜택
+                                    <div class="small">
+                                        <p>포인트</p>
+                                        <p>바우처</p>
+                                        <p>받은 혜택</p>
+                                        <p>Star.Gold Friendship</p>
+                                        <p>the Purple Celeb</p>
+                                        <p>마일리지 긴급충전</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">혜택 안내
+                                    <div class="small">
+                                        <p>M 혜택</p>
+                                        <p>X 혜택</p>
+                                        <p>H-Coin 혜택</p>
+                                        <p>해외 이용 혜택</p>
+                                        <p>현대 자동차.기아<br>
+                                            자동차 구매 프로그램</p>
+                                        <p>이벤트</p>
+                                        <p>클럽서비스</p>
+                                        <p>PRIVIA 여행</p>
+                                        <p>MoMA PASS</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">Premium 혜택
+                                    <div class="small">
+                                        <p>the Black</p>
+                                        <p>the Purple</p>
+                                        <p>the Red</p>
+                                        <p>the Green</p>
+                                        <p>the Pink</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">정부지원 사업
+                                    <div class="small">
+                                        <p>온누리상품권</p>
+                                        <p>한국장학재단 학습특별지원금</p>
+                                        <p>광주광역시 일상회복지원금</p>
+                                        <p>상생소비지원금</p>
+                                        <p>상생 국민지원금</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </li>
+                    
+                    <li class="first">
+                        <!--이름영역-->
+                        <div class="menu_item" onClick="location.href='money.html'">금융</div>
+                        <!--숨김메뉴-->
+                        <div class="item_contents">
+                                <div class="contents_menu">금융
+                                    <div class="small">
+                                        <p>장기카드대출(카드론)</p>
+                                        <p>단기카드대출(현금서비스)</p>
+                                        <p>일부결제금액이월약정(리볼빙)</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </li>
+                    
+                    <li class="first">
+                        <!--이름영역-->
+                        <div class="menu_item">컬처</div>
+
+                        <!--숨김메뉴-->
+                        <div class="item_contents"></div>
+                    </li>
+                    
+                    <li class="first">
+                        <!--이름영역-->
+                        <div class="menu_item">고객지원</div>
+                        
+                        <!--숨김메뉴-->
+                        <div class="item_contents">
+                                <div class="contents_menu">일반 상담 및 문의
+                                    <div class="small">
+                                        <p>홈페이지 상담</p>
+                                        <p>ARS 상담</p>
+                                        <p>카드 도난.분실 신고/해제</p>
+                                        <p>FAQ</p>
+                                        <p>개인신용평가 결과 대응권 신청</p>
+                                        <p>금리인하요구권 신청</p>
+                                        <p>할부 철회.항변 안내</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">소비자 보호
+                                    <div class="small">
+                                        <p>소비자보호 포털</p>
+                                        <p>전자민원 접수</p>
+                                        <p>소비자보호 체계</p>
+                                        <p>소비자보호 우수 사례</p>
+                                        <p>소비자피해 경보 사례</p>
+                                        <p>보이스피싱 예방 안내</p>
+                                        <p>민원 건수 공시/실태평가 결과</p>
+                                        <p>장애인 회원 상담 안내</p>
+                                        <p>금융소비자보호법</p>
+                                        <p>고객 이용약관</p>
+                                        <p>금융소비자 정보 사이트</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">로그인증서 안내
+                                    <div class="small">
+                                        <p>간편번호 등록</p>
+                                        <p>인증서 등록/삭제</p>
+                                        <p>휴대폰 인증서 발급 안내</p>
+                                        <p>모바일 앱용 인증서 복사</p>
+                                        <p>브라우저 인증서 복사</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">이용안내
+                                    <div class="small">
+                                        <p>카드 종합 이용 안내</p>
+                                        <p>Digital 현대카드 프로젝트</p>
+                                        <p>온라인/모바일결제서비스</p>
+                                        <p>보안프로그램 설치 안내</p>
+                                        <p>웹사이트 이용 안내</p>
+                                        <p>상품공시실/자료실</p>
+                                        <p>뉴스.공지</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!--nav영역-->
+            <div class="navi">
+                <p>개인사업자</p>
+                <p>법인</p>
+                <p>가맹점</p>
+                <p>|</p>
+                <p>소비자보호 포털</p>
+                <p>상품공시실</p>
+            </div>
+            <div class="search_logo"></div>
+        </header>
+
+        <div class="miniheader">
+            <p>홈</p>
+            <p> > </p>
+            <p>회원가입</p>
+            <button onClick="location.href='joinus.html'">회원가입</button>
+            <button onClick="location.href='login.html'">로그인</button>
+        </div>
+            <!--중간영역-->
+            <div class="wrap_1">
+                <div class="button">
+                    <div class="btn" id="card_all" onclick="card_all_change()">
+                        전체
+                    </div>
+                    <div class="btn" id="card_1" onclick="card_1_change()">
+                        Premium
+                    </div>
+                    <div class="btn" id="card_2" onclick="card_2_change()">
+                        MX BLACK
+                    </div>
+                    <div class="btn" id="card_3" onclick="card_3_change()">
+                        M
+                    </div>
+                    <div class="btn" id="card_4" onclick="card_4_change()">
+                        X
+                    </div>
+                    <div class="btn" id="card_5" onclick="card_5_change()">
+                        Z
+                    </div>
+                    <div class="btn" id="card_6" onclick="card_6_change()">
+                        ZERO
+                    </div>
+                    <div class="btn" id="card_7" onclick="card_7_change()">
+                        제휴
+                    </div>
+                    <div class="btn" id="card_8" onclick="card_8_change()">
+                        기아
+                    </div>
+                    <div class="btn" id="card_9" onclick="card_9_change()">
+                        네이버
+                    </div>
+                    <div class="btn" id="card_10" onclick="card_10_change()">
+                        넥슨
+                    </div>
+                    <div class="btn" id="card_11" onclick="card_11_change()">
+                        대한항공
+                    </div>
+                    <div class="btn" id="card_12" onclick="card_12_change()">
+                        무신사
+                    </div>
+                    <div class="btn" id="card_13" onclick="card_13_change()">
+                        배달의민족
+                    </div>
+                    <div class="btn" id="card_14" onclick="card_14_change()">
+                        스타벅스
+                    </div>
+                    <div class="btn" id="card_15" onclick="card_15_change()">
+                        쏘카
+                    </div>
+                    <div class="btn" id="card_16" onclick="card_16_change()">
+                        이마트
+                    </div>
+                    <div class="btn" id="card_17" onclick="card_17_change()">
+                        제네시스
+                    </div>
+                    <div class="btn" id="card_18" onclick="card_18_change()">
+                        지마켓(스마일카드)
+                    </div>
+                    <div class="btn" id="card_19" onclick="card_19_change()">
+                        코스트코
+                    </div>
+                    <div class="btn" id="card_20" onclick="card_20_change()">
+                        현대자동차
+                    </div>
+                    <div class="btn" id="card_21" onclick="card_21_change()">
+                        Amex
+                    </div>
+                    <div class="btn" id="card_22" onclick="card_22_change()">
+                        GS칼텍스
+                    </div>
+                    <div class="btn" id="card_23" onclick="card_23_change()">
+                        SSG.COM
+                    </div>
+                    <div class="btn" id="card_24" onclick="card_24_change()">
+                        MY BUSINESS
+                    </div>
+                    <div class="btn" id="card_25" onclick="card_25_change()">
+                        기타
+                    </div>
+                    <div class="btn" id="card_26">
+                        <a href="https://www.hyundaicard.com/docfiles/resources/pc/html/gallery/CardGallery.html"><img src="https://www.hyundaicard.com/docfiles/resources/pc/images/card/txt_gallery.png"></a>
+                    </div>          
+                </div>
+                <div class="button_1">
+                    <a class="cardfinder" href="https://www.hyundaicard.com/cpc/cf/CPCCF0101_01.hc"><img src="https://www.hyundaicard.com/docfiles/resources/pc/images/card/finder_logo.gif"></a>
+                </div>
+            </div>
+
+            <div class="cards">
+                    <div id="card_all_info">
+                    </div>
+                    <div id="card_1_info">
+                        <h1>premium</h1>
+                        <ul>
+                            <li>
+                                <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=TBE3" class="c1">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">국내전용</span><br>
+                                        2,500,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        2,500,000원<br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        2,500,000원
+                                    </button><br>
+                                    <h3>the Black Edition3</h3>
+                                    <span class="sp2">invitaion Only</span><br><br>
+                                    단 1,000명을 위한 카드<br>
+                                    그 이상의 가치
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=TPE3" class="c2">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">국내전용</span><br>
+                                        800,000원<br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        800,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        800,000원
+                                    </button><br>
+                                    <h3>the Purple osee</h3>
+                                    <span class="sp2">Not Just Luxury</span><br><br>
+                                    아무나 가질 수 없는<br>
+                                    럭셔리 그 이상의 카드<br>
+                                    취향에 따라 설계,사용하는<br>
+                                    바우처 네트워크
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=TRE5" class="c3">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">국내전용</span><br>
+                                        300,000원<br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        300,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        300,000원
+                                    </button><br>
+                                    <h3>the Red Edition5</h3>
+                                    <span class="sp2">My hot Luxury</span><br><br>
+                                    럭셔리 라이프스타일을 매순간<br>
+                                    더 핫하게<br>
+                                    20만원 프리미엄 바우처<br>
+                                </a>
+                                <a href="https://card.hyundaicard.com/EVENT?id=pred&eventCode=HPL99">
+                                    <div class="welcome">welcome이벤트</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=TGE2" class="c4">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">VISA</span><br>
+                                        150,000원<br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        150,000원<br>
+                                        <span class="sp1">국내전용</span><br>
+                                        150,000원
+                                    </button><br>
+                                    <h3>the Green Edition2</h3>
+                                    <span class="sp2">My First Luxury</span><br><br>
+                                    자유와 모험을 즐기는, 나의 첫<br>
+                                    럭셔리 카드<br>
+                                    국내외 여행,해외쇼핑5%<br>
+                                    적립
+                                </a>
+                                <a href="https://card.hyundaicard.com/EVENT?id=pred&eventCode=HPL99">
+                                <div class="welcome">welcome이벤트</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="c5">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">VISA</span><br>
+                                        150,000원<br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        150,000원<br>
+                                        <span class="sp1">국내전용</span><br>
+                                        150,000원
+                                    </button><br>
+                                    <h3>the Pink</h3>
+                                    <span class="sp2">My First Seduction</span><br><br>
+                                    프로쇼퍼들의 필수 럭셔리 카드<br>
+                                    프리미엄쇼핑,고메5% 적립
+                                </a>
+                                <a href="https://card.hyundaicard.com/EVENT?id=pred&eventCode=HPL99">
+                                    <div class="welcome">welcome이벤트</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="card_2_info">
+                        <h1>MX BLACK</h1>
+                        <ul>
+                            <li>
+                                <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=MXB" class="c6">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">VISA</span><br>
+                                        150,000원<br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        150,000원<br>
+                                        <span class="sp1">국내전용</span><br>
+                                        150,000원
+                                    </button><br>
+                                    <h3>MX Black</h3>
+                                    <span class="sp2">혜택의 블랙 라벨</span><br><br>
+                                    M의 전 영역 적립과 X의 10%
+                                    <br>할인을 동시에
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="card_3_info">
+                        <h1>M</h1>
+                    <ul>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=MPBT" class="c7">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">VISA</span><br>
+                                    90,000원<br>
+                                    <span class="sp1">MasterCard</span><br>
+                                    90,000원<br>
+                                    <span class="sp1">국내전용</span><br>
+                                    90,000원
+                                </button><br>
+                                <h3>M3 BOOST</h3>
+                                <span class="sp2">더블 적립되는 플래티넘<br>포인트카드</span><br><br>
+                                어디서나 한도 없는 최대3%X<br>
+                                2배 적립<br>
+                                페이,해외결제 5% 적립<br>
+                                주말 무료주차 플래티넘 서비스
+                            </a>
+                            <a href="https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=245911">
+                                <div class="welcome">3만원 캐시백 이벤트</div>
+                                </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=MPBT" class="c8">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">VISA</span><br>
+                                    60,000원<br>
+                                    <span class="sp1">MasterCard</span><br>
+                                    60,000원<br>
+                                    <span class="sp1">국내전용</span><br>
+                                    60,000원
+                                </button><br>
+                                <h3>M2 BOOST</h3>
+                                <span class="sp2">쓰면 쓸수록 강력한 플래티넘<br>포인트카드</span><br><br>
+                                어디서나 한도 없는 최대3%X<br>
+                                1.5배 적립<br>
+                                페이,해외결제 5% 적립<br>
+                                주말 무료주차 플래티넘 서비스
+                            </a>
+                            <a href="https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=245911">
+                                <div class="welcome">3만원 캐시백 이벤트</div>
+                                </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=MPBT" class="c9">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">VISA</span><br>
+                                    30,000원<br>
+                                    <span class="sp1">MasterCard</span><br>
+                                    30,000원<br>
+                                    <span class="sp1">국내전용</span><br>
+                                    30,000원
+                                </button><br>
+                                <h3>M BOOST</h3>
+                                <span class="sp2">쓰면 쓸수록 강력한 포인트카드</span><br><br>
+                                어디서나 한도 없는 최대3%X<br>
+                                1.5배 적립<br>
+                                페이,해외결제 5% 적립<br>
+                            </a>
+                            <a href="https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=245911">
+                                <div class="welcome">3만원 캐시백 이벤트</div>
+                                </a>
+                        </li>
+                    </ul>
+                    </div>
+                    <div id="card_4_info">
+                        <h1>X</h1>
+                        <ul>
+                            <li>
+                                <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=X3PE3" class="c10">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">VISA</span><br>
+                                        90,000원<br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        90,000원<br>
+                                        <span class="sp1">국내전용</span><br>
+                                        90,000원
+                                    </button><br>
+                                    <h3>X3 BOOST</h3>
+                                    <span class="sp2">보너스 캐시백 받는 플래티넘<br>할인카드</span><br><br>
+                                    어디서나 최대1.5%할인 +월<br>
+                                    1만원 캐시백<br>
+                                    페이,해외결제 5% 적립<br>
+                                    주말 무료주차 플래티넘 서비스
+                                </a>
+                                <a href="https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=245911">
+                                    <div class="welcome">3만원 캐시백 이벤트</div>
+                                    </a>
+                            </li>
+                            <li>
+                                <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=X3PE3" class="c11">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">VISA</span><br>
+                                        60,000원<br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        60,000원<br>
+                                        <span class="sp1">국내전용</span><br>
+                                        60,000원
+                                    </button><br>
+                                    <h3>X2 BOOST</h3>
+                                    <span class="sp2">쓰면 쓸수록 강력한 플래티넘<br>할인카드</span><br><br>
+                                    어디서나 최대1.5%할인 +월<br>
+                                    페이,해외결제 5% 적립<br>
+                                    주말 무료주차 플래티넘 서비스
+                                </a>
+                                <a href="https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=245911">
+                                    <div class="welcome">3만원 캐시백 이벤트</div>
+                                    </a>
+                            </li>
+                            <li>
+                                <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=X3PE3" class="c12">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">VISA</span><br>
+                                        30,000원<br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        30,000원<br>
+                                        <span class="sp1">국내전용</span><br>
+                                        30,000원
+                                    </button><br>
+                                    <h3>X3 BOOST</h3>
+                                    <span class="sp2">쓰면 쓸수록 강력한 할인카드</span><br><br>
+                                    어디서나 최대1.5%할인 +월<br>
+                                    페이,홰외결제 5% 적립<br>
+                                </a>
+                                <a href="https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=245911">
+                                    <div class="welcome">3만원 캐시백 이벤트</div>
+                                    </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="card_5_info">
+                        <h1>Z</h1>
+                    <ul>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=ZF" class="c13">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">MasterCard</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">VISA</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">AMEX</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">국내전용</span><br>
+                                    10,000원
+                                </button><br>
+                                <h3>Z family</h3>
+                                <span class="sp2">패밀리용 구간반복 할인카드</span><br><br>
+                                우리 가족을 위한 쇼핑,마트,<br>
+                                배달 10% 할인,주유 100/L<br>
+                                할인
+                            </a>                    
+                            <a href="https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=533021">
+                                <div class="welcome">연회비 캐시백 이벤트</div>
+                                </a>                  
+                        </li>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=ZW" class="c14">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">MasterCard</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">VISA</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">AMEX</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">국내전용</span><br>
+                                    10,000원
+                                </button><br>
+                                <h3>Z work</h3>
+                                <span class="sp2">출퇴근용 구간반복 할인카드</span><br><br>
+                                출퇴근길에 맣이 이용하는 커피<br>
+                                50%, 편의점,교통 10%할인<br>
+                            </a>                    
+                            <a href="https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=533021">
+                                <div class="welcome">연회비 캐시백 이벤트</div>
+                                </a>                  
+                        </li>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=ZO" class="c15">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">MasterCard</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">VISA</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">AMEX</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">국내전용</span><br>
+                                    10,000원
+                                </button><br>
+                                <h3>Z ontact</h3>
+                                <span class="sp2">방구석용 구간반복 할인카드</span><br><br>
+                                방구석 사용처만 모아 OTT,<br>
+                                맴버십,배달,온라인페이<br>
+                                10~70%할인
+                            </a>                    
+                            <a href="https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=245905">
+                                <div class="welcome">연회비 캐시백 이벤트</div>
+                                </a>                 
+                        </li>
+                    </ul>
+                    </div>
+                    <div id="card_6_info">
+                    <h1>ZERO</h1>
+                    <ul>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=MZROE2" class="c16">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">MasterCard</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">VISA</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">AMEX</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">국내전용</span><br>
+                                    10,000원
+                                </button><br>
+                                <h3>ZERO Edition2<br>(포인트형)</h3>
+                                <span class="sp2">조건,한도 없는 포인트카드</span><br><br>
+                                조건없이 모든 가맹점 1% 적립<br>
+                                외식,마트,편의점 2.5% 적립<br>                      
+                            </a>                    
+                            <a href="https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=245905">
+                                <div class="welcome">연회비 캐시백 이벤트</div>
+                                </a>   
+                        </li>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=MMOZRE2" class="c17">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">MasterCard</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">VISA</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">AMEX</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">국내전용</span><br>
+                                    10,000원
+                                </button><br>
+                                <h3>ZERO MOBILE<br>Editoin2(포인트형)</h3>
+                                <span class="sp2">온라인에서 더 좋은 조건,한도<br>없는 포인트카드</span><br><br>
+                                조건없이 모든 가맹점 1% 적립<br>
+                                온라인쇼핑,배달앱 2.5% 적립<br>                      
+                            </a>                    
+                            <a href="https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=245905">
+                                <div class="welcome">연회비 캐시백 이벤트</div>
+                                </a>   
+                        </li>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=ZROE2" class="c18">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">MasterCard</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">VISA</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">AMEX</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">국내전용</span><br>
+                                    10,000원
+                                </button><br>
+                                <h3>ZERO Edition2<br>(할인형)</h3>
+                                <span class="sp2">조건,한도 없는 할인카드</span><br><br>
+                                조건없이 모든 가맹점 0.7%<br>
+                                할인<br>
+                                외식,마트,편의점 1.5% 할인                      
+                            </a>                    
+                            <a href="https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=245905">
+                                <div class="welcome">연회비 캐시백 이벤트</div>
+                                </a>   
+                        </li>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=MOZRE2" class="c19">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">MasterCard</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">VISA</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">AMEX</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">국내전용</span><br>
+                                    10,000원
+                                </button><br>
+                                <h3>ZERO MOBILE<br>Edition2(할인형)</h3>
+                                <span class="sp2">온라인에서 더 좋은 조건,한도<br>없는 할인카드</span><br><br>
+                                조건없이 모든 가맹점 0.7%<br>
+                                할인<br>
+                                온라인쇼핑,배달앱 1.5% 할인                    
+                            </a>                    
+                            <a href="https://www.hyundaicard.com/cpb/ev/CPBEV0101_06.hc?bnftWebEvntCd=245905">
+                                <div class="welcome">연회비 캐시백 이벤트</div>
+                                </a>   
+                        </li>
+                    </ul>
+                    </div>
+                    <div id="card_7_info">
+                    <h1>제휴</h1>
+                    </div>
+                    <div id="card_8_info">
+                        <h1>기아</h1>
+                        <ul>
+                            <li>
+                                <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=MRDED2" class="c56">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">국내전용</span><br>
+                                        30,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        30,000원<br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        30,000원<br>
+                                        <span class="sp1">AMEX</span><br>
+                                        30,000원
+                                    </button><br>
+                                    <h3>Kia Menmbers<br>
+                                    신용카드 Edition2</h3>
+                                    <span class="sp2">
+                                        신차 구매 혜택받고<br>
+                                        기아 멤버스,M포인트까지<br>
+                                        적립되는 카드
+                                    </span><br><br>
+                                    기아 신차 구매 M포인트<br>
+                                    1.5% 적립<br>
+                                    기아멤버스 제휴처<br>
+                                    최대2% 적립
+                                </a>                     
+                            </li>
+                            <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=MRDEV" class="c57">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">국내전용</span><br>
+                                    30,000원<br>
+                                    <span class="sp1">VISA</span><br>
+                                    30,000원<br>
+                                    <span class="sp1">MasterCard</span><br>
+                                    30,000원<br>
+                                    <span class="sp1">AMEX</span><br>
+                                    30,000원
+                                </button><br>
+                                <h3>Kia Menmbers<br>
+                                전기차 신용카드</h3>
+                                <span class="sp2">
+                                    전기차 충전 요금 할인받고<br>
+                                    기아 멤버스,M포인트까지<br>
+                                    적립되는 카드
+                                </span><br><br>
+                                전기차 충전 최대 70%할인<br>
+                                기아 신차 구매M포인트<br>
+                                1.5% 적립
+                            </a>                     
+                        </li>
+                        <li>
+                        <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=MRDSC" class="c58">
+                            <button>
+                                연회비<br><br>
+                                <span class="sp1">국내전용</span><br>
+                                5,000원
+                            </button><br>
+                            <h3>Kia Menmbers<br>
+                            경차전용카드</h3>
+                            <span class="sp2">
+                                신차 구매 혜택받고<br>
+                                경차 주유까지 할인받는 카드
+                            </span><br><br>
+                            현대오일뱅크,sk에너지<br>
+                            리터당 최대 400원 할인<br>
+                            기아 신차 구매 M포인트<br>
+                            1.5% 적립
+                        </a>                     
+                        </li>
+                        <li>
+                        <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=MRDSCR" class="c59">
+                        <button>
+                            연회비<br><br>
+                            <span class="sp1">국내전용</span><br>
+                            연회비 없음
+                        </button><br>
+                        <h3>Kia Menmbers<br>
+                        경차전용카드(유류세<br>환급)</h3>
+                        <span class="sp2">
+                            신차 구매 혜택받고<br>
+                            경차 주유 할인,유류세까지<br>
+                            화급받는 카드
+                        </span><br><br>
+                        현대오일뱅크,sk에너지<br>
+                        리터당 최대 400원 할인<br>
+                        기아 신차 구매 M포인트<br>
+                        1.5% 적립
+                        </a>                     
+                        </li>
+                    </ul>
+                    </div>
+                    <div id="card_9_info">
+                    <h1>네이버</h1>
+                    <ul>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=NVHC" class="c60">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">국내전용</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">VISA</span><br>
+                                    10,000원
+                                </button><br>
+                                <h3>네이버 현대카드</h3>
+                                <span class="sp2">
+                                네이버플러스 맴버십 특화 카드
+                                </span><br><br>
+                            네이버 플러스 맴버쉽<br>
+                            무료 이용권<br>
+                            네이버페이 포인트<br>
+                                최대 5% 적립
+                                </a>  
+                        </li>
+                    </ul>
+                    </div>
+                    <div id="card_10_info">
+                        <h1>넥슨</h1>
+                        <ul>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=NXHCV" class="c61">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">MasterCard</span><br>
+                                    150,000원<br>
+                                    <span class="sp1">국내전용</span><br>
+                                    150,000원
+                                </button><br>
+                                <h3>넥슨 현대카드<br>UNLIMITED</h3>
+                                <span class="sp2">쓸 떄마다<br>
+                                넥슨 현대카드 포인트가<br>
+                                무제한 적립되는 프리미엄 카드</span><br><br>
+                                최대 3% 넥슨 현대카드 포인트<br>
+                                적립<br>
+                                게임 바우처,생활 편의 영역<br>
+                                청구 할인
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=NXHC" class="c62">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">MasterCard</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">AMEX</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">국내전용</span><br>
+                                    10,000원
+                                </button><br>
+                                <h3>넥슨 현대카드</h3>
+                                <span class="sp2">쓸 떄마다<br>
+                                넥슨 현대카드 포인트가<br>
+                                적립되는 게이밍 카드</span><br><br>
+                                최대 2% 넥슨 현대카드 포인트<br>
+                                적립<br>
+                                이용할 떄마다 바로 쌓이는<br>
+                                포인트 혜택
+                            </a>
+                        </li>  
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=NXHCK" class="c63">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">국내전용</span><br>
+                                    2,000원
+                                </button><br>
+                                <h3>넥슨 현대카드<br>CHECK</h3>
+                                <span class="sp2">쓸 떄마다<br>
+                                넥슨 현대카드 포인트가<br>
+                                적립되는 게이밍 체크카드</span><br><br>
+                                0.5% 넥슨 현대카드 포인트<br>
+                                적립<br>
+                                이용할 떄마다 바로 쌓이는<br>
+                                포인트 혜택
+                            </a>
+                        </li> 
+                        </ul>
+                    </div>
+                    <div id="card_11_info">
+                    <h1>대한항공</h1>
+                    <ul>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=KALT4" class="c64">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">MasterCard</span><br>
+                                    500,000원<br>
+                                    <span class="sp1">국내전용</span><br>
+                                    500,000원
+                                </button><br>
+                                <h3>대한항공카드 the<br>First</h3>
+                                <span class="sp2">대한항공 우수 회원만을 위한<br>
+                                프리미엄 마일리지 카드</span><br><br>
+                                보너스 최대 1만5천 마일리지,<br>
+                                1천원당 최대 5마일리지 적립<br>
+                                항공,면세 할인 바우처 제공<br>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=KALT3" class="c65">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">MasterCard</span><br>
+                                    150,000원<br>
+                                    <span class="sp1">국내전용</span><br>
+                                    150,000원
+                                </button><br>
+                                <h3>대한항공카드 150</h3>
+                                <span class="sp2">강력한 마일리지<br>
+                                바우처,라운지 혜택을<br>
+                                모두 갖춘 프리미엄 카드</span><br><br>
+                                보너스 5천 마일리지,<br>
+                                1천원당 최대 3마일리지 적립<br>
+                                항공,면세 할인 바우처 제공<br>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=KALT2" class="c66">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">MasterCard</span><br>
+                                    70,000원<br>
+                                    <span class="sp1">국내전용</span><br>
+                                    70,000원
+                                </button><br>
+                                <h3>대한항공카드 070</h3>
+                                <span class="sp2">마일리지는 기본,<br>
+                                    라운지 혜택까지 누리는<br>
+                                플래티넘 카드</span><br><br>
+                                보너스 5천 마일리지,<br>
+                                1천원당 최대2마일리지 적립<br>
+                                인천공항 라운지 무료 이용<br>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=KALT1" class="c67">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">MasterCard</span><br>
+                                    30,000원<br>
+                                    <span class="sp1">국내전용</span><br>
+                                    30,000원
+                                </button><br>
+                                <h3>대한항공카드 030</h3>
+                                <span class="sp2">연회비 부담은 줄이고<br>
+                                오직 마일리지에 집중한 카드</span><br><br>
+                                보너스 최대 3천 마일리지,<br>
+                                1천원당 최대 2마일리지 적립<br>
+                            </a>
+                        </li>
+                    </ul>
+                    </div>
+                    <div id="card_12_info">
+                    <h1>무신사</h1>
+                    <ul>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=MSSHC" class="c68">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">국내전용</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">MasterCard</span><br>
+                                    10,000원
+                                </button><br>
+                                <h3>무신사 현대카드</h3>
+                                <span class="sp2">무신사에서 할인받고<br>
+                                    어디서나 무신사 적립금 받는<br>
+                                카드</span><br><br>
+                                무신사,솔드아웃 5%할인<br>
+                                그 외 가맹점 한도없이 1%<br>
+                                적립
+                            </a>
+                        </li>
+                    </ul>
+                    </div>
+                    <div id="card_13_info">
+                        <h1>배달의민족</h1>
+                        <ul>
+                            <li>
+                                <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=BMHC" class="c69">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">국내전용</span><br>
+                                        10,000원<br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        10,000원
+                                    </button><br>
+                                    <h3>배민현대카드</h3>
+                                    <span class="sp2">어디서든 쓸 떄마다<br>
+                                        배민포인트가 적립되는 카드
+                                    </span><br><br>
+                                    최대3%적립<br>
+                                    10만원 쓰면 내년 연회비 면제
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="card_14_info">
+                    <h1>스타벅스</h1>
+                    <ul>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=BMHC" class="c70">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">국내전용</span><br>
+                                    30,000원<br>
+                                    <span class="sp1">VISA/MasterCard</span><br>
+                                    30,000원
+                                </button><br>
+                                <h3>스타벅스 현대카드</h3>
+                                <span class="sp2">쓸 떄마다 별이 되는 카드
+                                </span><br><br>
+                                누적 이용 금액 3만원당<br>
+                                스타벅스 별1개 적립
+                            </a> 
+                        </li>
+                    </ul>
+                    </div>
+                    <div id="card_15_info">
+                    <h1>쏘카</h1>
+                    <ul>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=SCHC" class="c71">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">국내전용</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">VISA</span><br>
+                                    10,000원
+                                </button><br>
+                                <h3>쏘카카드</h3>
+                                <span class="sp2">쓸 떄마다<br>
+                                    쏘카크레딧이 적립되는 카드
+                                </span><br><br>
+                                쏘카 앱에서 최대3% 적립<br>
+                                외식,커피,영화,대중교통 들<br>
+                                최대3%적립<br>
+                                그 외 어디서든 1% 적립
+                            </a> 
+                        </li>
+                    </ul>
+                    </div>
+                    <div id="card_16_info">
+                    <h1>이마트</h1>
+                    <ul>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=EMTE2" class="c72">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">국내전용</span><br>
+                                    20,000원<br>
+                                    <span class="sp1">MasterCard</span><br>
+                                    20,000원
+                                </button><br>
+                                <h3>이마트e카드<br>
+                                Edition2</h3>
+                                <span class="sp2">이마트 안에서도,밖에서도<br>
+                                    쓸 떄마다 신세계포인트가<br>
+                                    적립되는 카드
+                                </span><br><br>
+                                이마트 7대 가맹점과<br>
+                                생활 편의 영역에서<br>
+                                최대5%적립
+                            </a> 
+                        </li>
+                    </ul>
+                    </div>
+                    <div id="card_17_info">
+                        <h1>제네시스</h1>
+                        <ul>
+                            <li>
+                                <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=HGEHC" class="c73">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">국내전용</span><br>
+                                        10,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        10,000원<br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        10,000원<br>
+                                        <span class="sp1">AMEX</span><br>
+                                        10,000원
+                                    </button><br>
+                                    <h3>GENESIS CARD</h3>
+                                    <span class="sp2">GENESIS OWNER ONLY</span><br><br>
+                                    제네시스 신차 구매1.5% 적립<br>
+                                    premium업종 최대5% 적립<br>
+                                    업종별 최대4.5%적립
+                                </a> 
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="card_18_info">
+                    <h1>지마켓(스마일카드)</h1>
+                    <ul>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=ESPCLB" class="c74">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">국내전용</span><br>
+                                    50,000원<br>
+                                    <span class="sp1">VISA</span><br>
+                                    50,000원
+                                </button><br>
+                                <h3>SmileCard the<br>Club</h3>
+                                <span class="sp2">실적,한도 제한없이 적립받고<br>
+                                스마일클럽 혜택까지 받는 카드</span><br><br>
+                                어디서든 최대3%적립<br>
+                                스마일클럽 자동 가입 및<br>
+                                스마일클럽 연회비 지원
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=ESPE2" class="c75">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">국내전용</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">VISA</span><br>
+                                    10,000원
+                                </button><br>
+                                <h3>SmileCard the<br>Edition2</h3>
+                                <span class="sp2">쓸 대마다<br>
+                                실적,한도 제한없이<br>
+                                스마일캐시가 적립되는 카드</span><br><br>
+                                어디서든 최대2%적립<br>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=ESPS" class="c76">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">국내전용</span><br>
+                                    5,000원<br>
+                                    <span class="sp1">VISA</span><br>
+                                    8,000원
+                                </button><br>
+                                <h3>스마일 Seller카드</h3>
+                                <span class="sp2">사업지원 서비스에 실적,한도<br>
+                                제한 없이 혜택받는 카드</span><br><br>
+                                스마일페이 최대2%적립<br>
+                                그 외 어디서든 1% 청구 할인<br>
+                                개인사업자 사업지원 서비스
+                            </a>
+                        </li>
+                    </ul>
+                    </div>
+                    <div id="card_19_info">
+                        <h1>코스트코</h1>
+                        <ul>
+                            <li>
+                                <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=CSTC" class="c77">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">국내전용</span><br>
+                                        10,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        10,000원
+                                    </button><br>
+                                    <h3>코스트코 리워드<br>현대카드</h3>
+                                    <span class="sp2">코스트코 회원만을 위한<br>
+                                    코스트코 쇼핑 최적 카드</span><br><br>
+                                    코스트코 최대3%적립<br>
+                                    생활 편의 영역 최대2% 적립<br>
+                                    일반 가맹점 한도 없이 1%적립
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=CSTMB" class="c78">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">국내전용</span><br>
+                                        10,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        10,000원
+                                    </button><br>
+                                    <h3>코스트코 리워드<br>비즈니스 현대카드</h3>
+                                    <span class="sp2">코스트코 회원만을 위한<br>
+                                    코스트코 쇼핑 최적 카드</span><br><br>
+                                    코스트코 최대3%적립<br>
+                                    생활 편의 영역 최대2% 적립<br>
+                                    일반 가맹점 한도 없이 1%적립<br>
+                                    개인사업자 사업지원 서비스
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="card_20_info">
+                        <h1>현대자동차</h1>
+                        <ul>
+                            <li>
+                                <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=HMHCP" class="c79">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">국내전용</span><br>
+                                        70,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        70,000원<br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        70,000원<br>
+                                        <span class="sp1">AMEX</span><br>
+                                        70,000원
+                                    </button><br>
+                                    <h3>Hyundai MObility<br>
+                                    Platinum카드</h3>
+                                    <span class="sp2">쓸 떄마다<br>
+                                    블루멤버스 포인트가 적립되는<br>
+                                    플래티넘 모빌리티 카드</span><br><br>
+                                    현대차 신차 구매2% 적립<br>
+                                    업종별 최대 4.5%적립<br>
+                                    블루멤버스 멤버십 서비스 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=HMHC" class="c80">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">국내전용</span><br>
+                                        30,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        30,000원<br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        30,000원<br>
+                                        <span class="sp1">AMEX</span><br>
+                                        30,000원
+                                    </button><br>
+                                    <h3>Hyundai<br> MObility카드</h3>
+                                    <span class="sp2">쓸 떄마다<br>
+                                    블루멤버스 포인트가 적립되는<br>
+                                    모빌리티 카드</span><br><br>
+                                    현대차 신차 구매1.5% 적립<br>
+                                    업종별 최대 3%적립<br>
+                                    블루멤버스 멤버십 서비스 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=HSCHC" class="c81">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">국내전용</span><br>
+                                        30,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        30,000원<br>
+                                        <span class="sp1">AMEX</span><br>
+                                        30,000원
+                                    </button><br>
+                                    <h3>Hyundai<br> 
+                                    MObility카드<br>
+                                    (CASPER)</h3>
+                                    <span class="sp2">쓸 떄마다<br>
+                                    블루멤버스 포인트가 적립되는<br>
+                                    CASPER 전용카드</span><br><br>
+                                    현대차 신차 구매1.5% 적립<br>
+                                    업종별 최대 3%적립<br>
+                                    블루멤버스 멤버십 서비스 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=HSCHCR" class="c82">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">국내전용</span><br>
+                                        30,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        30,000원<br>
+                                        <span class="sp1">AMEX</span><br>
+                                        30,000원<br>
+                                        <span class="sp1">유류세 환급 대상</span><br>
+                                        연회비 없음
+                                    </button><br>
+                                    <h3>Hyundai<br> 
+                                        MObility카드<br>
+                                        (CASPER 경차카드)</h3>
+                                    <span class="sp2">경차 유류세 환급받고<br>
+                                    블루멤버스 포인트까지<br>
+                                    적립되는 카드</span><br><br>
+                                    CASPER 신차 구매2% 적립<br>
+                                    주유,충전 시 리터당<br>
+                                    최대 130포인트 적립<br>
+                                    블루멤버스 멤버십 서비스 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=HEHC" class="c83">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">국내전용</span><br>
+                                        30,000원<br>
+                                        <span class="sp1">VISA/MasterCard/AMEX</span><br>
+                                        30,000원
+                                    </button><br>
+                                    <h3>Hyundai EV카드</h3>
+                                    <span class="sp2">쓸 떄마다<br>
+                                    블루멤버스 포인트가 적립되는<br>
+                                    EV 전용카드</span><br><br>
+                                    현대차 신차 구매1.5% 적립<br>
+                                    전기차,수소차 충전 시<br>
+                                    월 최대 2만 포인트 적립<br>
+                                    업종별 최대3% 적립
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=HMCV" class="c84">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">국내전용</span><br>
+                                        30,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        30,000원<br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        30,000원<br>
+                                        <span class="sp1">AMEX</span><br>
+                                        30,000원
+                                    </button><br>
+                                    <h3>Hyundai MObility<br>
+                                    카드(상용차)</h3>
+                                    <span class="sp2">쓸 떄마다<br>
+                                    블루멤버스 포인트가 적립되는<br>
+                                    상용차 전용카드</span><br><br>
+                                    현대차 신차 구매1.5% 적립<br>
+                                    현대오일뱅크,sk 에너지에서<br>
+                                    리터당 최대 85포인트 적립<br>
+                                    블루멤버스 멤버십 서비스  
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=HMLSB" class="c85">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">국내전용</span><br>
+                                        연회비 없음<br>
+                                        <span class="sp1">VISA</span><br>
+                                        연회비 없음<br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        연회비 없음<br>
+                                        <span class="sp1">AMEX</span><br>
+                                        연회비 없음
+                                    </button><br>
+                                    <h3>Hyundai<br> MObility카드<br>
+                                    (상용차<br>화물차유가보조금카드)</h3>
+                                    <span class="sp2">사업용 회물차의 유가보조금<br>
+                                    환급받고<br>
+                                    블루멤버스 포인트까지<br>
+                                    적립되는 카드</span><br><br>
+                                    현대차 신차 구매1.5% 적립<br>
+                                    현대오일뱅크,sk, 에너지에서<br>
+                                    리터당 최대 85포인트 적립<br>
+                                    블루멤버스 멤버십 서비스 
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="card_21_info" class="Amex">
+                    <h1>Amex</h1>
+                    <ul>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=AMPT" class="c86">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">Amex</span><br>
+                                    1,000,000원
+                                </button><br>
+                                <h3>American Express The<br>Platinum Card</h3>
+                                <span class="sp2">진짜를 만나다</span><br><br>
+                                연간 10만 멤버십 리원즈(MR)특별적립<br>
+                                1,000원당 최대 4,5 MR적립<br>
+                                The Platinum Card 전용 글로벌 혜택
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=AMGL" class="c87">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">Amex</span><br>
+                                    300,000원
+                                </button><br>
+                                <h3>American Express Gold<br>Rose Gold Card</h3>
+                                <span class="sp2">진짜를 만나다</span><br><br>
+                                연간 3만 멤버십 리원즈(MR)특별적립<br>
+                                1,000원당 최대 3MR적립<br>
+                                메탈 플레이트 기본 제공
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=AMGR" class="c88">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">Amex</span><br>
+                                    100,000원
+                                </button><br>
+                                <h3>American Express Green<br>Card</h3>
+                                <span class="sp2">진짜를 만나다</span><br><br>
+                                연간 최대 1만 멤버십 리원즈(MR)특별적립<br>
+                                1,500원당 최대 3MR적립<br>
+                                공항 라운지/발레파킹/Be MY Guest 혜택
+                            </a>
+                        </li>
+                    </ul>
+                    </div>
+                    <div id="card_22_info">
+                    <h1>GS칼텍스</h1>
+                    <ul>
+                        <li>
+                            <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=GCE2" class="c89">
+                                <button>
+                                    연회비<br><br>
+                                    <span class="sp1">국내전용</span><br>
+                                    10,000원<br>
+                                    <span class="sp1">VISA</span><br>
+                                    10,000원
+                                </button><br>
+                                <h3>에너지플러스카드<br>
+                                Edition2</h3>
+                                <span class="sp2">GS칼텍스에서 최대 15%<br>
+                                할인받는 주유카드</span><br><br>
+                                에너지플러스 앱 주유 15%<br>
+                                일반 주유 10% 할인<br>
+                                정비,세차,주차 5% 할인
+                            </a>
+                        </li>
+                    </ul>
+                    </div>
+                    <div id="card_23_info">
+                        <h1>SSG.COM</h1>
+                        <ul>
+                            <li>
+                                <a href="https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=SGE2" class="c90">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">국내전용</span><br>
+                                        10,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        10,000원
+                                    </button><br>
+                                    <h3>SSG.COM카드<br>
+                                    Edition2</h3>
+                                    <span class="sp2">강력한 쓱머니 적립에<br>
+                                    스마일클럽 혜택까지 받는 카드</span><br><br>
+                                    SSG.COM 7% 적립<br>
+                                    그 외 가맹점 0.5% 적립<br>
+                                    스마일클럽 정기 결제 금액 지원
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="card_24_info">
+                    <h1>MY BUSINESS</h1>
+                    </div>
+                    <div id="card_25_info">
+                        <h1>기타</h1>
+                        <ul>
+                            <li>
+                                <a href="" class="c106">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">국내전용</span><br>
+                                        0,000원
+                                    </button><br>
+                                    <h3></h3>
+                                    <span class="sp2"></span><br><br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="c107">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">국내전용</span><br>
+                                        0,000원
+                                    </button><br>
+                                    <h3></h3>
+                                    <span class="sp2"></span><br><br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="c108">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">국내전용</span><br>
+                                        0,000원
+                                    </button><br>
+                                    <h3></h3>
+                                    <span class="sp2"></span><br><br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="c109">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">국내전용</span><br>
+                                        0,000원
+                                    </button><br>
+                                    <h3></h3>
+                                    <span class="sp2"></span><br><br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="c110">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">국내전용</span><br>
+                                        0,000원
+                                    </button><br>
+                                    <h3></h3>
+                                    <span class="sp2"></span><br><br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="c111">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">국내전용</span><br>
+                                        0,000원
+                                    </button><br>
+                                    <h3></h3>
+                                    <span class="sp2"></span><br><br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="c112">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">국내전용</span><br>
+                                        0,000원
+                                    </button><br>
+                                    <h3></h3>
+                                    <span class="sp2"></span><br><br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="c113">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">국내전용</span><br>
+                                        0,000원
+                                    </button><br>
+                                    <h3></h3>
+                                    <span class="sp2"></span><br><br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="c114">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">국내전용</span><br>
+                                        0,000원
+                                    </button><br>
+                                    <h3></h3>
+                                    <span class="sp2"></span><br><br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="c115">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">국내전용</span><br>
+                                        0,000원
+                                    </button><br>
+                                    <h3></h3>
+                                    <span class="sp2"></span><br><br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="c116">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">국내전용</span><br>
+                                        0,000원
+                                    </button><br>
+                                    <h3></h3>
+                                    <span class="sp2"></span><br><br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="c117">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">국내전용</span><br>
+                                        0,000원
+                                    </button><br>
+                                    <h3></h3>
+                                    <span class="sp2"></span><br><br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="c118">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">국내전용</span><br>
+                                        0,000원
+                                    </button><br>
+                                    <h3></h3>
+                                    <span class="sp2"></span><br><br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="c119">
+                                    <button>
+                                        연회비<br><br>
+                                        <span class="sp1">MasterCard</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">VISA</span><br>
+                                        0,000원<br>
+                                        <span class="sp1">국내전용</span><br>
+                                        0,000원
+                                    </button><br>
+                                    <h3></h3>
+                                    <span class="sp2"></span><br><br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+            <div class="bye">
+                <h2>이용안내</h2>
+                <ul>
+                    <li>모든 가맹점은 현대카드 가맹점 등록 및 업종 분류 기중</li>
+                    <li>당월 이용 금액,적립 및 할인 대상은 각 카드 상세페이지 참고</li>
+                </ul>
+            </div>
+        <!--footer영역-->
+        <footer>
+            <div class="notice">
+                <p>소비자 경보  ></p>
+                <p>유사투자자문업자 주식리딩방<br>
+                '2차 사기' 피해를 주의하세요!</p>
+            </div>
+            <div class="cs">
+                <div class="cs_name">
+                    <p>고객센터</p>
+                    <p>카드신청</p>
+                    <p>금융신청</p>
+                    <p>도난분실신고</p>
+                    <p>해외</p>
+                </div>
+                <div class="cs_num">
+                    <p>1577-6000</p>
+                    <p>1577-0100</p>
+                    <p>1577-6100</p>
+                    <p>1577-6200</p>
+                    <p>82-2-3015-9000</p>
+                </div>
+            </div>
+            <div class="company">
+                <div class="com_left">
+                    <p>회사소개(한글.ENG)</p>
+                    <p>영업점 안내</p>
+                    <p>개인정보 처리방침</p>
+                    <p>고객권리안내</p>
+                    <p>이용약관</p>
+                    <p>현대카드 SNS.패밀리.그룹사</p>
+                </div>
+                <div class="com_right">
+                    <p>윤리경영</p>
+                    <p>업무위탁현황</p>
+                    <p>인재모집</p>
+                    <p>사이트맵</p>
+                </div>
+            </div>
+            <div class="location">
+                서울시 영등포구 의사당대로 3 현대캐피탈빌딩<br>
+                사업자 등록번호 213-86-15419<br>
+                © Hyundai Card Co., Ltd.
+            </div>
+        </footer>
+    </div>    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // "stop" 문자열이 입력되기 전까지 입력한 내용을 출력하는 문제
+        //      != "stop"
+        // 1. while(조건){}
+        // 2. while(true){ 탈출조건 break;}
+        let string;
+        while (true) {
+          string = prompt("문자열을 입력하세요 (그만하려면 stop 문자열을 입력)");
+          if (string == null || string == "") { //취소했거나, 공백인지를 먼저 확인한다.
+            alert("입력을 해 주세요 필수사항입니다");        
+          } 
+          else { //우선 취소인지 확인인지 판단한다. (확인인경우)
+            if (string == "stop") { //확인일때, stop을 입력한 경우
+              alert("정상적인 동작으로 종료합니다."); 
+              break;
+            } 
+            else{ //확인일때, 정상 입력인 경우 -> 그 값을 출력하고 다시 루프를 돈다.
+              document.write("<br>"+string);
+            }
+          }
+        }
+      </script>
+  
+    
+</body>
+</html>

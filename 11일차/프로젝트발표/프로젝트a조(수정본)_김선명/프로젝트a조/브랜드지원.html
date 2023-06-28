@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*헤더부분*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header img{
+            float: left;
+            width: 220px;
+            height: 40px;
+        
+        }
+        li{
+            list-style: none;
+        }
+        .menu{
+            padding: 20px;
+            font-weight: bold;
+            overflow: hidden;
+            /* border: 1px solid red; */
+        }
+        ul a{
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+         
+        }
+        #ssub{
+            color: gray;
+            font-size: 12px;
+        }
+        .mainmenu{
+            /* border: 1px solid green; */
+            font-size: 16px;
+            margin-left: 35px;
+            text-align: left;
+           
+        }
+        .menu > li {
+        float: left;
+        line-height: 40px;
+        }
+        .submenu > li {
+        line-height: 45px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+        }
+
+        .submenu {
+        margin-top: 25px;
+        height: 0; 
+        overflow: hidden;
+        text-align: left;
+        }
+        
+        .menu:hover {
+       
+        transition-duration: 0.5s;
+        }
+
+        .menu:hover .submenu {
+        height: 330px; 
+        transition-duration: 0.4s;
+        }
+
+         
+        @media screen and (max-width:768px) {
+            .mainmenu{
+                display: none;
+            }
+        }
+        /*헤더부분*/
+
+
+        section{
+            position: relative;
+            /* border: 1px solid red; */
+            margin: 100px 200px 200px 200px;
+        }
+        section div{
+            font-size: 13px;
+        }
+        section a{
+            text-decoration: none;
+            color: palevioletred;
+            font-weight: bold;
+        }
+        h1{
+            font-size: 60px;
+            margin: 50px 0px 50px 0px;
+        }
+        section img{
+            position: relative;
+        }
+        h2{
+            position: absolute;
+            top: 690px;
+            margin-left: 30px;
+            font-size: 40px;
+        }
+        h2, h3, h4, p{
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        h3{
+            font-size: 25px;
+            color: rgb(49, 49, 49);
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        section p{
+            color: rgb(88, 88, 88);
+            font-weight: bold;
+            line-height: 28px;
+            
+        }
+        h4{
+            font-size: 25px;
+            margin-top: 80px;
+            margin-bottom: 50px;
+        }
+
+
+        /*푸터부분*/
+        footer{
+            position: relative;
+            padding: 50px 100px 50px 100px;
+            background-color: rgb(33, 33, 33);
+
+        }
+        a{
+           text-decoration: none;
+            color: white;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        .l_link{
+            
+            font-weight: bold;
+            font-size: 23px;
+            line-height: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+        .r_text{
+            position: absolute;
+            right: 100px;
+            top: 50px;
+        }
+        .r_text1{
+            color: white;
+        }
+        .r_text2, hr, .min_text{
+            color: rgb(120, 120, 120);
+        }
+        .last_link a{
+            font-size: 15px;
+            margin-right: 30px;
+        }
+        .pointtext{
+            color: rgb(245, 186, 76);
+        }
+        .min_text{
+            margin-left: -30px;
+            margin-top: 30px;
+            font-size: 14px;
+            line-height: 30px;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        
+        <ul class="menu">
+            <a href="main.html"><img src="./images/twosomelogo.png"></a>
+            <li class="mainmenu"><a href="introduce.html">투썸플레이스 소개</a>
+                <ul class="submenu">
+                    <li><a href="introduce.html">투썸플레이스</a></li>
+                    <div id="ssub">
+                    <li><a href="introduce.html" style="color: gray;"> 비전체계</a></li>
+                    <li><a href="" style="color: gray;">연혁</a></li>
+                    <li><a href="" style="color: gray;">BI</a></li>
+                    <li><a href="" style="color: gray;">20주년 이야기</a></li>
+                    <li><a href="" style="color: gray;">Recruit</a></li>
+                    </div>
+                </ul>
+            </li>
+            <li class="mainmenu"><a href="menu.html">메뉴이야기</a>
+                <ul class="submenu">
+                    <li><a href="menu.html">커피이야기</a></li>
+                    <li><a href="">디저트이야기</a></li>
+                    <li><a href="">델리이야기</a></li>
+                </ul>
+            </li>
+            <li class="mainmenu"><a href="브랜드지원.html">브랜드 지원</a>
+                <ul class="submenu">
+                    <li><a href="브랜드지원.html">어썸 페어링 플랜트</a></li>
+                    <li><a href="">어썸 디저트 플랜트</a></li>
+                    <li><a href="">C&D센터</a></li>
+                    <li><a href="">SEP센터</a></li>
+                </ul>
+            </li>
+            <li class="mainmenu"><a href="">투썸플레이스 앱 & 멤버십</a>
+                <ul class="submenu">
+                    <li><a href="">투썸플레이스 앱 소개</a></li>
+                    <li><a href="">투썸플레이스 멤버십</a></li>
+                    <div id="ssub">
+                    <li><a href="" style="color: gray;">멤버십 소개</a></li>
+                    <li><a href="" style="color: gray;">등급 및 혜택</a></li>
+                    </div>
+                </ul>
+            </li>
+            <li class="mainmenu"><a href="">가맹점 창업안내</a>
+                <ul class="submenu">
+                    <li><a href="">가맹점 개설 안내</a></li>
+                    <li><a href="">창업설명회</a></li>
+                    <li><a href="">온라인 창업상담신청</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">가맹점 전용 금융상품</a></li>
+                </ul>
+            </li>
+            <li class="mainmenu"><a href="">새소식 & 공지</a>
+                <ul class="submenu">
+                    <li><a href="">공지사항</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+
+    <section>
+        <div><a href="main.html" style="color: black;"> 홈</a> • <a href="브랜드지원.html">브랜드지원</a>
+        </div>
+        <h1>어썸 페어링 플랜트</h1>
+        <img src="./images/twosome.jpg" width="100%">
+        <h2>Awesome Pairing Plant</h2>
+        <h3>원두 로스팅부터 고객의 손에 들리는 한 잔의 커피까지, 최고의 커피 품질을 만듭니다.</h3>
+        <p>
+            어썸 페어링 플랜트의 커피 로스팅팀은 국내 최고의 커피 생산 전문가들로 구성되었으며 식품안전관리인증 기준인 HACCP인증을 적용해 원료 입고, 로스팅부터 고객에게 전해지는 한 잔의 커피까지 믿을 수 있는 품질을 만듭니다.
+            <br><br>
+            커피의 본고장 이탈리아에서 70년의 역사를 이어온 브람바티(BRAMBATI) 로스팅 설비를 도입했으며, 브람바티 로스터의 핵심 기술인 ‘15단계 자동 프로파일 교정 시스템’을 통해 365일 늘 같은 품질의 로스팅을 진행하고 있습니다.
+            <br><br>
+            생두 투입부터 로스팅, 포장까지 전 공정이 자동화로 이루어진 로스팅 플랜트는 원두 색상 선별(Color-Sorter) 적용 시스템을 통해 이물과 결점두(Quaker)를 제거해 균일한 원두 품질을 유지하며, 세계 각국의 커피 산지별로 엄선된 커피 농장을 찾아 고품질의 생두를 매월 직수입하고 있습니다.
+            <br><br>
+            해외에서 수입하는 원료를 외부 위해 요인으로부터 안전하게 보호하기 위해 이중 포장 공법인 그레인프로포장(Grain-pro bag)을 적용해 운송∙보관하는 과정에서 생두의 품질을 최상의 상태로 유지합니다.
+            <br><br>
+            투썸플레이스 커피 로스팅팀에서 생산된 커피를 Q-Grader로 구성된 내부 전문가 그룹에서 엄격하게 관리함으로써 고객 니즈에 맞춰 발 빠르게 대응하며 대한민국 커피 트렌드를 리드하고 있습니다.
+        </p>
+        <h4>최고의 커피와 함께 할 특별한 디저트를 만듭니다.</h4>
+        <p>
+            어썸 페어링 플랜트의 디저트 생산팀은 최적화된 생산 시스템을 갖추고 투썸플레이스의 시그니처 케이크인 스트로베리 초콜릿 생크림을 비롯한 다양한 케이크와 디저트를 생산해 고객의 니즈에 부합하고자 노력하고 있습니다.
+            <br><br>
+            HACCP인증 뿐만 아니라, 원료 입고, 제품 생산 공정 관리, 제품 출고에 이르는 전 과정에서 철저한 품질 관리 시스템을 통해 고객에게 최고의 제품을 제공합니다.
+            <br><br>
+            나아가 국내 최고의 프리미엄 디저트 카페로서 고객에게 최고의 경험을 선사하고자 케이크 및 디저트 관련 기술 개발과 투자를 이어가고 있습니다.
+        </p>
+    </section>
+
+    <footer>
+        <div class="l_link">
+        <a href="">기업 및 단체구매안내</a>
+        <a href="">가맹상담신청</a>
+        <a href="">사이버신문고</a>
+        </div>
+       <div class="r_text">
+        <p class="r_text1">Address</p>
+        <p class="r_text2">서울특별시 중구 을지로 170, 8층(을지로4가, 을지트윈타워)투썸플레이스(주)</p>
+        <br><p class="r_text1">Customer Center</p>
+        <p class="r_text2">고객센터 : 1577-4410  팩스 : 02-2058-6777</p>
+       </div> 
+       <br><br><hr><br><br>
+       <div class="last_link">
+        <a href="">이용약관</a>
+        <a href="" class="pointtext">개인정보처리방침</a>
+        <a href="">위치기반서비스 이용약관</a>
+        <a href="">이메일 무단수집거부</a>
+        <a href="">법적고지</a>
+        <a href="">사업자정보확인</a>
+       </div>
+       <div class="min_text">
+        <p>
+        대표이사 : 이영삼 | 개인정보보호책임자 : 장재호 | 사업자등록번호 : 404-86-01054 <br>
+        통신판매업종신고증 : 제 2018-서울중구-0353호 | 대표이메일 : helpmaster@twosome.co.kr <br>
+        Copyright # 2021 A TWOSOME PLACE Co.,LTD. All Rights Reserved.
+        </p>
+       </div>
+       <div class="f_icon">
+        <img src="" alt="">
+       </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .ball{
+            width: 30px;
+            height: 30px;
+               
+            border-radius: 50%;
+           
+        }
+
+        .ball0{
+             
+             left:500px;
+             top: 0px;
+             position: absolute;
+             animation: anima1 8s infinite normal linear;
+             background-color: red;    
+         
+            
+         }
+
+        .ball1{
+             
+            left: 200px;
+            top: 0px;
+            position: absolute;
+            animation: anima1 8s infinite normal linear;
+            background-color: rgb(0, 255, 170);    
+        
+           
+        }
+
+        .ball2{
+             
+             right: 100px;
+             top: 0px;
+             position: absolute;
+             animation: anima1 8s infinite normal linear;
+             background-color: rgb(48, 11, 182);    
+            
+         }
+
+         .ball3{
+             
+          
+             position: absolute;
+             left: 300px;
+             top: 0px;
+             animation: anima1 8s infinite normal linear;
+         
+            
+         }
+
+         .ball4{
+             
+             left: 350px;
+             top: 0px;
+             position: absolute;
+             animation: anima1 8s infinite normal linear;
+         
+            
+         }
+        @keyframes anima1{
+            0%{left: 100px; top: 0px;}
+            100%{left: 100px; top:1080px}
+        }
+   
+    </style>
+
+    <script>
+        function moveStop(){
+             let ball  =  document.querySelector(".ball");
+             for( let i=0; i< ball.length ; i++){
+                ball[i].style.animationPlayState = "paused";
+             }
+            
+            alert("stop");
+        }
+    </script>
+</head>
+<body>
+  <div class="ball ball0 "> </div>
+  <div class="ball ball1"> </div>
+  <div class="ball ball2"> </div>
+  <div class="ball ball3"> </div>
+  <div class="ball ball4"> </div>
+ 
+
+  
+
+  <button  onclick="moveStop()">멈추기</button>
+
+</body>
+</html>

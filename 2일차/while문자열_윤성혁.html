@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while 반복문</title>
+</head>
+<body>
+    <h3>while 반복문</h3>
+    <pre>
+    while(조건){
+        명령문;
+    }
+
+    조건이 만족할 동안 반복하기
+    </pre>
+
+    <script>
+        //"stop" 문자열이 입력되기 전 까지 입력한 내용을 출력하는 문제
+        // !="stop"
+
+        //1. while(조건) {}
+        let str;   // 변수초기화
+        //alert(str);
+        str="start" ;
+        while(str!="stop"){
+            str = prompt("문자 입력 1")
+            alert(str);
+        }
+
+        //2. while(true) {탈출조건 break;}
+        let str2 ;
+        while(true){
+            if(str2=="stop") break;
+            str2 = prompt("문자 입력 2")
+            alert(str2);
+        }
+    </script>
+</body>
+</html>

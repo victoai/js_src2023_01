@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> 증감연산자 ++ , -- </h3>
+
+    <script>
+        //연산의 예시
+        let rtn = 10+20;  // 연산은 연산의 결과가 발생한다.
+                          //  let rtn = 30 (10+20의 연산의 결과);        
+        let a =10;
+        let b =10;
+
+        let rtna, rtnb;        
+        rtna = a++;
+        rtnb = ++b;
+
+        // a++ ,  ++b의  공통점, 차이점
+        // 공통점:  변수의 값을 1증가 시킴
+        // 차이점:  연산의 결과가 다름  ++a(전위형: 증가된 후 값을 연산의 결과로 반환 )
+        //                              a++(후위형: 증가된 전의 값을 연산의 결과로 반환 )
+        alert(  a + ", " +  b)  // 둘 다  11
+        alert(  rtna + ", " +  rtnb); //  10    11 
+    </script>
+
+</body>
+</html>

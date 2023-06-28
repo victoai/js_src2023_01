@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+ <script>
+function getTen(){
+  let sum=1+2+3+4+5+6+7+8+9+10;
+  alert("genTen=" + sum);
+}
+function getTen2(){
+  let sum=1+2+3+4+5+6+7+8+9+10;
+   return sum;
+} 
+//==============================================================
+
+let i= prompt("수를 입력하시오");
+function getTot(){
+  
+  let n=0 , sum=0
+  while(n<i){
+    n++;
+    sum+= n;
+  }
+  alert( "getTot=" +sum);
+}
+
+
+getTen();
+let result  = getTen2();
+alert( "genTen2 =" + result);
+getTot();
+
+    </script>
+</body>
+</html>

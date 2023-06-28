@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main_container *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* border: 1px solid black; */
+        }
+        .cart tr td{
+            height: 195px;
+        }
+        /* ------------------------------------------------------------- */
+        .cart tr td:nth-child(1){
+            width: 42px;
+            padding: 24px 10px;
+        }
+        /* ------------------------------------------------------------- */
+        .cart tr td:nth-child(2){
+            width: 486px;
+            padding: 24px 24px 24px 0;
+        }
+        .cart tr td:nth-child(2) .book_wrap{
+            display: flex;
+            font-size: 14px;
+        }
+        .cart tr td:nth-child(2) .book_wrap img{
+            width: 82px;
+        }
+        .cart tr td:nth-child(2) .book_info{
+            margin-left: 12px;
+        }
+        .cart tr td:nth-child(2) .book_title{
+            margin-bottom: 18px;
+        }
+        .cart tr td:nth-child(2) .book_discount{
+            color: #4dac27;
+        }
+        .cart tr td:nth-child(2) .book_point{
+            color: #666;
+            font-size: 12px;
+        }
+        /* ------------------------------------------------------------- */
+        .cart tr td:nth-child(3){
+            width: 140px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .cart tr td:nth-child(3) .price_wrap{
+            margin-bottom: 8px;
+        }
+        .cart tr td:nth-child(3) .qty_wrap{
+            width: 80px;
+            height: 30px;
+            border: 1px solid #666;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .cart tr td:nth-child(3) .qty_wrap button{
+            width: 27px;
+            border: none;
+        }
+        .cart tr td:nth-child(3) .qty_wrap input{
+            width: 28px;
+            font-size: 14px;
+            text-align: center;
+            border: none;
+            outline: none;
+        }
+        .cart tr td:nth-child(3) .qty_wrap button:nth-child(1){
+            background: url(media/Minus.png) center no-repeat;
+            background-size: 10px;
+        }
+        .cart tr td:nth-child(3) .qty_wrap button:nth-child(3){
+            background: url(media/Plus.png) center no-repeat;
+            background-size: 10px;
+        }
+        .cart tr td:nth-child(3) .qty_wrap input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+        }
+        .cart tr td:nth-child(3) .qty_wrap input[type=number]{
+            -moz-appearance: textfield;
+        }
+        /* ------------------------------------------------------------- */
+        .cart tr td:nth-child(4){
+            width: 222px;
+            padding: 24px;
+            font-size: 12px;
+        }
+        .cart tr td:nth-child(4) hr{
+            border: 1px dashed #bbb;
+            margin: 10px 0;
+        }
+        /* ------------------------------------------------------------- */
+    </style>
+    <script>
+        function minus(){
+            let count=document.querySelector("#count");
+            let countval=parseInt(count.value);
+            countval--;
+            if(countval<1){
+                countval=1;
+                count.value=countval;
+            }else{
+                count.value=countval;
+            }
+        }
+        function plus(plusBtn){
+            let count=document.querySelector("#count");
+            let countval=parseInt(count.value);
+            countval++;
+            if(countval>99){
+                countval=99;
+                count.value=countval;
+            }else{
+                count.value=countval;
+            }
+            sum(plusBtn.previousElementSibling);
+        }
+        function sum(inputNumber){
+         
+            let price=0;
+            let unitPrice=parseInt(inputNumber.parentElement.parentElement.previousElementSibling.lastElementChild.lastElementChild.lastElementChild.lastElementChild.firstElementChild.nextElementSibling.lastElementChild.innerHTML);
+            let qty=inputNumber.value;
+            let multiply=inputNumber.parentElement.previousElementSibling.firstElementChild.lastElementChild;
+            price=unitPrice*qty;
+            multiply.innerHTML=price;
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <div class="main_container">
+            <div class="cart_wrap">
+                <table class="cart">
+                    <tr>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td>
+                            <div class="book_wrap">
+                                <img src="media/9788937437564_cart.jpg" alt="">
+                                <div class="book_info">
+                                    <div class="book_title">
+                                        [국내도서] 참을 수 없는 존재의 가벼움
+                                    </div>
+                                    <div>
+                                        <span>
+                                            <span class="book_discount">10%</span>
+                                            <span class="book_price">
+                                               <b>13500</b>
+                                            </span>
+                                            <span class="book_won">원</span>
+                                            <span class="book_point">(750P)</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="price_wrap">
+                                <span>
+                                    <b>13500</b>
+                                </span>
+                                <span>원</span>
+                            </div>
+                            <div class="qty_wrap">
+                                <button onclick="minus()"></button>
+                                <input type="number" value="1" id="count" onkeyup="sum(this)"   >
+                                <button onclick="plus(this)"></button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ship_wrap">
+                                <span>택배배송</span>
+                                <p><b>내일(2/1,수) 도착예정</b></p>
+                            </div>
+                            <hr>
+                            <div class="visit_wrap">
+                                <span>바로드림</span>
+                                <p>
+                                    <b>1시간 이후 수령가능 ,<br>광화문점</b>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="">
+                <ul>
+                    <li>하하</li>
+                    <li>호호</li>
+                    <li>히히히</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+
+
+[국내도서] 나미야 잡화점의 기적
+10% 13,320 원 (740P)
+13,320 원 
+1
+택배배송
+내일(2/1,수) 도착예정
+
+바로드림
+1시간 이후 수령가능 , 광화문점
+
+	
+국내도서이방인
+[국내도서] 이방인
+10% 9,000 원 (500P)
+9,000 원 
+1
+택배배송
+내일(2/1,수) 도착예정
+
+바로드림
+1시간 이후 수령가능 , 광화문점

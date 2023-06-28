@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .wrap{
+            margin-top: 300px;
+            width: 300px;
+            height: 60px;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        #slide{
+            height:30x;          
+        }
+        
+       
+    </style>
+    
+
+</head>
+<body>
+
+    <div class="wrap">
+        <div id="slide">
+          슬라이드 이동 문자
+        </div>        
+    </div> 
+
+    <script>
+
+       
+      
+        let slide  =    document.getElementById("slide");
+        slide.animate( {
+                   transform: [                           //  transform   translate 위치 이동 
+                   'translateY(100%)',    //시작     // slide의 크기를 기준으로 
+                   'translateY(0%)'      //도착
+                   ]
+               },
+               {
+                   duration:1000               // 위의효과가 1초간 지속되도록
+          });  
+ 
+   
+ 
+         
+   </script>
+</body>
+</html>

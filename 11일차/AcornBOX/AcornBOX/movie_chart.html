@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acon BoX</title>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./Swiper.js"></script>
+    <!-- CSS file link -->
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="section.css">
+    <link rel="stylesheet" href="./footer.css">    
+    <link rel="stylesheet" href="./chatting_robot.css">   
+    <link rel="stylesheet" href="./movie_select.css"> 
+    <!-- JS file link -->
+    <script src="./section_banner.js"></script>
+    <script src="./ticketing_box_btn.js"></script>
+    <script src="./movie_select.js"></script>
+
+    
+
+    <!-- inital Setting -->
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        main{
+            margin: 50px 0;
+        }
+        section .rank{
+            width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            
+        }
+        /* 윗부분 */
+        section .rank_top{
+            height: 70px;
+            display: flex;
+            position: relative;
+            border-bottom: 3px solid black;
+            margin-bottom: 50px;
+        }
+        section .top_left{
+            display: flex;
+            font-size: 30px;
+            margin-left: 20px;            
+            font-weight: bold;
+            color: black;
+        }        
+        section .top_right > span{
+            padding: 5px 20px 0 20px;
+            font-size: 16px;
+            color: lightgray;
+        }
+        section .top_right{
+            position: absolute;
+            top: 10px;
+            right: 30px;
+            display: flex;
+        }
+        section .top_right select{
+            padding: 5px;
+        }
+        section .top_right .go{
+            padding: 3px 5px;
+            border: 2px solid grey;
+            margin-left: 1px;
+            font-size: 14px;
+            font-weight: bold;
+            color: rgb(165, 163, 163);
+            
+        }
+        
+
+        /* 아랫부분 */
+        section ul{
+            list-style: none;
+            display: flex;
+            position: relative;
+            margin-bottom: 100px;
+        }
+        section ul li{
+            width: 200px;
+            height: 300px;                       
+            margin: 0 40px;
+            
+            font-size: 18px;
+            font-weight: bold;
+            
+            
+        }
+        section ul li div{
+            width: 170px;
+            height: 250px;            
+            border-radius: 0px 20px 0px 20px;
+            margin: 10px auto;         
+            position: relative;            
+        }
+        section ul li .background{
+            z-index: 2;
+            position: absolute;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.09) 35%, rgba(0, 0, 0, 0.85));
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            border-radius: 20px 0px 0px 20px;
+            
+        }
+        section ul li .num{
+            z-index: 3;
+            color: white;
+            position: absolute;
+            left: 15px;
+            bottom: -12px;            
+            font-size: 50px;
+        }
+
+        /* 영화정보 */
+        section .rank_info{
+            font-size: 12px;
+            color: grey;
+        }
+        section .rank_info #title{
+            font-size: 15px;
+            font-weight: bold;
+            color: black;
+            line-height: 30px;
+        }
+        section .rank_info #percent{
+            font-size: 14px;                   
+        }
+        section .rank_info button{
+            display: block;
+            padding: 5px 25px;
+            margin-top: 5px;
+            border: none;
+            background-color: rgb(243, 61, 91);
+            color: white;
+            border-radius: 5px;
+            font-size: 12px;
+            
+        }
+        
+        /* 영화 이미지 */
+        #first{
+            background-image: url("https://img.cgv.co.kr/Movie/Thumbnail/Poster/000082/82120/82120_320.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        #second{
+            background-image: url("https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86059/86059_320.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        #third{
+            background-image: url("https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86058/86058_320.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        #fourth{
+            background-image: url("https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86081/86081_320.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        #fifth{
+            background-image: url("https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86008/86008_320.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        #sixth{
+            background-image: url("https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86032/86032_320.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        #seventh{
+            background-image: url("https://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83280/83280_320.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        #eightth{
+            background-image: url("https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85722/85722_320.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        #nineth{
+            background-image: url("https://img.cgv.co.kr/Movie/Thumbnail/Poster/000081/81889/81889_320.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        #tenth{
+            background-image: url("https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86071/86071_320.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        #eleventh{
+            background-image: url("https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86049/86049_320.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        #twelveth{
+            background-image: url("https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86064/86064_320.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body onload="init()">
+    <div id="aconBox-wrap">
+        <header id="header-nav">
+
+            <div class="meunbar">
+                <!--로고영역-->
+                <div class="meunbar__items">
+                    <span  onclick="location.href='index.html'" class="meunbar__headimg"></span>
+                </div>
+
+                <div class="meunbar__items" >
+                    <ul class="meunbar__items-ul">
+                        <li class="meunbar__items-menus"><!--상위메뉴-->
+                            <h4>영화</h4>
+                            <ul class="items-menu">   <!--하위메뉴-->
+                                <li >
+                                    <div class="bold">전체영화</div>
+                                    <div>상영관</div>
+                                    <div>매점</div>
+                                    <div>진행중인 이벤트</div>
+                                </li>
+                                <li>
+                                    <div class="bold">큐레이터</div>
+                                    <div>특별관</div>
+                                    <div>굿즈</div>
+                                    <div>지난 이벤트</div>
+                                </li>
+                                <li>
+                                    <div class="bold">무비포스터</div>
+                                    <div> </div>
+                                    <div>포토카드인쇄</div>
+                                    <div>당첨자발표</div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="meunbar__items-menus"><!--상위메뉴-->
+                            <h4>극장</h4>
+                            <ul class="items-menu">   <!--하위메뉴-->
+                                <li> 
+                                    <div>전체영화</div>
+                                    <div class="bold">상영관</div>
+                                    <div>매점</div>
+                                    <div>진행중인 이벤트</div>
+                                </li>
+                                <li>
+                                    <div>큐레이터</div>
+                                    <div class="bold">특별관</div>
+                                    <div>굿즈</div>
+                                    <div>지난 이벤트</div>
+                                </li>
+                                <li>
+                                    <div>무비포스터</div>
+                                    <div> </div>
+                                    <div>포토카드인쇄</div>
+                                    <div>당첨자발표</div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="meunbar__items-menus"><!--상위메뉴-->
+                            <h4>스토어</h4>
+                            <ul class="items-menu">   <!--하위메뉴-->
+                                <li>
+                                    <div>전체영화</div>
+                                    <div>상영관</div>
+                                    <div class="bold">매점</div>
+                                    <div>진행중인 이벤트</div>
+                                </li>
+                                <li>
+                                    <div>큐레이터</div>
+                                    <div>특별관</div>
+                                    <div class="bold">굿즈</div>
+                                    <div>지난 이벤트</div>
+                                </li>
+                                <li>
+                                    <div>무비포스터</div>
+                                    <div> </div>
+                                    <div class="bold">포토카드인쇄</div>
+                                    <div>당첨자발표</div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="meunbar__items-menus"><!--상위메뉴-->
+                            <h4>이벤트</h4>
+                            <ul class="items-menu">   <!--하위메뉴-->
+                                <li>
+                                    <div>전체영화</div>
+                                    <div>상영관</div>
+                                    <div>매점</div>
+                                    <div class="bold">진행중인 이벤트</div>
+                                </li>
+                                <li>
+                                    <div>큐레이터</div>
+                                    <div>특별관</div>
+                                    <div>굿즈</div>
+                                    <div class="bold">지난 이벤트</div>
+                                </li>
+                                <li>
+                                    <div>무비포스터</div>
+                                    <div> </div>
+                                    <div>포토카드인쇄</div>
+                                    <div class="bold">당첨자발표</div>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    </table>
+                </div>
+                <div class="meunbar__items">
+                    <span><a href="login.html">로그인</a></span>
+                    <span><a href="joinus.html">회원가입</a></span>
+                    <span><a href="index.html">홈으로<!--아이콘을 넣어도 좋을듯 합니다.--></a></span>
+                    <!-- <span class="meunbar__items-search"></span> -->
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section>        
+                <div class="rank"> 
+        
+                    <!--상위부분-->
+                    <div class="rank_top">
+                        <div class="top_left">
+                            <div>무비차트</div>
+                        </div>
+                        <div class="top_right">
+                            <select>
+                                <option>예매율순</option>
+                                <option>평점순</option>
+                                <option>관람객순</option>
+                            </select>
+                            <div class="go">GO</div>
+                        </div>
+                        
+                    </div>            
+        
+                    <!--하위부분-->
+                    <div class="rank_bottom">
+                        <!-- 1~4위 -->
+                        <ul>
+                            
+                            <li>
+                                <div id="first">
+                                    <span class="background"></span>
+                                    <span class="num">1</span>
+                                    
+                                </div>
+                                <div class="rank_info">
+                                    <span id="title">탑건-매버릭</span><br>
+                                    예매율 <span id="percent">19.6%</span><br>
+                                    2022.06.22 개봉 
+                                    <button>예매하기</button>                           
+                                </div>
+                                
+                                
+                            </li>
+                            <li>
+                                <div id="second">
+                                    <span class="background"></span>
+                                    <span class="num">2</span>
+                                </div>                        
+                                <div class="rank_info">
+                                    <span id="title">육사오</span><br>
+                                    예매율 <span id="percent">10.8%</span><br>
+                                    2022.08.24 개봉 
+                                    <button>예매하기</button>                           
+                                </div>
+                            </li>
+                            <li>
+                                <div id="third">
+                                    <span class="background"></span>
+                                    <span class="num">3</span>
+                                </div>
+                                <div class="rank_info">
+                                    <span id="title">헌트</span><br>
+                                    예매율 <span id="percent">8.6%</span><br>
+                                    2022.08.10 개봉
+                                    <button>예매하기</button>                          
+                                </div>
+                            </li>
+                            <li>
+                                <div id="fourth">
+                                    <span class="background"></span>
+                                    <span class="num">4</span>
+                                </div>
+                                <div class="rank_info">
+                                    <span id="title">시맨틱에러-더무비</span><br>
+                                    예매율 <span id="percent">7.0%</span><br>
+                                    2022.08.31 개봉
+                                    <button>예매하기</button>                          
+                                </div>                     
+                            
+                            </li>                    
+                        </ul>
+        
+                        <!-- 5~8위 -->
+                        <ul>
+                            
+                            <li>
+                                <div id="fifth">
+                                    <span class="background"></span>
+                                    <span class="num">5</span>
+                                    
+                                </div>
+                                <div class="rank_info">
+                                    <span id="title">명탐정 코난</span><br>
+                                    예매율 <span id="percent">6.8%</span><br>
+                                    2022.07.13 개봉 
+                                    <button>예매하기</button>                            
+                                </div>
+                                
+                            </li>
+                            <li>
+                                <div id="sixth">
+                                    <span class="background"></span>
+                                    <span class="num">6</span>
+                                </div>                        
+                                <div class="rank_info">
+                                    <span id="title">리미트</span><br>
+                                    예매율 <span id="percent">6.0%</span><br>
+                                    2022.08.31 개봉
+                                    <button>예매하기</button>                             
+                                </div>
+                            </li>
+                            <li>
+                                <div id="seventh">
+                                    <span class="background"></span>
+                                    <span class="num">7</span>
+                                </div>
+                                <div class="rank_info">
+                                    <span id="title">한산-용의출현</span><br>
+                                    예매율 <span id="percent">4.2%</span><br>
+                                    2022.07.27 개봉  
+                                    <button>예매하기</button>                           
+                                </div>
+                            </li>
+                            <li>
+                                <div id="eightth">
+                                    <span class="background"></span>
+                                    <span class="num">8</span>
+                                </div>
+                                <div class="rank_info">
+                                    <span id="title">놉</span><br>
+                                    예매율 <span id="percent">2.8%</span><br>
+                                    2022.08.17 개봉   
+                                    <button>예매하기</button>                          
+                                </div>                     
+                            
+                            </li>                    
+                        </ul>
+        
+                        <!-- 9~12위 -->
+                        <ul>
+                            
+                            <li>
+                                <div id="nineth">
+                                    <span class="background"></span>
+                                    <span class="num">9</span>
+                                    
+                                </div>
+                                <div class="rank_info">
+                                    <span id="title">그녀</span><br>
+                                    예매율 <span id="percent">1.9%</span><br>
+                                    2022.08.31 개봉 
+                                    <button>예매하기</button>                            
+                                </div>
+                                
+                            </li>
+                            <li>
+                                <div id="tenth">
+                                    <span class="background"></span>
+                                    <span class="num">10</span>
+                                </div>                        
+                                <div class="rank_info">
+                                    <span id="title">불릿 트레인</span><br>
+                                    예매율 <span id="percent">1.2%</span><br>
+                                    2022.08.24 개봉
+                                    <button>예매하기</button>                             
+                                </div>
+                            </li>
+                            <li>
+                                <div id="eleventh">
+                                    <span class="background"></span>
+                                    <span class="num">11</span>
+                                </div>
+                                <div class="rank_info">
+                                    <span id="title">노스맨</span><br>
+                                    예매율 <span id="percent">0.9%</span><br>
+                                    2022.08.31 개봉  
+                                    <button>예매하기</button>                           
+                                </div>
+                            </li>
+                            <li>
+                                <div id="twelveth">
+                                    <span class="background"></span>
+                                    <span class="num">12</span>
+                                </div>
+                                <div class="rank_info">
+                                    <span id="title">귀멸의 칼날</span><br>
+                                    예매율 <span id="percent">0.7%</span><br>
+                                    2022.08.25 개봉   
+                                    <button>예매하기</button>                          
+                                </div>                     
+                            
+                            </li>                    
+                        </ul>
+                        
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- footer영역 -->
+        <footer>
+        
+            <div class="footer">
+                <div class="footer_top">
+                    <a href="#">회사소개</a>
+                    <a href="#">인재채용</a>
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">제휴/광고/부대사업문의</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">위치기반서비스 이용약관</a>
+                    <a href="#">사회공헌</a>
+                    <a href="#">윤리경영</a>
+    
+                </div>
+    
+                <div class="footer_bottom">
+                    <div class="address">
+                        [04038]서울특별시 마포구 양화로 122 LAB7 빌딩 3층, 4층<br>
+                        대표 : 홍 윤 성 | 사업자등록번호:101-86-89995 | 통신판매업신고증 : 제 2022-서울마포-1597호 | TEL: 02-2231-6412
+                    </div>
+    
+                    <div class="link">
+                        <div class="icon" id="facebook"></div>
+                        <div class="icon" id="instagram"></div>
+                        <div class="icon" id="google"></div>
+                        <div class="icon" id="naver"></div>
+                    </div>
+    
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- 예매상자 -->
+    <div  class="ticketing_box">
+        <div class="info">
+            <div class="heading"><div>영화표 예매</div></div>
+            <div class="movie_select">
+                 <!-- 예매상자 영화포스터 -->
+                 <div class="wrap">
+                    <div class="img" id="left_img" onclick="movie_left_btn()"></div>
+                    <div class="img" id="middle_img"></div>
+                    <div class="img" id="right_img" onclick="movie_right_btn()"></div>
+                </div>
+            </div>
+            <div class="date">
+                <input type="date">
+            </div>
+            <div class="location">
+                <select name="" id="">
+                    <option value="">영화관지점</option>
+                    <option value="">홍대입구역점</option>
+                    <option value="">강남역점</option>
+                </select>
+            </div>
+            <div class="members">
+                <select name="" id="">
+                    <option value="">관람인원</option>
+                    <option value="">1명</option>
+                    <option value="">2명</option>
+                    <option value="">3명</option>
+                    <option value="">4명</option>
+                    <option value="">5명</option>
+                    <option value="">6명</option>
+                </select>
+            </div>
+            <div class="search">영화표 예매 검색</div>
+        </div>
+    </div>
+    <div class="ticketing_box_btn" onclick="slideTicketBox()">
+        <div class="ticketing_box_btn__icon"></div>
+        
+    </div>
+</body>
+</html>

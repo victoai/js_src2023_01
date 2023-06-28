@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        nav {
+        width: 100%;
+        position: relative;
+        /* border: solid 3px black; */
+        height: 80px;
+        z-index: 20;
+      }
+      .menu1 {
+        left: 90px;
+        /* border: solid 1px red; */
+        top: 15px;
+        text-align: center;
+        position: fixed;
+        align-items: flex-start;
+      }
+      .mainlogo{
+        /* border: solid 1px green; */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+        position: center;
+      }
+      .menu2 {
+        right: 90px;
+        /* border: solid 1px blue; */
+        top: 15px;
+        text-align: center;
+        position: fixed;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+      }
+      nav li {
+        padding: 0px 25px 3px 0;
+        line-height: 50px;
+        height: 50px;
+        display: inline-block;
+        position: relative;
+        font-size: 13px;
+      }
+      nav a, footer a {
+        text-decoration: none;
+        color: rgb(123, 111, 111);
+        font-weight: bold;
+      }
+      nav a:hover {
+        color: rgb(201, 201, 201);
+        cursor: pointer;
+      }
+      .btn1 {
+        background-color: white;
+        border: solid 0px;
+      }
+      @media screen and (max-width: 1500px) {
+        .menu1,
+        .menu2 {
+          display: none;
+        }
+      }
+      .sidebar {
+        /* border: solid 1px red; */
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        right: 0px;
+      }
+      .sidetext {
+        height: 22px;
+        line-height: 22px;
+      }
+        .container{
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content:center;
+            margin-top: 100px;
+            margin-bottom: 150px;
+            
+        }
+        .container img{
+            width: 600px;
+            height: 870px;
+            margin-right: 55px;
+        }
+        .container caption{
+            margin-top: 20px;
+
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 30px;
+        }
+        .container table{
+            width: 700px;
+            height: 250px;
+            /* border: 1px solid blue; */
+        }
+        .container tr{
+            line-height: 10px;
+            text-align: center;
+            
+        }
+        .container td{
+            float: left;
+            /* border: 1px solid red; */
+            margin-left: 25px;
+        }
+        .check{
+            font-size: 12px;
+        }
+        .radio{
+            margin-right: 20px;
+        }
+        select{
+            width: 590px;
+            height: 31px;
+            font-size: 11px;
+            color: #9e9e9e;
+            border: 1px solid #dfdfdf;
+            outline: 0;
+
+        }
+        .txt_div{
+            /* border: 1px solid green; */
+            display: flex;
+            flex-direction: column;
+        }
+        .container a{
+            margin-left: 25px;
+            color: black;
+            text-decoration: none;
+        }
+        .container ul{
+            list-style: none;
+        }
+        .container li{
+            margin-top: 20px;
+            line-height: 50px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        .container ol{
+            display: none;
+        }
+        .price{
+            margin-top: 50px;
+            padding: 5px;
+            font-size: 16px;
+        }
+        span{
+            color: #9e9e9e;
+            text-decoration: line-through;
+        }
+        .shop{
+            font-size: 20px;
+            padding: 10px;
+            line-height: 30px;
+            /* border: 1px solid black; */
+            /* float: left;  */
+            transition: opacity 0.1s linear;
+            opacity: 1;
+        }
+        .sh1{
+            margin-right: 20px;
+        }
+        .sh1:hover , .sh2:hover{
+            opacity: 0.2;
+            /* text-decoration: underline; */
+        }
+        .container p{
+            /* border: 1px solid black; */
+            width: 500px;
+            margin-left: 15px;
+            padding: 10px 3px 20px 3px;
+            font-size: 11px;
+            color: #9e9e9e;
+        }
+        .wrap{
+            margin-left: 25px;
+            /* border: 1px solid violet; */
+        }
+        .wrap img{
+            width: 102px;
+            height: 147px;
+            opacity: 0.7;
+        }
+        .wrap img:hover{
+            opacity: 1;
+        }
+
+
+        section{
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        section img{
+            width: 690px;
+            height: 1000px;
+            margin-bottom: 20px;
+        }
+
+        /* 버튼 --------------------------------*/
+
+        .box{
+            position: relative;
+        }
+        .btn1{
+            color: rgb(168, 166, 166);
+            position: absolute;
+            border: none;
+            background: none;
+            font-size: 100px;
+            top: -500px;
+            left: 530px;
+            opacity: 0.4;
+        }
+        .btn1:hover{
+            cursor: pointer;
+            opacity: 1;
+        }
+        .btn2{
+            color: rgb(168, 166, 166);
+            position: absolute;
+            border: none;
+            background: none;
+            font-size: 100px;
+            top: -500px;
+            left: 10px;
+            opacity: 0.4;
+        }
+        .btn2:hover{
+            cursor: pointer;
+            opacity: 1;
+        }
+
+        /* 옵션 수량 텍스트 */
+        .optionqtyM, .optionqtyL, .optionqtyXL{
+            font-size: 11px;
+            font-weight: bold;
+            line-height: 21px;
+            margin-left: 30px;
+            margin-bottom: 10px;
+            display: none;
+        }
+        .optionqtyM input, .optionqtyL input, .optionqtyXL input{
+            width: 40px;
+            margin-left: 60px;
+            line-height: 19px;
+            border: 0px;
+
+            outline: none;
+        }
+        .removebutton1, .removebutton2, .removebutton3{
+            width: 15px;
+            height: 15px;
+            font-size: 10px;
+            margin-left: 15px;
+            text-align: center;
+            background-color: grey;
+            color: white;
+            border: 0px;
+        }
+        .size{
+            color: #9e9e9e;
+            text-decoration: none;
+        }
+        footer{
+        width: 100%;
+        height: 70px;
+        /* border: 1px solid red; */
+        text-align: center;
+      }
+      .inst a{
+        font-weight: normal;
+        color: black;
+        font-size: 13px;
+        padding: 10px;
+      }
+      .inst a:hover{
+        cursor: pointer;
+        color: grey;
+      }
+      .page1{
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        font-size: 12px;
+        color: gray;
+      }
+      .page1 h4{
+        margin-bottom: 10px;
+        color: black;
+        font-size: 14px;
+      }
+      
+    </style>
+   
+   
+   <script>
+
+        function doDisplay1(){
+            let con1 = document.getElementById("toDisplay1");
+            if ( con1.style.display == "block"){
+                con1.style.display = "none";
+            } else {
+                con1.style.display = "block";
+            }
+        }
+        function doDisplay2(){
+           
+            let con2 = document.getElementById("toDisplay2");
+            if ( con2.style.display == "block"){
+                con2.style.display = "none";
+            } else {
+                con2.style.display = "block";
+            }
+        }
+        function doDisplay3(){
+            let con3 = document.getElementById("toDisplay3");
+            if ( con3.style.display == "block"){
+                con3.style.display = "none";
+            } else {
+                con3.style.display = "block";
+            }
+        }
+
+        /////////////////////////////////////////////////////////////////
+
+
+        
+        let index = 0;
+        let imgs = [ "dark_navyy.jpg" ,"dark_navy1.jpg" ,"dark_navy2.jpg" ,"dark_navy3.jpg" ,"dark_navy4.jpg"]
+
+        // 다음 버튼 
+        function changeImg1(){
+            let imgGallery = document.getElementById("imgGallery");
+            index++;
+
+            if ( index >= imgs.length)
+            index=0;
+            imgGallery.src = "images/" + imgs[index];
+        }
+
+        // 이전 버튼
+        function changeImg2() {
+            let imgGallery = document.getElementById("imgGallery");
+            index--; 
+
+            
+            if (index < 0)
+                index=imgs.length-1;  
+            imgGallery.src = "images/" + imgs[index];
+        }
+
+        // 작은 이미지 누르면 바뀜
+        function ttt(b){
+            console.log(b.src);
+            let imgGallery = document.getElementById("imgGallery");
+            imgGallery.src = b.src ;
+
+        }
+        //옵션선택하면 글자나오게
+        function changeValue(opti){
+            
+            let optionqtyM = document.querySelector(".optionqtyM");
+            let optionqtyL = document.querySelector(".optionqtyL");
+            let optionqtyXL = document.querySelector(".optionqtyXL");
+            if(opti.value == "Msize"){
+                optionqtyM.style.display = "block";
+            }
+            else if(opti.value == "Lsize"){
+                optionqtyL.style.display = "block";
+            }
+            else if(opti.value == "XLsize"){
+                optionqtyXL.style.display = "block";
+            }
+        }
+        //선택한 옵션 삭제
+        function removebtn(a){
+            console.log(a.parentElement);
+            a.parentElement.style.display= "none";
+    
+
+        }
+        
+ 
+        
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="menu1">
+          <ul>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="collection.html">COLLECTION</a></li>
+            <li><a href="#">STOCKIST</a></li>
+            <li><a href="#">COMMUNITY</a></li>
+          </ul>
+        </div>
+        <div class="mainlogo">
+          <a href="index.html"><img src="./미디어/toplogo.png" /></a>
+        </div>
+        <div class="menu2">
+          <ul>
+            <li><a href="login.html">LOGIN</a></li>
+            <li><a href="#">MY PAGE</a></li>
+            <li><a href="cart.html">CART</a></li>
+            <li>
+              <button class="btn1">
+                <img src="./미디어/btn_search_icon.png" width="13px" />
+              </button>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="sidebar">
+          <ul>
+            <li class="sidetext"><a href="섹션부분.html">22FW</a></li>
+            <li class="sidetext"><a href="섹션부분.html">22SS</a></li>
+            <li class="sidetext"><a href="섹션부분.html">New Arrivals</a></li>
+            <li class="sidetext"><a href="섹션부분.html">Outwear</a></li>
+            <li class="sidetext"><a href="섹션부분.html">Top</a></li>
+            <li class="sidetext"><a href="섹션부분.html">Bottom</a></li>
+            <li class="sidetext"><a href="섹션부분.html">Accessories</a></li>
+            <li class="sidetext"><a href="섹션부분.html">Slelcted Brand</a></li>
+            <li class="sidetext"><a href="섹션부분.html">SALE</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    <div class="container">
+    <div class="img_div">
+        <img id="imgGallery" src="images/dark_navyy.jpg">
+        <div class="box">
+            <button class="btn1" onclick="changeImg1()">></button>
+            <button class="btn2" onclick="changeImg2()"><</button>
+          </div>
+    </div>
+
+    <div class="txt_div">
+        <table>
+            <caption> Belted Fishtail Shield_Dark navy </caption>
+            
+            <tr>
+                <td class="price"><span>258,000원</span><br><br>206,400원</td>  
+            </tr>
+                
+            <tr class="check">
+                <td>
+                    <label for="" class="radio">
+                    <input type="radio" checked="checked" name="aaa">국내배송
+                </label>
+
+                <label for="">
+                    <input type="radio" name="aaa">해외배송
+                </label></td>
+
+            </tr>
+
+            <tr>
+                <td>
+                    <select name="" id="optionselect" onchange="changeValue(this)">
+                        <option value="" selected>-[필수] 옵션을 선택해주세요-</option>
+                        <option value="Msize">M</option>
+                        <option value="Lsize">L</option>
+                        <option value="XLsize">XL</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <!-- 옵션선택하면 나오는 글자부분 -->
+
+        <div class="optibox">
+            <div class="optionqtyM">
+
+                Plain Knit Vest_ Light Grey - <span class="size">M</span><input type="number" value="1" >
+
+                <button onclick="removebtn(this)" class="removebutton1">x</button>
+            </div>
+            <div class="optionqtyL">
+
+                Plain Knit Vest_ Light Grey - <span class="size">L</span><input type="number" value="1">
+
+                <button onclick="removebtn(this)" class="removebutton2">x</button>
+            </div>
+            <div class="optionqtyXL">
+
+                Plain Knit Vest_ Light Grey - <span class="size">XL</span><input type="number" value="1">
+
+                <button onclick="removebtn(this)" class="removebutton3">x</button>
+            </div>
+        </div>
+
+        <!-- 옵션선택하면 나오는 글자부분 -->
+
+        <div class="shop">
+            <a href="" class="sh1">Buy now.</a>
+            <a href="" class="sh2">Add cart.</a>
+        </div>
+
+
+        <div class="wrap">
+            <img src="images/dark_navyy.jpg" class="img1" onclick="ttt(this)">
+            <img src="images/dark_navy1.jpg" class="img2" onclick="ttt(this)">
+            <img src="images/dark_navy2.jpg" class="img3" onclick="ttt(this)">
+            <img src="images/dark_navy3.jpg" class="img4" onclick="ttt(this)">
+        </div>
+
+
+
+        <div class="text">
+            <ul>
+                <li><a href="javascript:doDisplay1();">Insruction</li></a>
+                <ol id="toDisplay1">
+                    <p>
+                        Belted Fishtail Shield는 오리지널 피시 테일 파카에 동양적인 느낌을 가미하여 Art if acts만의 관점으로 재해석한 제품입니다. 우리나라의 한복에서 볼 수 있는 긴 직선의 고름에서 영감을 얻어, 스탠드 칼라의 장식, 허리, 밑단의 여밈 또는 조임의 목적으로 들어간 제 원단의 납작 끈이 특징입니다. 기호에 따라 끈 또는 벨트를 제거 후 착용이 가능합니다.
+                        <br><br>
+                        Brand : Art if acts
+                        Model : Belted Fishtail Shield
+                        Material : Nylon 100%
+                        Color : Cream / Dark Navy
+                        Silhouette : Loose fit
+                    </p>
+                </ol>
+                <li><a href="javascript:doDisplay2();">Size Guide</li></a>
+                <ol id="toDisplay2">
+                    <p>
+                        SIZE(cm)
+ 
+                        M : 어깨 58 / 가슴 70 / 소매기장 61 / 총장 103
+                        L : 어깨 61 / 가슴 73 / 소매기장 61 / 총장 104
+
+
+
+                        Model : 186cm / 62kg / Top (L size) / Bottom (M size)
+
+
+
+                       - 사이즈 측정 방법에 따라 1-2cm 오차가 생길 수 있습니다.
+
+                       - 모니터 설정에 따라 색상이 다르게 보일 수 있습니다.
+
+                       - 착장컷은 색감 보정 및 조명으로 인해 컬러가 상이해 보일 수 있는 점 안내드리며, 자세한 사항은 제품컷 참고 부탁드립니다.
+                    </p>
+                </ol>
+                <li><a href="javascript:doDisplay3();">Shipping & Return</li></a>
+                <ol id="toDisplay3">
+                    <p>
+                        - 산간벽지나 도서지방은 별도의 추가금액을 지불하셔야 하는 경우가 있습니다.
+                        고객님께서 주문하신 상품은 입금 확인 후 배송해 드립니다. 다만, 상품종류에 따라서 상품의 배송이 다소 지연될 수 있습니다.
+                    </p>
+                </ol>
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    <section>
+        <img src="images/dark_navyy.jpg">
+        <img src="images/dark_navy1.jpg">
+        <img src="images/dark_navy2.jpg">
+        <img src="images/dark_navy3.jpg">
+        <img src="images/dark_navy4.jpg">
+    </section>    
+    <footer>
+        <div class="last">
+            <div class="inst">
+              <a href="https://www.instagram.com/artifacts_official/"><img src="./미디어/ins2.png" width="17px" /></a>
+            </dlv>
+           <div>
+            <a href="index.html">home</a>
+            <a>shop guide</a>
+            <a>terms df use</a>
+            <a>privacy policy</a>
+          </div>
+        </div>
+      </footer>
+      <div class="page1">
+        <h4>02-6207-0666</h4>
+        <p>국민은행 730601-04-085253 (주)이티씨컴퍼니</p>
+        <p>고객센터 운영시간 MON-FRI AM 11:00 ~ PM 18:00</p>
+        <p>contact@artifacts.co.kr</p>
+  
+  
+      </div>
+</body>
+</html>

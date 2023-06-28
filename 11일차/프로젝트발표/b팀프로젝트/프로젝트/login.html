@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        width: 100%;
+        position: relative;
+        /* border: solid 3px black; */
+        height: 80px;
+        z-index: 20;
+      }
+      .menu1 {
+        left: 90px;
+        /* border: solid 1px red; */
+        top: 15px;
+        text-align: center;
+        position: fixed;
+        align-items: flex-start;
+      }
+      .mainlogo{
+        /* border: solid 1px green; */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+        position: center;
+      }
+      .menu2 {
+        right: 90px;
+        /* border: solid 1px blue; */
+        top: 15px;
+        text-align: center;
+        position: fixed;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+      }
+      nav li {
+        padding: 0px 25px 3px 0;
+        line-height: 50px;
+        height: 50px;
+        display: inline-block;
+        position: relative;
+        font-size: 13px;
+      }
+      nav a, footer a {
+        text-decoration: none;
+        color: rgb(123, 111, 111);
+        font-weight: bold;
+      }
+      nav a:hover {
+        color: rgb(201, 201, 201);
+        cursor: pointer;
+      }
+      .btn1 {
+        background-color: white;
+        border: solid 0px;
+      }
+      @media screen and (max-width: 1500px) {
+        .menu1,
+        .menu2 {
+          display: none;
+        }
+      }
+      .sidebar {
+        /* border: solid 1px red; */
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        right: 0px;
+      }
+      .sidetext {
+        height: 22px;
+        line-height: 22px;
+      }
+        section{
+            margin-top: 150px;
+            margin-bottom: 150px;
+        }
+        .wrap{
+            width: 500px;
+            margin: 0 auto;
+        }
+        .uid, .upass{
+            display: block;
+            width: 500px;
+            height: 45px;
+            border: 0px;
+            border-bottom: 1px solid #969696;
+            margin-bottom: 10px;
+        }
+        .wrap > input{
+            padding-left: 5px;
+        }
+        .wrap a{
+            text-decoration: none;
+        }
+        .upasslengthmsg{
+            font-size: 12px;
+            padding-left: 4px;
+            color: red;
+            display: none;
+        }
+        .loginBox{
+            margin: 30px 0 0;
+            width: 500px;
+            height: 40px;
+            border: 1px solid black;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.5s;
+        }
+        .loginBox:hover{
+            background-color: rgb(199, 199, 199);
+            border: 1px solid #000;
+            color: #000;
+        }
+        .joinBox{
+            width: 500px;
+            height: 40px;
+            border: 1px solid #969696;
+            background-color: #fff;
+            color: #000;
+            text-align: center;
+            line-height: 40px;
+            font-size: 14px;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+        .joinBox:hover{
+            background-color: #969696;
+            color: #fff;
+            border: 1px solid #969696;
+
+        }
+        .idSave{
+            font-size: 12px;
+            margin-top: 10px;
+
+        }
+        .idSave input{
+            width: 13px;
+            height: 13px;
+            /* margin: 10px 0 ; */
+        }
+        section ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        section li{
+            font-size: 12px;
+            text-align: center;
+            padding: 0 15px;
+        }
+        section li:nth-child(2){
+            border-left: 1px solid #e9e9e9;
+            border-right: 1px solid #e9e9e9;
+        }
+        section ul li a{
+            color: rgb(102, 102, 102);
+        }
+        footer{
+        width: 100%;
+        height: 70px;
+        /* border: 1px solid red; */
+        text-align: center;
+        }
+        .inst a{
+            font-weight: normal;
+            color: black;
+            font-size: 13px;
+            padding: 10px;
+        }
+        .inst a:hover{
+            cursor: pointer;
+            color: grey;
+        }
+        .page1{
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            font-size: 12px;
+            color: gray;
+        }
+        .page1 h4{
+            margin-bottom: 10px;
+            color: black;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        function login(){
+            let uid = document.querySelector(".uid");
+            let upass = document.querySelector(".upass")
+            // alert(login.value);
+            if(uid.value==""){
+                alert("아이디는 필수 입력사항입니다.");
+                uid.focus();
+            }
+            else if(upass.value==""){
+                alert("비밀번호는 필수 입력사항힙니다.");
+                upass.focus();
+            }
+            else{
+                alert("로그인 되었습니다.")
+            }
+        }
+        function passlength(){
+            let upasslength = document.querySelector(".upass").value;
+            let upasslengthmsg = document.querySelector(".upasslengthmsg");
+            if(upasslength.length < 8 & upasslength.length > 0){
+                upasslengthmsg.style.display = "block";
+            }
+            else{
+                upasslengthmsg.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="menu1">
+            <ul>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="collection.html">COLLECTION</a></li>
+            <li><a href="#">STOCKIST</a></li>
+            <li><a href="#">COMMUNITY</a></li>
+            </ul>
+        </div>
+        <div class="mainlogo">
+            <a href="index.html"><img src="./미디어/toplogo.png" /></a>
+        </div>
+        <div class="menu2">
+            <ul>
+            <li><a href="login.html">LOGIN</a></li>
+            <li><a href="#">MY PAGE</a></li>
+            <li><a href="cart.html">CART</a></li>
+            <li>
+                <button class="btn1">
+                <img src="./미디어/btn_search_icon.png" width="13px" />
+                </button>
+            </li>
+            </ul>
+        </div>
+
+        <div class="sidebar">
+            <ul>
+            <li class="sidetext"><a href="섹션부분.html">22FW</a></li>
+            <li class="sidetext"><a href="섹션부분.html">22SS</a></li>
+            <li class="sidetext"><a href="섹션부분.html">New Arrivals</a></li>
+            <li class="sidetext"><a href="섹션부분.html">Outwear</a></li>
+            <li class="sidetext"><a href="섹션부분.html">Top</a></li>
+            <li class="sidetext"><a href="섹션부분.html">Bottom</a></li>
+            <li class="sidetext"><a href="섹션부분.html">Accessories</a></li>
+            <li class="sidetext"><a href="섹션부분.html">Slelcted Brand</a></li>
+            <li class="sidetext"><a href="섹션부분.html">SALE</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section>
+        <div class="wrap">
+            <input type="text" placeholder="ID" class="uid">
+            <input type="password" placeholder="PASSWORD" class="upass" onkeyup="passlength()">
+            <span class="upasslengthmsg">비밀번호는 8자 이상입니다.</span>
+            <a href="#"><div class="loginBox" onclick="login()">LOG IN</div></a>
+            <a href="join.html"><div class="joinBox">JOIN US</div></a>
+            <p class="idSave"><input type="checkbox" name="" id="checkSave">
+                <label for="checkSave"> 아이디 저장</label></p>
+            <ul>
+                <li><a href="forgotid.html">FORGOT ID</a></li>
+                <li><a href="forgotpassword.html">FORGOT PASSWORD</a></li>
+                <li><a href="#">ORDER CHECK</a></li>
+            </ul>           
+            
+        </div>
+        
+    </section>
+
+    <footer>
+        <div class="last">
+            <div class="inst">
+                <a href="https://www.instagram.com/artifacts_official/"><img src="./미디어/ins2.png" width="17px" /></a>
+            </dlv>
+            <div>
+            <a href="index.html">home</a>
+            <a>shop guide</a>
+            <a>terms df use</a>
+            <a>privacy policy</a>
+            </div>
+        </div>
+    </footer>
+    <div class="page1">
+        <h4>02-6207-0666</h4>
+        <p>국민은행 730601-04-085253 (주)이티씨컴퍼니</p>
+        <p>고객센터 운영시간 MON-FRI AM 11:00 ~ PM 18:00</p>
+        <p>contact@artifacts.co.kr</p>
+
+
+    </div>
+</body>
+</html>

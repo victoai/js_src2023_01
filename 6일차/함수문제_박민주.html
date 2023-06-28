@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function tot(){
+            let sum0=0; 
+
+            for(let i=1; i<=10; i++){
+                sum0 = sum0 + i;
+            }
+            alert("0-1번문제1~10까지의 합_출력:" + sum0);
+        }
+
+
+        function tot1(){
+            let sum=0;
+            
+            for(let i=1; i<=10; i++){
+                sum = sum + i;
+            }
+            return sum;
+        }
+
+        function tot2(num1){
+            let sum1=0;
+            for(let j=1; j<=num1; j++){
+                sum1 = sum1 + j;
+            }
+            alert("1번문제 :" + sum1);
+
+        }
+        function tot3(num2){
+            let sum2=0;
+            for(let k=1; k<=num2; k++){
+                sum2 = sum2 + k;
+            }
+            return sum2;
+
+        }
+        function myFunc(){
+            let age = prompt("나이를 입력하세요");
+            let name = prompt("이름을 입력하세요");
+            let like = prompt("좋아하는 숫자를 입력하세요");
+            alert("반갑습니다.<br>" + name + "님");
+            document.write("<h2>" + age + "세 " + name + "님을 위한 별찍기쇼입니다.</h3>" );
+            for(let l=1; l<=like; l++){
+                for(let m=1; m<=l; m++){
+                    document.write("*");
+                }
+                document.write("<br>");    
+            }
+        }
+        tot();
+        alert("0-2번문제1~10까지의 합_반환:" + tot1());
+        tot2(prompt("1번문제 입력"));
+        alert("2번문제 : " + tot3(prompt("2번문제 입력")));
+        myFunc();
+    </script>
+    
+</body>
+</html>

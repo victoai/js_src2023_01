@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .top{
+            height: 300px;
+            background-color: rgb(85, 255, 0);
+        }
+
+
+        .bottom{
+            margin-top: 1000px;
+            height: 300px;
+            background-color: aqua;
+        }
+
+        span{
+            color: red;
+        }
+    </style>
+
+    <script>
+        function aaa(){
+          // window.scrollTo( 0,0);
+          // window.scrollTo({top:0, left:0, behavior:'smooth'});
+
+           let box  = document.querySelector('.box');
+           let myTop =box.offsetTop;   // offsetTop
+           alert(myTop);
+
+           let menu = document.querySelector(".top").offsetHeight;  // 메뉴의 높이 
+           alert( menu);
+
+           window.scrollTo({top: myTop-menu, left:0, behavior:'smooth'});
+       
+
+        }
+    </script>
+</head>
+<body>
+
+    <div class="top">
+        topdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd topdddddddddddddddddddddddddddddddddddddddddddddddddddddddddd topddddddddddddddddddddddddddddddddddddddddddddddddd<span>ddddddddd</span>
+    </div>
+   
+    <div class="box" >
+       ccccccccccccccccccccccccccddddddddddddddddd topdddddddddddddddddddddddddddddddddddddddddddddddddddddddddd topddddddddddddddddddddddddddddddddddddddddddddddddd<span>ddddddddd</span>
+    </div>
+
+    <div class="bottom">
+        bottom
+    </div>
+     <button onclick="aaa()">클릭</button>
+
+    
+</body>
+</html>

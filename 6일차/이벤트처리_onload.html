@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function abc() {
+            alert("버튼을 선택하세요");
+        }
+       /*
+        window.addEventListener("load" , init );
+
+        function init(){          
+            
+                let button1 = document.getElementById("button1");
+                let button2 = document.getElementById("button2");
+        
+                button1.addEventListener("click",  abc);
+                button2.addEventListener("click", function(){
+                    alert("버튼2가 선택되었습니다.")
+                });
+       
+        }
+
+        
+
+
+
+*/
+
+     // window.addEventListener("load" , function(){   alert( "dfkfkf") ;});
+    
+
+      window.addEventListener("load" , function(){  
+
+        //  alert("dkfkfkfk");
+            let button1 = document.getElementById("button1");
+            let button2 = document.getElementById("button2");
+    
+            button1.addEventListener("click",  abc);
+            button2.addEventListener("click", function(){
+                alert("버튼2가 선택되었습니다.")
+            });
+
+       });
+    
+    </script>
+</head>
+
+<body>
+    <button id="button1">버튼1</button>
+    <button id="button2">버튼2</button>
+
+   
+</body>
+
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+        nav {
+        width: 100%;
+        position: relative;
+        /* border: solid 3px black; */
+        height: 80px;
+        z-index: 20;
+      }
+      .menu1 {
+        left: 90px;
+        /* border: solid 1px red; */
+        top: 15px;
+        text-align: center;
+        position: fixed;
+        align-items: flex-start;
+      }
+      .mainlogo{
+        /* border: solid 1px green; */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+        position: center;
+      }
+      .menu2 {
+        right: 90px;
+        /* border: solid 1px blue; */
+        top: 15px;
+        text-align: center;
+        position: fixed;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+      }
+      nav li {
+        padding: 0px 25px 3px 0;
+        line-height: 50px;
+        height: 50px;
+        display: inline-block;
+        position: relative;
+        font-size: 13px;
+      }
+      nav a, footer a {
+        text-decoration: none;
+        color: rgb(123, 111, 111);
+        font-weight: bold;
+      }
+      nav a:hover {
+        color: rgb(201, 201, 201);
+        cursor: pointer;
+      }
+      .btn1 {
+        background-color: white;
+        border: solid 0px;
+      }
+      @media screen and (max-width: 1500px) {
+        .menu1,
+        .menu2 {
+          display: none;
+        }
+      }
+      .sidebar {
+        /* border: solid 1px red; */
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        right: 0px;
+      }
+      .sidetext {
+        height: 22px;
+        line-height: 22px;
+      }
+        .container{
+            /* border: 1px solid red; */
+            width: 400px;
+            margin: 150px auto;
+
+        }
+        /* .selecttable {
+            border: 1px solid gray;
+        }
+        .selecttable tr, .selecttable td{
+            border: 1px solid gray;
+        } */
+        .selecttable .selectbox_box{
+            width: 140px;
+            vertical-align: text-top;
+            font-size: 12px;
+            line-height: 25px;
+        }
+        .sel select{
+            width: 185px;
+            height: 25px;
+            background-color: rgb(226, 226, 226);
+        }
+        .radiobox_box{
+            /* border: 1px solid blue; */
+            font-size: 12px;
+            
+        }
+        .invidual{
+            display: flex;
+            
+        }        
+        .invidual_email input{
+            width: 190px;
+            height: 25px;
+            padding-left: 5px;
+            font-weight: 100;
+            box-sizing: border-box;
+        }
+        .invidual_email{
+            margin-top: 40px;
+        }
+        .invidual_email td:nth-child(1){
+            width: 140px;
+            font-size: 12px;
+        }
+        .invidual_email tr,.invidual_email td{
+            border-collapse: collapse;
+            /* border: 0.5px solid red; */
+        }
+        .invibox, .juribox{
+            display: flex;
+            /* border: 1px solid red; */
+        }
+        .jurinumbox{
+            display: none;
+        }
+        .jurinumbox input{
+            width: 90px;
+        }
+        .jurinumbox span{
+            margin: 0 1px;
+        }
+        .juribox div{
+            display: none;
+        }
+        .phonebox, .objphone , .objjurinum{
+            display: none;
+        }
+        .phonebox input{
+            width: 48px;
+            margin-right: 2px;
+        }
+        .phonebox .num{
+            width: 55px;
+            margin: 0 2px;
+        }
+        .radiobox{
+            display: flex;
+        }
+        button{
+            width: 80px;
+            height: 35px;
+            background-color: white;
+            transition: all 0.5s;
+            margin-top: 80px;
+            border: 0.5px solid black;
+            font-size: 12px;
+        }
+        button:hover{
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+        footer{
+        width: 100%;
+        height: 70px;
+        /* border: 1px solid red; */
+        text-align: center;
+      }
+      .inst a{
+        font-weight: normal;
+        color: black;
+        font-size: 13px;
+        padding: 10px;
+      }
+      .inst a:hover{
+        cursor: pointer;
+        color: grey;
+      }
+      .page1{
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        font-size: 12px;
+        color: gray;
+      }
+      .page1 h4{
+        margin-bottom: 10px;
+        color: black;
+        font-size: 14px;
+      }
+      
+    </style>
+    <script>
+        function radio_find(name){
+            let objemail = document.querySelector(".objemail");
+            let emailbox = document.querySelector(".emailbox");
+            let objphone = document.querySelector(".objphone");
+            let phonebox = document.querySelector(".phonebox");
+            let objjurinum = document.querySelector(".objjurinum");
+            let jurinumbox = document.querySelector(".jurinumbox");
+            
+            // alert(name);
+            if(name == "r_find_phone"){
+                objphone.style.display = "block";
+                phonebox.style.display = "block";
+                objemail.style.display = "none";
+                emailbox.style.display = "none";
+                objjurinum.style.display = "none";
+                jurinumbox.style.display = "none";
+            }
+            else if(name == "r_find_juri"){
+                objphone.style.display = "none";
+                phonebox.style.display = "none";
+                objemail.style.display = "none";
+                emailbox.style.display = "none";
+                objjurinum.style.display = "block";
+                jurinumbox.style.display = "block";
+            }
+            else{
+                objphone.style.display = "none";
+                phonebox.style.display = "none";
+                objemail.style.display = "block";
+                emailbox.style.display = "block";
+                objjurinum.style.display = "none";
+                jurinumbox.style.display = "none";
+            }
+        }
+        function changemembertype(selecval){
+            let invidual = document.querySelector(".invidual");
+            let invibox = document.querySelector(".invibox");
+            let juribox = document.querySelector(".juribox");
+            console.log(invidual.childNodes[7].childNodes);
+            // console.log(juribox.childNodes[3]);
+            if(selecval.value == "sel3" || selecval.value == "sel4"){
+                invidual.childNodes[3].childNodes[1].style.display = "none";
+                invidual.childNodes[3].childNodes[3].style.display = "none";
+                invidual.childNodes[7].childNodes[1].style.display = "block";
+                invidual.childNodes[7].childNodes[3].style.display = "block";
+                invidual.childNodes[7].childNodes[5].style.display = "block";
+            }
+            else{
+                invidual.childNodes[3].childNodes[1].style.display = "block";
+                invidual.childNodes[3].childNodes[3].style.display = "block";
+                invidual.childNodes[7].childNodes[1].style.display = "none";
+                invidual.childNodes[7].childNodes[3].style.display = "none";
+                invidual.childNodes[7].childNodes[5].style.display = "none";
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="menu1">
+          <ul>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="collection.html">COLLECTION</a></li>
+            <li><a href="#">STOCKIST</a></li>
+            <li><a href="#">COMMUNITY</a></li>
+          </ul>
+        </div>
+        <div class="mainlogo">
+          <a href="index.html"><img src="./미디어/toplogo.png" /></a>
+        </div>
+        <div class="menu2">
+          <ul>
+            <li><a href="login.html">LOGIN</a></li>
+            <li><a href="#">MY PAGE</a></li>
+            <li><a href="cart.html">CART</a></li>
+            <li>
+              <button class="btn1">
+                <img src="./미디어/btn_search_icon.png" width="13px" />
+              </button>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="sidebar">
+          <ul>
+            <li class="sidetext"><a href="섹션부분.html">22FW</a></li>
+            <li class="sidetext"><a href="섹션부분.html">22SS</a></li>
+            <li class="sidetext"><a href="섹션부분.html">New Arrivals</a></li>
+            <li class="sidetext"><a href="섹션부분.html">Outwear</a></li>
+            <li class="sidetext"><a href="섹션부분.html">Top</a></li>
+            <li class="sidetext"><a href="섹션부분.html">Bottom</a></li>
+            <li class="sidetext"><a href="섹션부분.html">Accessories</a></li>
+            <li class="sidetext"><a href="섹션부분.html">Slelcted Brand</a></li>
+            <li class="sidetext"><a href="섹션부분.html">SALE</a></li>
+          </ul>
+        </div>
+      </nav>
+      <section>
+        <div class="container">
+            <h3>아이디 찾기</h3>
+            <table class="selecttable">
+                <tr>
+                    <td rowspan="2" class="selectbox_box">> 회원유형</td>
+                    <td class="sel">
+                        <select name="" id="member" onchange="changemembertype(this)">
+                            <option value="sel1">개인회원</option>
+                            <option value="sel2">개인 사업자회원</option>
+                            <option value="sel3">법인 사업자회원</option>
+                        </select>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td class="radiobox_box">
+                        <div class="invidual">
+                            <!-- 개인, 개인사업자 -->
+                            <div class="invibox">
+                                <div class="radiobox">
+                                    <input type="radio" name="emailtel" id="email" value="r_find_email" onclick="radio_find(this.value)" checked >
+                                    <label for="email">이메일</label>
+                                </div>
+                                <div class="radiobox">
+                                    <input type="radio" name="emailtel" id="tel" value="r_find_phone" onclick="radio_find(this.value)">
+                                    <label for="tel">휴대폰번호</label>
+                                </div>
+                            </div>
+                            <!-- 법인사업자  -->
+                            <div class="juribox">
+                                <div class="radiobox">
+                                    <input type="radio" name="emailtel" id="jurinum" value="r_find_juri" onclick="radio_find(this.value)" checked >
+                                    <label for="jurinum">법인번호</label>
+                                </div>
+                                <div class="radiobox">
+                                    <input type="radio" name="emailtel" id="juri_email" value="r_find_email" onclick="radio_find(this.value)" >
+                                    <label for="juri_email">이메일</label>
+                                </div>
+                                <div class="radiobox">
+                                    <input type="radio" name="emailtel" id="juri_tel" value="r_find_phone" onclick="radio_find(this.value)">
+                                    <label for="juri_tel">휴대폰번호</label>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                </table>
+                <table class="invidual_email">
+                    <tr>
+                        <td>> 이름</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="objemail">> 이메일로 찾기</span>
+                            <span class="objphone">> 휴대폰 번호로 찾기</span>
+                            <span class="objjurinum">> 법인 번호로 찾기</span>
+                        </td>
+                        <td>
+                            <input type="text" class="emailbox">
+                            <div class="phonebox">
+                                <input type="text">-
+                                <input type="text" class="num" maxlength="4">-
+                                <input type="text" class="num" maxlength="4">
+                            </div>
+                            <div class="jurinumbox">
+                                <input type="text"><span>-</span><input type="text">
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+            
+            <button>확인</button>
+        </div>
+      </section>
+    <footer>
+        <div class="last">
+            <div class="inst">
+              <a href="https://www.instagram.com/artifacts_official/"><img src="./미디어/ins2.png" width="17px" /></a>
+            </dlv>
+           <div>
+            <a href="index.html">home</a>
+            <a>shop guide</a>
+            <a>terms df use</a>
+            <a>privacy policy</a>
+          </div>
+        </div>
+      </footer>
+      <div class="page1">
+        <h4>02-6207-0666</h4>
+        <p>국민은행 730601-04-085253 (주)이티씨컴퍼니</p>
+        <p>고객센터 운영시간 MON-FRI AM 11:00 ~ PM 18:00</p>
+        <p>contact@artifacts.co.kr</p>
+  
+  
+      </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function addList(){
+           //  alert("dlkdflf");
+           // 1.태그생성
+           let liTag =  document.createElement("li");
+            liTag.innerHTML="fun";
+
+           // 2.부모아래에 append 
+            let ulTag= document.getElementById("ulTag");
+            ulTag.appendChild( liTag);
+        }
+    </script>
+</head>
+<body>   
+    <button onclick="addList()"> 추가</button>
+    <ul id="ulTag">
+    </ul>
+</body>
+</html>

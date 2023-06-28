@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function changeImage(){
+           // alert("dkdfkdfkd");
+           //1. 선택한 이미지 정보얻어오기
+            let selectTag = document.getElementById("selectTag");
+            alert(selectTag);
+            alert( selectTag.selectedIndex );
+            let  index=  selectTag.selectedIndex ; 
+            let optionTag  = selectTag.options[index];        
+            alert( optionTag)     ;
+            let optionValue  = optionTag.value;
+            alert(optionValue);
+           //2. 이미지태그의 src속성의 값을 변경하기
+           let imgTag = document.getElementById("imgTag");
+           alert(imgTag);
+           imgTag.src= optionValue ; 
+        }
+    </script>
+</head>
+<body>
+    
+    그림을 선택하세요    
+    <img  id="imgTag" src="media/apple.png">
+    <select id="selectTag"  onchange="changeImage()">        
+        <option>선택하세요</option>
+        <option value="media/apple.png">사과</option>
+        <option value="media/banana.png">바나나</option>
+        <option value="media/mango.png">망고</option> 
+    </select>
+</body>
+</html>

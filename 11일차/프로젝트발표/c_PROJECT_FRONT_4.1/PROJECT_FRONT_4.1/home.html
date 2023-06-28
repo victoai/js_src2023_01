@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/4ec79785b5.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @font-face {
+        font-family: "Pretendard-Regular";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+          format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+      /* 🚩 */
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: "Pretendard-Regular";
+      }
+      header {
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 1050px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+      .logo img {
+        width: 150px;
+      }
+      .search {
+        padding-left: 5px;
+        width: 400px;
+        height: 45px;
+        border: 1px solid black;
+        border-radius: 5px;
+      }
+      .search i {
+        font-size: 18px;
+        cursor: pointer;
+      }
+      .search input {
+        border: 0;
+        outline: none;
+        font-size: 16px;
+        padding: 0;
+        height: 44px;
+        width: 340px;
+        margin-right: 20px;
+      }
+      .user i {
+        text-decoration: none;
+        color: black;
+        font-size: 25px;
+        padding: 10px;
+      }
+      .user i:hover {
+        color: rgb(113, 113, 113);
+      }
+      /* 🚩 */
+      nav {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        min-width: 1050px;
+        height: 50px;
+        margin: 0 auto;
+        line-height: 50px;
+        background-color: rgb(255, 255, 255);
+        z-index: 10;  /*무조건 맨 위로 오도록*/
+        box-shadow: 0 4px 4px -3px rgb(210, 210, 210);  /*그림자 아래에만 적용*/
+      }
+      .navbar {
+        width: 1200px;
+        font-size: 18px;
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 auto;
+
+      }
+      .navbar a{
+        text-decoration: none;
+        color: black;
+      }
+      .navbar li:hover{
+        color: rgb(98, 98, 98);
+      }
+      /* 🚩 */
+      /* 배너 시작 */
+      .mbn {
+        width: 1900px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      .img_wrap {
+        height: 370px;
+        width: 9500px;
+        min-width: 1050px;
+        display: flex;
+        cursor: pointer;
+        transform: translateX(-1900px);
+      }
+      .img_wrap img{
+        width: 1900px;
+        height: 370px;
+      }
+      .img_btn {
+        position: absolute;
+        top: 320px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        font-size: 40px;
+        border: none;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.699); 
+        color: white;
+        opacity: 0;
+        transition: 1s;
+      }
+      .img_btn img{ 
+        width: 25px;
+        text-align: center;
+        filter: invert(100%);
+      }
+      #btn_l {
+        left: 300px;
+      }
+      #btn_r {
+        right: 300px;
+      }
+      .img_wrap:hover ~ .img_btn,
+      .img_btn:hover {
+        opacity: 0.7;
+      }
+      .bn_cnt{
+        width: 80px;
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0.699);
+        position: absolute;
+        top: 480px;
+        right: 600px;
+        border-radius: 20px;
+        color: white;
+        text-align: center;
+        line-height: 40px;
+      }
+      /* 배너 끝 */
+            /* 사이드박스 시작*/
+            #sidebox_wrap{
+        position: absolute;
+        right: 20px;
+        /* border: red 1px solid; */
+        width: 130px;
+        height: 3000px;
+
+      }
+      #sidebox{
+        transform: translateY(180px);
+        position: sticky;
+        top: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+        width: 100px;
+        height: 400px;
+        border: 1px solid rgb(208, 208, 208);
+        border-radius: 5px;
+
+      }
+      #sidebox img{
+        margin: 0 auto;
+        width: 80px;
+        height: 100px;
+        border: rgb(211, 211, 211) solid 1px;
+
+      }
+      .sidebox_button{
+        cursor: pointer;
+      }
+      #sidebox_imgwrap{
+        position: relative;
+        overflow-y: hidden;
+        height: 300px;
+      }
+      #sidebox_imgs{
+        position: absolute;
+        transition: 0.6s;
+      }
+      
+      @media (max-width: 1500px){
+        #sidebox_wrap{
+          display: none;
+        }
+      }
+      
+      
+      /* 사이드박스 끝 */
+
+      /* 특가 시작 */
+      .main_adv{
+        width: 1200px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        margin-top: 120px;
+      }
+    
+     .sale{ 
+      color:  rgb(100, 100, 100);
+      margin: auto;
+      margin-top: 120px;
+      display: flex;
+      justify-content: space-between;
+      width: 1200px;
+      line-height: 40px;
+     }
+
+     
+     .sale h1{ 
+      color:  rgb(0, 0, 0);
+     }
+     
+     #clock{
+      font-size: 30px;
+      color: black;
+      font-weight: 700;
+      margin-top: 20px;
+      margin-bottom: 20px;
+     }
+
+     .timer{
+      margin-right: 150px;
+      line-height: 40px;
+      width: 250px;
+     }
+
+     .timer p{
+      font-size: 10px;
+     }
+
+     .sale_box{
+      line-height: 40px;
+      cursor: pointer;
+     }
+
+     .sale_box a{
+      margin-top: 10px;
+      color:   black;
+      text-decoration: none;
+      font-size: 10px;
+     }
+
+     .sale_title{
+      font-size: 25px;
+      color: rgb(12, 6, 3);
+     }
+     
+     .sale p{
+      font-size: 20px;
+     }
+
+     .sale_per{
+      color: orangered;
+      font-size: 18px;
+      font-weight: 600;
+     }
+
+     .sale_price{
+     color: black;
+     font-size: 20px;
+     font-weight: 700;
+     }
+      /* 특가 끝 */
+
+      /* 슬라이드 시작 */
+      .slide_wrap{
+        width: 1200px;
+        height: 500px;
+        margin: 0 auto;
+        margin-top: 50px;
+        position: relative;
+        overflow: hidden;
+      }
+      .slide_title{
+        width: 1200px;
+        height: 100px;
+        font-size: 32px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 100px;
+      }
+      .slide{
+        display: flex;
+        width: 4800px;
+        height: 400px;
+      }
+      .slide_img{
+        width: 1200px;
+        height: 400px;
+      }
+      .slide_img ul{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+      .slide_img li{
+        position: relative;
+        list-style: none;
+        width: 250px;
+        height: 350px;
+        border-radius: 0px; /**/
+        text-align: center;
+        line-height: 25px;
+        /* border: solid 0.5px rgb(113, 113, 113); */
+        box-shadow: 5px 5px 10px rgb(113, 113, 113); /**/
+        transition: 0.2s ease-out;
+      }
+      .slide_img li:hover{
+        transform: scale(1.05);
+        cursor: pointer; /**/
+      }
+      .slide_img li img{
+        width: 250px;
+        height: 278px;
+      }
+      .slide_img li span{
+        font-size: 18px;
+      }
+      .slide_img li a{
+        font-size: 18px;
+        color: rgba(255, 0, 0, 0.9);
+      }
+      .slide_img li s{
+        font-size: 14px;
+      }
+      .slide_img li .product_sale{
+        font-size: 16px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        color: white;
+        background-color: red;
+        padding: 3px;
+      }
+      .slide_img div{
+        width: 250px;
+        height: 350px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .slide_img div a{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        box-shadow: 5px 5px 10px rgb(113, 113, 113); /**/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .slide_img div img{
+        width: 35px;
+      }
+      .slide_img div p{
+        font-size: 18px;
+        margin-top: 10px;
+      }
+      .slide_wrap button{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: white;
+        transition: 0.3s ease-out;
+        cursor: pointer;
+      }
+      .slide_wrap button img{
+        width: 20px;
+        filter: invert(100%);
+        margin-top: 4px;
+      }
+      .slide_wrap button:hover{
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+      .left_btn{
+        top: 278px;
+        display: none;
+      }
+      .right_btn{
+        top: 278px;
+        right: 0px;
+      }
+      /* 슬라이드 끝 */
+
+      /*맨 위로 버튼*/
+      aside{
+        float: right;
+        position:sticky;
+        bottom: 50px;
+        right: 50px;
+      }
+      aside div{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        font-size: 40px;
+        line-height: 50px;        
+        cursor: pointer;
+        border: 1px solid lightgray;
+        border-radius: 50%;
+      }
+      #upbtn img{
+        width: 25px;
+        height: 25px;
+        transform: rotateZ(90deg);
+      }
+      /*맨 위로 버튼 끝*/
+      
+      /* 🚩 */
+      footer{
+        width: 100%;
+      }
+      #info{
+        width: 1200px;
+        padding-top: 30px;
+        margin: 30px auto;
+      }
+
+      .qbox{
+        display: flex;
+      }
+      #call{
+        margin-bottom: 30px;
+      }
+      #callnumber{
+        font-size: 28px;
+      }
+      #call span{
+        margin-right: 10px;
+      }
+      .qbox{
+        padding: 5px 0px;
+      }
+      .qbox div{
+        color: gray;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      .qbox button{
+        width: 180px;
+        height: 40px;
+        margin-right: 20px;
+        border:1px solid rgb(206, 206, 206);
+        padding: 8px 40px;
+        background-color: white;
+        cursor: pointer;
+      }
+      footer h2{
+        padding: 20px 0;
+      }
+      #info{
+        display: flex;
+        justify-content: space-between;
+
+      }
+      #info2 ul{
+        padding: 20px 0 20px 0;
+        list-style: none;
+        display: flex;
+        margin-bottom: 50px;
+        
+      }
+      #info2 ul li{
+        margin-right: 15px;
+      }
+      #info2 p{
+        font-size: 13px;
+        color: gray;
+        padding: 4px;
+      }
+
+      #icons{
+        font-size: 30px;
+        color: gray;
+        margin-top: 20px;
+      }
+      #copyright{
+        height: 100px;
+        line-height: 100px;
+        background-color: rgb(238, 238, 238);
+        text-align: center;
+        padding: 0 30px 0 30px;
+        font-size: 12px;
+        color: rgb(122, 122, 122);
+        margin-top: 30px;
+      }
+    </style>
+    <script>
+      //배너 시작
+      let imgs = [];
+      let index = 0;
+      let auto_banner = setInterval(right_bn,4000);
+      let bn_cntTag
+
+      function init() { // 자동 배너
+        imgs = document.querySelectorAll(".img_wrap img");
+        bn_cntTag = document.querySelector(".bn_cnt");
+      }
+
+      function right_bn() { //배너 오른쪽 버튼
+        let gallery = document.querySelector(".img_wrap");
+        
+        if(index==0){
+          gallery.animate(
+          {
+            transform: [
+              'translateX(-1900px)',
+              'translateX(-3800px)'
+            ]
+          },
+          {
+            duration: 700,
+            fill: "forwards"
+          }
+        )
+        }else if(index==1){
+          gallery.animate(
+          {
+            transform: [
+              'translateX(-3800px)',
+              'translateX(-5700px)'
+            ]
+          },
+          {
+            duration: 700,
+            fill: "forwards"
+          }
+        )
+        gallery.style.transform = "translateX(0)";
+        }else if(index==2){
+          gallery.animate(
+          {
+            transform: [
+              'translateX(0)',
+              'translateX(-1900px)'
+            ]
+          },
+          {
+            duration: 700,
+            fill: "forwards"
+          }          
+        )
+        }
+        index++;
+        if(index>=3) index=0;
+        bn_cntTag.innerHTML = (index+1) + " / " + (imgs.length-2);
+        if(index==imgs.length){
+          bn_cntTag.innerHTML = "1 / 3";
+        }
+        clearInterval(auto_banner);
+        auto_banner = setInterval(right_bn,4000);
+      }
+
+      function left_bn() { //배너 왼쪽 버튼
+        let gallery = document.querySelector(".img_wrap");
+
+        if(index==0){
+          gallery.animate(
+          {
+            transform: [
+              'translateX(-1900px)',
+              'translateX(0)'
+            ]
+          },
+          {
+            duration: 700,
+            fill: "forwards"
+          }
+        )
+        gallery.style.transform = "translateX(-5700px)";
+        }else if(index==1){
+          gallery.animate(
+          {
+            transform: [
+              'translateX(-3800px)',
+              'translateX(-1900px)'
+            ]
+          },
+          {
+            duration: 700,
+            fill: "forwards"
+          }
+        )
+        }else if(index==2){
+          gallery.animate(
+          {
+            transform: [
+              'translateX(-5700px)',
+              'translateX(-3800px)'
+            ]
+          },
+          {
+            duration: 700,
+            fill: "forwards"
+          }
+        )
+        }
+        index--;
+        if(index<0) index=imgs.length-3;
+        bn_cntTag.innerHTML = (index+1) + " / " + (imgs.length-2);
+        if(index<0){
+          bn_cntTag.innerHTML = (imgs.length-2) + " / " + (imgs.length-2);
+        }
+        clearInterval(auto_banner);
+        auto_banner = setInterval(right_bn,4000);
+        // if (index < 0) index = imgs.length-3;
+      }
+      //배너 끝
+
+      //사이드박스 시작
+      sideboxindex = 0;
+      function sideboxUp(){
+        if(sideboxindex<0){
+        let sidebox = document.querySelector("#sidebox_imgs");
+        sideboxindex += 100;
+        sidebox.style.top = sideboxindex+"px";
+        }
+      }
+
+      function sideboxDown(){
+        if(sideboxindex>=-300){
+          let sidebox = document.querySelector("#sidebox_imgs");
+          sideboxindex -= 100;
+          sidebox.style.top = sideboxindex+"px";
+        }
+      }
+      //사이드박스 끝
+
+      //특가 시작
+      var time = 86400;
+      var hour = "";
+      var min = "";
+      var sec = "";
+
+      var x = setInterval(function(){
+      hour = parseInt(time/3600);
+      min = time&60;
+      sec = time%60;
+
+      document.getElementById("clock").innerHTML = hour + ":" + min + ":" + sec;
+      time--;
+      if(time < 0){
+        clearInterval(x);0
+        document.getElementById("clock").innerHTML = "행사종료";
+      }
+      }, 1000);
+      //특가 끝
+
+      //슬라이드 시작
+      let slide_imgWidth = 1200; //slide_img의 width값 값이 변경되면 변경 필요
+      let cntA = 0,cntB = 0,cntC = 0,cntD = 0,cntE = 0; //슬라이드 당 카운팅할 변수
+
+      //슬라이드의 왼쪽 버튼
+      function left(obj){
+        let cnt = 0; 
+        let rightBtn = obj.parentElement.lastElementChild; // obj랑 같은 부모를 가진 오른쪽 버튼 가져옴
+        let slide = obj.parentElement.firstElementChild.nextElementSibling; //클릭한 버튼이랑 같은 부모를 가진 슬라이드를 가져옴
+        let slideA = document.querySelector(".slideA"); // slideA를 가져옴
+        let slideB = document.querySelector(".slideB"); // slideB를 가져옴
+        let slideC = document.querySelector(".slideC"); // slideC를 가져옴
+        let slideD = document.querySelector(".slideD"); // slideD를 가져옴
+        let slideE = document.querySelector(".slideE"); // slideE를 가져옴
+
+        switch(slide){ //조건: slide가
+          case slideA: //slideA랑 같으면
+            if(cntA<1) return; // cntA가 1보다 작으면 리턴
+            cnt = --cntA; // 카운트 감소
+            break;
+            case slideB:
+            if(cntB<1) return;
+            cnt = --cntB;
+            break;
+          case slideC:
+            if(cntC<1) return;
+            cnt = --cntC;
+            break;
+          case slideD:
+            if(cntD<1) return;
+            cnt = --cntD;
+            break;
+          case slideE:
+            if(cntE<1) return;
+            cnt = --cntE;
+            break;
+        }
+        slide.style.transform = 'translateX(-'+slide_imgWidth * cnt+'px)'; // 클릭한 버튼이랑 같은 부모를 가진 슬라이드를 -(slide_imgWidth * cnt)px로 이동
+        slide.style.transition = '0.5s ease-out'; // 0.5초 천천히 끝나게
+
+        if(cnt==0){
+          obj.style.display = "none"; // cnt가 0이면 왼쪽 버튼 숨김
+        }
+        else if(cnt>0){
+          rightBtn.style.display="block"; // cnt가 0보다 크면 오른쪽 버튼 보이기
+        }
+      }
+
+      //슬라이드의 오른쪽 버튼
+      function right(obj){
+        let cnt = 0;
+        let leftBtn = obj.parentElement.lastElementChild.previousElementSibling; // obj랑 같은 부모를 가진 왼쪽 버튼 가져옴
+        let slide = obj.parentElement.firstElementChild.nextElementSibling; //클릭한 버튼이랑 같은 부모를 가진 슬라이드를 가져옴
+        let slideA = document.querySelector(".slideA"); // slideA를 가져옴
+        let slideB = document.querySelector(".slideB"); // slideB를 가져옴
+        let slideC = document.querySelector(".slideC"); // slideC를 가져옴
+        let slideD = document.querySelector(".slideD"); // slideD를 가져옴
+        let slideE = document.querySelector(".slideE"); // slideE를 가져옴
+
+        switch(slide){ //조건: slide가
+          case slideA: //slideA랑 같으면
+            if(cntA>=3) return; // cntA가 2보다 크거나 같으면 리턴
+            cnt = ++cntA; // 카운트 증가
+            break;
+          case slideB:
+            if(cntB>=3) return;
+            cnt = ++cntB;
+            break;
+          case slideC:
+            if(cntC>=3) return;
+            cnt = ++cntC;
+            break;
+          case slideD:
+            if(cntD>=3) return;
+            cnt = ++cntD;
+            break;
+          case slideE:
+            if(cntE>=3) return;
+            cnt = ++cntE;
+            break;
+        }
+
+        if(cnt<3){
+          slide.style.transform = 'translateX(-'+slide_imgWidth * cnt+'px)';
+          slide.style.transition = '0.5s ease-out';
+        }
+        else{
+          slide.style.transform = 'translateX(-2700px)';
+          slide.style.transition = '0.5s ease-out';
+          obj.style.display="none"; // cnt가 2가 되면 오른쪽 버튼 사라짐
+        }
+
+        if(cnt>0){
+          leftBtn.style.display="block" //cnt가 0보다 크면 왼쪽 버튼 보이기
+        }
+        
+      }
+      //슬라이드 끝
+
+      //맨위로
+      function upbtn(){
+        window.scrollTo({top:0, behavior:"smooth"});
+      }
+      //맨위로 끝
+
+      //검색 시작
+      function search(obj){
+        let search = obj.previousElementSibling.value;
+        console.log(search);
+
+        switch(search){
+          case '신상품':
+          location.href = 'newList.html';
+          break;
+          case '베스트':
+          location.href = 'bestList.html';
+          break;
+          case '여성시계':
+          location.href = 'womensList.html';
+          break;
+          case '남성시계':
+          location.href = 'mensList.html';
+          break;
+          case '아동시계':
+          location.href = 'childList.html';
+          break;
+          default:
+          alert('상품이 존재하지 않습니다');
+          break;
+        }
+      }
+      //검색 끝
+    </script>
+  </head>
+  <body onload="init()">
+    <header>
+      <div class="logo">
+        <a href="home.html"> <img src="image/logo.png" alt="" /> </a>
+        <span>Acorn watch </span>
+      </div>
+      <div class="search">
+        <input type="text"/>
+        <i onclick="search(this)" class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="user">
+        <a href="login.html"><i class="fa-solid fa-user"></i></a>
+        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+      </div>
+    </header>
+    <nav>
+      <ul class="navbar">
+        <a href="newList.html"><li>신상품</li></a>
+        <a href="bestList.html"><li>베스트</li></a>
+        <a href="womensList.html"><li>여성시계</li></a>
+        <a href="mensList.html"><li>남성시계</li></a>
+        <a href="childList.html"><li>아동시계</li></a>
+      </ul>
+    </nav>
+
+
+    <main>
+      <!-- 배너 시작 -->
+      <div class="mbn">
+        <div class="img_wrap">
+          <img src="image/banner/banner1.png" alt="" />
+          <img src="image/banner/banner5.png" alt="" />
+          <img src="image/banner/banner6.png" alt="" />
+          <img src="image/banner/banner1.png" alt="" />
+          <img src="image/banner/banner5.png" alt="" />                  
+        </div>
+        <div class="bn_cnt">1 / 3</div>
+        <button class="img_btn" id="btn_l" onclick="left_bn()"><img src="image/leftbtn.png"></button> 
+        <button class="img_btn" id="btn_r" onclick="right_bn()"><img src="image/rightbtn.png"></button>
+      </div>
+      <!-- 배너 끝 -->
+
+      <!-- 사이드박스 시작 -->
+      <div id="sidebox_wrap">
+        <div id="sidebox" >
+          <div id="sidebox_up" onclick="sideboxUp()" class="sidebox_button"><i class="fa-solid fa-caret-up"></i></div>
+          <p>최근 본 상품</p>
+          <div id="sidebox_imgwrap">
+            <div id="sidebox_imgs">
+              <img src="https://static.swatch.com/images/product/SB01Z102/sa200/SB01Z102_sa200_er005.png" alt="">
+              <img src="https://static.swatch.com/images/product/SB01Z101/sa200/SB01Z101_sa200_er005.png" alt="">
+              <img src="https://static.swatch.com/images/product/SO29N705/sa200/SO29N705_sa200_er005.png" alt="">
+              <img src="https://static.swatch.com/images/product/SS07B106/sa200/SS07B106_sa200_er005.png" alt="">
+              <img src="https://static.swatch.com/images/product/SS07B108/sa200/SS07B108_sa200_er005.png" alt="">
+              <img src="https://static.swatch.com/images/product/SYXS138/sa200/SYXS138_sa200_er005.png" alt="">
+            </div>
+          </div> 
+          <div id="sidebox_down" onclick="sideboxDown()" class="sidebox_button"><i class="fa-solid fa-caret-down"></i></div>
+        </div>
+      </div>
+      <!-- 사이드박스 끝 -->
+
+      <!-- 슬라이드 시작 -->
+      <div class="slide_wrap">
+        <div class="slide_title">
+          <span>신상품 Update</span>
+        </div>
+        <div class="slide slideA">
+          <div class="slide_img">
+            <ul>
+              <li><img src="image/watches/new-releases1.avif" alt="신상품1"><span>RECIPE FOR LOVE<br><a>125,100원</a><s>139,000원</s></span><a class="product_sale">10% 할인</a></li>
+              <li><img src="image/watches/new-releases2.avif" alt="신상품2"><span>PUREST LOVE<br>93,000원</span></li>
+              <li><img src="image/watches/new-releases3.avif" alt="신상품3"><span>LOVE TO GO AROUND<br>106,000원</span></li>
+              <li><img src="image/watches/new-releases4.webp" alt="신상품4"><span>CIRCLING BLACK<br>93,000원</span></li>
+            </ul>
+          </div>
+          <div class="slide_img">
+            <ul>
+              <li><img src="image/watches/new-releases5.webp" alt="신상품5"><span>DARK GLOW<br>106,000원</span></li>
+              <li><img src="image/watches/new-releases6.webp" alt="신상품6"><span>COBALT DISCO<br>106,000원</span></li>
+              <li><img src="image/watches/new-releases7.webp" alt="신상품7"><span>BRUSHED RED<br>252,000원</span></li>
+              <li><img src="image/watches/new-releases8.webp" alt="신상품8"><span>BRUSHED GREEN<br><a>239,400원</a><s>252,000원</s></span><a class="product_sale">5% 할인</a></li>
+            </ul>
+          </div>
+          <div class="slide_img">
+            <ul>
+              <li><img src="image/watches/new-releases9.webp" alt="신상품9"><span>PURE WHITE IRONY<br>212,000원</span></li>
+              <li><img src="image/watches/new-releases10.avif" alt="신상품10"><span>SXY - VALENTINES 2023 IV<br><a>112,200원</a><s>132,000원</s></span><a class="product_sale">15% 할인</a></li>
+              <li><img src="image/watches/new-releases11.avif" alt="신상품11"><span>SXY - VALENTINES 2023 I<br>132,000원</span></li>
+              <li><img src="image/watches/new-releases12.avif" alt="신상품12"><span>SXY - VALENTINES 2023 III<br>132,000원</span></li>
+            </ul>
+          </div>
+          <div class="slide_img">
+            <div><a href="newList.html"><img src="image/rightbtn.png"></a><p>전체보기</p></div>
+          </div>
+        </div>
+        <button class="left_btn" onclick="left(this)"><img src="image/leftbtn.png"></button>
+        <button class="right_btn" onclick="right(this)"><img src="image/rightbtn.png"></button>
+      </div>
+
+      <!-- 특가 시작 -->
+      <img  class="main_adv" src="image/main-ad2.png" alt="">
+      <div class="sale">
+          <div class="timer">
+             <h1>일일특가</h1>
+             <p>24시간 한정 특가</p>
+             <div id="clock"></div>
+             <p> 시간은 돌아오지 않습니다! </p>
+          </div>
+          <div class="sale_box" onclick="location.href='www.swatch.com';">
+            <img src="image/daily_sale.webp" alt="" width="700px" height="400px">
+            <p> 독보적인 스타일의 <br> 
+              <b><span class="sale_title"> origami  art watch</span></b><br>
+              <span class="sale_per">  30% </span><span class="sale_price"> 70,000 원</span> <span class="sale_priceDel"> <del> 100,000 원 </del> </span> <br>
+            </p>
+            <div class="sale_revew">
+              <img src="image/reiview_icon.png" a href="#" alt="" width="15px" height="20px"> 후기 </img>
+            </div>
+          </div>
+        </div>
+      <!-- 특가 끝 -->
+
+      <div class="slide_wrap">
+        <div class="slide_title">
+          <span>2월 베스트 상품 모음전</span>
+        </div>
+        <div class="slide slideB">
+          <div class="slide_img">
+            <ul>
+              <li><a href="product.html"><img src="image/watches/best-sellers1.webp" alt="베스트셀러1"></a><span>YEAR OF THE RABBIT<br>132,000원</span></li>
+              <li><img src="image/watches/best-sellers2.webp" alt="베스트셀러2"><span>HOW MAJESTIC<br>132,000원</span></li>
+              <li><img src="image/watches/best-sellers3.webp" alt="베스트셀러3"><span>ONCE AGAIN<br><a>65,700원</a><s>73,000원</s></span><a class="product_sale">10% 할인</a></li>
+              <li><img src="image/watches/best-sellers4.webp" alt="베스트셀러4"><span>JUST WHITE SOFT<br>73,000원</span></li>
+            </ul>
+          </div>
+          <div class="slide_img">
+            <ul>
+              <li><img src="image/watches/best-sellers5.webp" alt="베스트셀러5"><span>TWICE AGAIN<br><a>100,700원</a><s>106,000원</s></span><a class="product_sale">5% 할인</a></li>
+              <li><img src="image/watches/best-sellers6.webp" alt="베스트셀러6"><span>LADY BLACK SINGLE<br>73,000원</span></li>
+              <li><img src="image/watches/best-sellers7.webp" alt="베스트셀러7"><span>LA NIGHT<br>93,000원</span></li>
+              <li><img src="image/watches/best-sellers8.webp" alt="베스트셀러8"><span>ULTRALAVANDE<br>99,000원</span></li>
+            </ul>
+          </div>
+          <div class="slide_img">
+            <ul>
+              <li><img src="image/watches/best-sellers9.webp" alt="베스트셀러9"><span>BLUE AWAY<br>93,000원</span></li>
+              <li><img src="image/watches/best-sellers10.webp" alt="베스트셀러10"><span>LOVE O'CLOCK<br><a>84,150원</a><s>99,000원</s></span><a class="product_sale">15% 할인</a></li>
+              <li><img src="image/watches/best-sellers11.webp" alt="베스트셀러11"><span>BLUE REBEL<br>106,000원</span></li>
+              <li><img src="image/watches/best-sellers12.webp" alt="베스트셀러12"><span>CASUAL BLUE<br>86,000원</span></li>
+            </ul>
+          </div>
+          <div class="slide_img">
+            <div><a href="bestList.html"><img src="image/rightbtn.png"></a><p>전체보기</p></div>
+          </div>
+        </div>
+        <button class="left_btn" onclick="left(this)"><img src="image/leftbtn.png"></button>
+        <button class="right_btn" onclick="right(this)"><img src="image/rightbtn.png"></button>
+      </div>
+      <div class="slide_wrap">
+        <div class="slide_title">
+          <span>여성시계</span>
+        </div>
+        <div class="slide slideC">
+          <div class="slide_img">
+            <ul>
+              <li><a href="product.html"><img src="image/watches/womens-watches1.webp" alt="여성시계1"></a><span>YEAR OF THE RABBIT<br>132,000원</li>
+              <li><img src="image/watches/womens-watches2.webp" alt="여성시계2"><span>MYSTERY LIFE<br>119,000원</span></li>
+              <li><img src="image/watches/womens-watches3.webp" alt="여성시계3"><span>RESOLUTION<br><a>101,700원</a><s>113,000원</s></span><a class="product_sale">10% 할인</a></span></li>
+              <li><img src="image/watches/womens-watches4.webp" alt="여성시계4"><span>ROSTFREI<br>113,000원</span></li>
+            </ul>
+          </div>
+          <div class="slide_img">
+            <ul>
+              <li><img src="image/watches/womens-watches5.webp" alt="여성시계5"><span>GLEAM TEAM<br>227,000원</span></li>
+              <li><img src="image/watches/womens-watches6.webp" alt="여성시계6"><span>HOW MAJESTIC<br>132,000원</span></li>
+              <li><img src="image/watches/womens-watches7.webp" alt="여성시계7"><span>ONCE AGAIN<br><a>69,350원</a><s>73,000원</s></span><a class="product_sale">5% 할인</a></li>
+              <li><img src="image/watches/womens-watches8.webp" alt="여성시계8"><span>TWICE AGAIN<br>106,000원</span></li>
+            </ul>
+          </div>
+          <div class="slide_img">
+            <ul>
+              <li><img src="image/watches/womens-watches9.webp" alt="여성시계9"><span>JUST WHITE SOFT<br>73,000원</span></li>
+              <li><img src="image/watches/womens-watches10.webp" alt="여성시계10"><span>BBBLACK<br><a>118,150원</a><s>139,000원</s></span><a class="product_sale">15% 할인</a></li>
+              <li><img src="image/watches/womens-watches11.webp" alt="여성시계11"><span>BLUE AWAY<br>93,000원</span></li>
+              <li><img src="image/watches/womens-watches12.webp" alt="여성시계12"><span>TIME FOR TAUPE<br>172,000원</span></li>
+            </ul>
+          </div>
+          <div class="slide_img">
+            <div><a href="womensList.html"><img src="image/rightbtn.png"></a><p>전체보기</p></div>
+          </div>
+        </div>
+        <button class="left_btn" onclick="left(this)"><img src="image/leftbtn.png"></button>
+        <button class="right_btn" onclick="right(this)"><img src="image/rightbtn.png"></button>
+      </div>
+      <div class="slide_wrap">
+        <div class="slide_title">
+          <span>남성시계</span>
+        </div>
+        <div class="slide slideD">
+          <div class="slide_img">
+            <ul>
+              <li><a href="product.html"><img src="image/watches/mens-watches1.webp" alt="남성시계1"></a><span>YEAR OF THE RABBIT<br>132,000원</span></li>
+              <li><img src="image/watches/mens-watches2.webp" alt="남성시계2"><span>ONCE AGAIN<br>73,000원</span></li>
+              <li><img src="image/watches/mens-watches3.webp" alt="남성시계3"><span>TWICE AGAIN<br><a>95,400원</a><s>106,000원</s></span><a class="product_sale">10% 할인</a></li>
+              <li><img src="image/watches/mens-watches4.webp" alt="남성시계4"><span>JUST WHITE SOFT<br>73,000원</span></li>
+            </ul>
+          </div>
+          <div class="slide_img">
+            <ul>
+              <li><img src="image/watches/mens-watches5.webp" alt="남성시계5"><span>HEART IN BLUE BY SWATCH<br>132,000원</span></li>
+              <li><img src="image/watches/mens-watches6.avif" alt="남성시계6"><span>RECIPE FOR LOVE<br><a>118,150원</a><s>139,000원</s></span><a class="product_sale">15% 할인</a></li>
+              <li><img src="image/watches/mens-watches7.webp" alt="남성시계7"><span>MONO BLACK<br>106,000원</span></li>
+              <li><img src="image/watches/mens-watches8.webp" alt="남성시계8"><span>BLUE TRIP<br>106,000원</span></li>
+            </ul>
+          </div>
+          <div class="slide_img">
+            <ul>
+              <li><img src="image/watches/mens-watches9.webp" alt="남성시계9"><span>GOLDEN TAC<br>93,000원</span></li>
+              <li><img src="image/watches/mens-watches10.webp" alt="남성시계10"><span>BLUE REBEL<br>106,000원</span></li>
+              <li><img src="image/watches/mens-watches11.webp" alt="남성시계11"><span>DIE GLOCKE<br>106,000원</span></li>
+              <li><img src="image/watches/mens-watches12.png" alt="남성시계12"><span>SKINNAVY<br><a>220,400원</a><s>232,000원</s></span><a class="product_sale">5% 할인</a></li>
+            </ul>
+          </div>
+          <div class="slide_img">
+            <div><a href="mensList.html"><img src="image/rightbtn.png"></a><p>전체보기</p></div>
+          </div>
+        </div>
+        <button class="left_btn" onclick="left(this)"><img src="image/leftbtn.png"></button>
+        <button class="right_btn" onclick="right(this)"><img src="image/rightbtn.png"></button>
+      </div>
+      <div class="slide_wrap">
+        <div class="slide_title">
+          <span>아동시계</span>
+        </div>
+        <div class="slide slideE">
+          <div class="slide_img">
+            <ul>
+              <li><img src="image/watches/child_watches1.webp" alt="아동시계1"><span>YOUR GIRAXUS<br>62,000원</span></li>
+              <li><img src="image/watches/child_watches2.webp" alt="아동시계2"><span>PEARLAXUS<br><a>70,300원</a><s>74,000원</s></span><a class="product_sale">5% 할인</a></li>
+              <li><img src="image/watches/child_watches3.png" alt="아동시계3"><span>YOUR DINOSAURITOS<br>55,000원</span></li>
+              <li><img src="image/watches/child_watches4.webp" alt="아동시계4"><span>YOUR MAGICAL DREAM<br>55,000원</span></li>
+            </ul>
+          </div>
+          <div class="slide_img">
+            <ul>
+              <li><img src="image/watches/child_watches5.webp" alt="아동시계5"><span>YOUR COLOR BLAST BLUE<br>55,000원</span></li>
+              <li><img src="image/watches/child_watches6.webp" alt="아동시계6"><span>SOLAR SYSTEM<br><a>44,100원</a><s>49,000원</s></span><a class="product_sale">10% 할인</a></li>
+              <li><img src="image/watches/child_watches7.webp" alt="아동시계7"><span>YOUR CUORICINO<br>62,000원</span></li>
+              <li><img src="image/watches/child_watches8.webp" alt="아동시계8"><span>SOLO DARK BLUE<br>68,000원</span></li>
+            </ul>
+          </div>
+          <div class="slide_img">
+            <ul>
+              <li><img src="image/watches/child_watches9.webp" alt="아동시계9"><span>STRIPY DREAMS<br><a>41,650원</a><s>49,000원</s></span><a class="product_sale">15% 할인</a></li>
+              <li><img src="image/watches/child_watches10.webp" alt="아동시계10"><span>MAGICAL UNICORNS<br>56,000원</span></li>
+              <li><img src="image/watches/child_watches11.webp" alt="아동시계11"><span>CATCH U<br>68,000원</span></li>
+              <li><img src="image/watches/child_watches12.webp" alt="아동시계12"><span>EYE SEE U<br>62,000원</span></li>
+            </ul>
+          </div>
+          <div class="slide_img">
+            <div><a href="childList.html"><img src="image/rightbtn.png"></a><p>전체보기</p></div>
+          </div>
+        </div>
+        <button class="left_btn" onclick="left(this)"><img src="image/leftbtn.png"></button>
+        <button class="right_btn" onclick="right(this)"><img src="image/rightbtn.png"></button>
+      </div>
+      <!-- 슬라이드 끝 -->
+      <aside>
+        <div id="upbtn" onclick="upbtn()"><img src="image/leftbtn.png"></div>
+      </aside>
+    </main>
+
+    <footer>
+      <div id="info">
+        <div id="info1">
+          <h2>고객행복센터</h2>
+            <div id="call"><span id="callnumber"><strong>1644-1107</strong></span><span>월~토요일 오전7시 - 오후 6시</span></div>
+            <div class="qbox">
+            <button>카카오톡 문의</button>
+            <div>
+              월~토요일| 오전7시 - 오후 6시<br>
+              일~공휴일| 오전7시 - 오후 1시
+            </div>
+          </div>
+          <div class="qbox">
+            <a href="service.html"><button>1:1  문의</button></a>
+            <div>
+              365일<br>
+              고객센터 운영시간에 순차적으로 답변드리겠습니다.
+            </div>
+          </div>
+          <div class="qbox">
+            <a href="service.html"><button>대량주문 문의</button></a>
+            <div>
+              월~금요일| 오전9시 - 오후 6시<br>
+              점심시간| 오후1시 - 오후 2시
+            </div>
+          </div>
+        </div>
+        <div id="info2">
+          <ul>
+            <li>에이콘소개</li>
+            <li>에이콘소개영상</li>
+            <li>인재채용</li>
+            <li>이용약관</li>
+            <li>개인정보처리방침</li>
+            <li>이용안내</li>
+          </ul>
+          <p>법인명(상호):주식회사 에이콘 | 사업자 등록번호:61-254-25225 사업자 정보확인</p>
+          <P>통신판매업:제2018-서울강남-55566호 | 개인정보보호책임자:이원준</P>
+          <P>주소:서울특별시 강남구 테헤란로 133,18층(역삼동) | 대표이사:양양양</P>
+          <P>입점문의:입점문의하기| 제휴문의:ksjfdlssfljk@dlkjdl.com</P>
+          <p>채용문의:sksdkf@kdfjsld.com</p>
+          <p>팩스: 070-555-5545</p>
+          <div id="icons">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-youtube"></i>
+
+          </div>
+        </div>
+      </div>
+      <div id="copyright">
+        에이콘에서 판매되는 상품중에는 에이콘에 입접한 개별 판매자가 판매하는 오픈 마켓 상품이 포함되어 있습니다.
+        ACORN CORP.ALL RIGHT RESERVED
+      </div>
+    </footer>
+  </body>
+</html>

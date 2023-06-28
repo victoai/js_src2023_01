@@ -1,0 +1,497 @@
+section{
+    width:1200px; 
+    margin: 0 auto;
+}
+/* =========================== 배너 ================================ */
+.banner{
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+.banner .left_spacer{
+    width: 40%;
+    background-color: black;
+}
+.banner .right_spacer{
+    width: 40%;
+    background-color: black;
+}
+.banner .img{
+    background-color: black;
+    width: 20%;
+    min-width: 1200px; height: 400px;
+    background-image: url(./images/banner1.jpg);
+   
+    background-size: contain;
+    background-position: center;
+}
+/* =========================== 랭킹 ================================ */
+.ranking{
+    margin: 40px auto;    
+    width: 100%;    
+    padding: 15px 0 15px 0;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(232, 232, 232, 0.37));
+}
+.ranking ul{
+    width: 1200px;
+    margin: 0 auto;
+    list-style: none;
+}
+.ranking .heading{
+    margin: 0 auto;
+    width: 1200px;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(63, 62, 62);
+    display: flex;
+}
+.ranking .heading .title{
+    width: 200px;
+}
+.ranking .heading .spacer{
+    width: 900px;
+}
+.ranking .heading .more_chart{
+    text-align: center;
+    line-height: 30px;
+    margin-top: 3px;
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+    color: gray;
+    background-color: transparent;
+    border: 0.5px solid rgb(238, 237, 237);
+    border-radius: 15px;
+}
+
+    /* swiper */
+    .swiper1{
+        margin-top: 15px;
+    }
+    .ranking .swiper {
+        width: 1200px;
+        height: 300px; 
+    }
+    .ranking .swiper img{
+        width: 220px;
+        height: 280px;
+        border-radius: 15px;
+    } 
+/* =========================== 이벤트 ================================ */
+
+.event{
+    margin: 100px auto;
+    width: 100%;
+    
+}
+.event .event_title{
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(63, 62, 62);
+}
+.event .swiper2{
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+    /* swiper_event */
+    
+    .event .swiper {
+        width: 100%;
+        height: 220px;
+    }
+    .event .swiper img{
+        width: 380px;
+        height: 220px;
+        border-radius: 10px;
+    } 
+/* ==========================특별관================================= */
+
+.special_cinema{
+    position: relative;
+}
+    /* Heaidng */
+    .special_cinema .heading{
+        margin: 10px;
+        margin-top: 50px;
+        font-size: 25px;
+        font-weight: bold;
+        color: rgb(63, 62, 62);
+    }
+    /* heading 버튼 */
+    .special_cinema .heading button{
+        width: 80px;
+        height: 30px;
+        font-size: 12px;
+        font-weight: bold;
+        color: gray;
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        background-color: transparent;
+        border: 0.5px solid rgb(238, 237, 237);
+        border-radius: 15px;
+    }
+    /* 특별관 내용 레이아웃 */
+    .special_cinema ul{
+        list-style: none;
+        width: 47.5%; height: 90px;
+        line-height: 90px;
+        padding-left: 20px;
+        font-size: 16px;
+        border-bottom: 0.5px solid rgb(201, 199, 199);
+        display: flex;
+        color: rgb(153, 153, 153);
+    }
+    .special_cinema ul:nth-child(1){
+        border-top: 2px solid rgb(145, 145, 145);
+    }
+    .special_cinema ul li{
+        width: 50.0%; height: 360px;
+        visibility: hidden;
+        position: absolute  ;
+        top: 10px;
+        right: 0;
+    }
+    .special_cinema img{
+        width: 100%; 
+        height:100%;
+        border-radius: 20px;
+        margin-top: 30px;
+    }
+    /* 특별관 hover */
+    /* 1번 이미지를 z축을 0으로해서 다른 이미지들에 가리게 설정 */
+    .special_cinema ul:nth-child(1) li{ 
+        visibility: visible;
+        z-index: 0;
+    }
+    .special_cinema ul:hover li{
+        z-index: 2;
+        visibility: visible;
+    }
+    .special_cinema ul:hover{
+        color: black;
+        font-size: 20px;
+        font-weight: bolder;
+        border: 1px solid black;
+        border-radius: 15px;
+    }
+
+    /* 판매메뉴 영역 */
+    
+    /* 영역 넓이 조정 */ 
+.sell_wrap{
+    width: 1200px;            
+    margin: 50px auto;
+    margin-left: -50px;
+    padding: 50px;
+    display: flex;
+}
+
+/* 3등분 나누기 */
+.sell_info{
+    width: 300px;
+    padding: 10px;
+    border: 1px solid rgb(230, 227, 227);
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+/* 상단 글씨와 더보기 */
+.sell_top{
+    display: flex;
+    position: relative;
+    height: 50px;            
+}
+.sell_top div:nth-child(1){
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.sell_top div:nth-child(2){
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: 0.5px solid rgb(238, 237, 237);
+    border-radius: 20px;
+    font-size: 10px;
+    padding: 5px 10px 5px 10px;
+}        
+
+/* 티켓부분 */
+.ticket_info{
+    padding: 10px 10px 20px 10px;            
+    display: flex;
+}
+.ticket_info div:nth-child(1){
+    width: 100px;
+    height: 75px;
+               
+}
+
+/* 티켓영역 왼쪽 이미지 */
+#ticket1{
+    background-image: url("http://img.cgv.co.kr/GiftStore/Product/Pc/Detail/16094706931690.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#ticket2{
+    background-image: url("http://img.cgv.co.kr/GiftStore/Product/Pc/Detail/15458911955580.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#ticket3{
+    background-image: url("http://img.cgv.co.kr/GiftStore/Product/Pc/Detail/16105061094000.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#ticket4{
+    background-image: url("http://img.cgv.co.kr/GiftStore/Product/Pc/Detail/15814124362500.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#ticket5{
+    background-image: url("http://img.cgv.co.kr/GiftStore/Product/Pc/Detail/15814158043490.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#ticket6{
+    background-image: url("http://img.cgv.co.kr/GiftStore/Product/Pc/Detail/15814162231780.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#ticket7{
+    background-image: url("http://img.cgv.co.kr/GiftStore/Product/Pc/Detail/15463252014310.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#ticket8{
+    background-image: url("http://img.cgv.co.kr/GiftStore/Product/Pc/Detail/15463251542560.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#ticket9{
+    background-image: url("http://img.cgv.co.kr/GiftStore/Product/Pc/Detail/15464065566830.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+/* 티켓영역 우측 설명부분 */
+.ticket_info div:nth-child(2){
+    font-size: 14px;
+    font-weight: bold;
+    padding: 15px 0 0 15px;
+}
+.ticket_info div:nth-child(2) span{
+    font-size: 16px;
+}
+
+/* 하위메뉴 스타일 */
+.bottomMenu{
+    border-top: 0.5px solid rgba(128, 128, 128, 0.5);
+}
+.bottomMenu_wrap{
+    width: 1200px;
+    padding: 50px 0px 50px 0px;            
+    margin: 0 auto;
+    color: gray;
+    font-size: 12px;
+    font-weight: bold;
+}
+.bottomMenu_wrap ul{
+    list-style: none;
+    display: flex;
+}
+.bottomMenu_wrap ul li{
+    width: 150px;
+    height: 100px;            
+    margin: 0 auto;
+    text-align: center;
+    
+}
+.bottomMenu_wrap ul li:hover{
+    text-decoration: underline;
+    font-size: 15px;
+    font-weight: bolder;
+    
+}
+.bottomMenu_wrap ul li div{
+    width: 50px;
+    height: 50px;            
+    margin: 5px auto;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+#item1{
+    background-image: url("https://www.dedra.co.kr/design/lsh7614/smartskin2018/app/notice_icon.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#item2{
+    background-image: url("https://cdn-icons-png.flaticon.com/512/2037/2037655.png");
+    background-position: center;
+    background-size: cover;
+}
+#item3{
+    background-image: url("https://www.4xtyle.com/design/cooldog/smartskin2018/footer_ic02.png");
+    background-position: center;
+    background-size: cover;
+}
+#item4{
+    background-image: url("https://media.istockphoto.com/vectors/talking-people-vector-icon-isolated-on-white-background-people-icon-vector-id1181003043?k=20&m=1181003043&s=170667a&w=0&h=0ALFgMTTiU2W_kvvwKYsxwlSmzoPCTOYDmCyyWXl2hQ=");
+    background-position: center;
+    background-size: cover;
+}
+#item5{
+    background-image: url("https://cdn-icons-png.flaticon.com/512/1201/1201867.png");
+    background-position: center;
+    background-size: cover;
+}
+#item6{
+    background-image: url("https://cdn-icons-png.flaticon.com/512/679/679454.png");
+    background-position: center;
+    background-size: cover;
+}
+
+/* ========================== 예매 상자 ================================= */
+
+.ticketing_box{
+    width: 20%; height: 440px;
+    min-width: 300px;
+    background-color:rgba(255, 255, 255, 0.8);
+    border: 3px solid  #2731558e;;
+    border-radius: 10px;
+    position: fixed;
+    padding: 20px;
+    left: 100%;
+    right: 0;
+    top: 121px;
+    z-index: 3;
+}
+.ticketing_box .info{
+    width: 100%; height: 100%;
+}
+.ticketing_box .info .heading{
+    width: 100%; 
+    height: 10%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 30px;
+    font-size: 22px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+.ticketing_box .info .heading div{
+    margin: 0 auto;
+    width: 200px; height: 30px;
+    /* border-radius: 10px;
+    background-color: #17979a; */
+    
+}
+.ticketing_box .info .movie_select{
+    width: 93%; height: 45%;
+    margin: 0 auto;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    /* border-radius: 5px; */
+    margin-bottom: 2%;
+}
+
+
+.ticketing_box .info .date{
+    width: 93%; height: 8%;
+    margin: 0 auto;
+    /* background-color: rgb(255, 255, 255); */
+    border-bottom: 1px solid black;
+    /* border-radius: 10px; */
+    margin-bottom: 2%;
+    text-align: center;
+}
+.info .date input{
+    border: 0px;
+    outline: 0px;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(128, 128, 128);
+    width: 90%; height: 80%;
+    text-align: right;
+}   
+.ticketing_box .info .location{
+    width: 93%; height: 8%;
+    margin: 0 auto;
+    /* background-color: rgb(255, 255, 255); */
+    border-bottom: 1px solid black;
+    /* border-radius: 10px; */
+    margin-bottom: 2%;
+    text-align: center;
+
+}
+.info .location select{
+    border: 0px;
+    outline: 0px;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(128, 128, 128);
+    width: 90%; height: 80%;
+    text-align: right;
+}   
+.ticketing_box .info .members{
+    width: 93%; height: 8%;
+    margin: 0 auto;
+    /* background-color: rgb(255, 255, 255); */
+    border-bottom: 1px solid black;
+    /* border-radius: 10px; */
+    margin-bottom: 2%;
+    text-align: center;
+    line-height:27px;
+}
+.info .members select{
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: 600;
+    color: rgb(128, 128, 128);
+    border: 0px;
+    outline: 0px;
+    width: 90%; height: 80%;
+    text-align: right;
+    background-color: none;
+}
+.ticketing_box .info .search{
+    width: 93%; height: 10%;
+    margin: 0 auto;
+    font-size: 12px;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 45px;
+    font-weight: bold;
+    margin-top: 10px;
+    
+
+}
+.ticketing_box_btn{
+    /* width: 30px; 
+    height: 60px;
+    line-height: 60px; */
+    /* border: 3px solid rgba(192, 192, 192, 0.5); */
+    /* background-color: rgb(255, 255, 255); */
+    /* border-radius: 10px 0 0 10px; */
+    position: fixed;
+    right: 20px; 
+    top: 150px;
+    z-index: 5;
+}
+.ticketing_box_btn__icon {
+    width: 50px;
+    height: 50px;
+    opacity: 0.5;
+    background-position: center;
+    background-size: cover;
+    background-image: url(http://cdn.onlinewebfonts.com/svg/img_403008.png);
+}

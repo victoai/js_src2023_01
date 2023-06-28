@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function delCount(){
+            // checkbox  checked  속성을 가지고 있음,  체크가되면 true,  체크가 안되면 false 가짐 
+            //1.태그정보 얻어오기   
+           let checkboxs =   document.querySelectorAll("input[type='checkbox']");
+           alert( checkboxs.length);
+           let body = document.querySelector("body");        
+         
+           /*
+        // console.log( checkboxs.length);
+           console.log ( checkboxs[0].checked );   
+           console.log ( checkboxs[1].checked );
+           console.log ( checkboxs[2].checked );
+           console.log ( checkboxs[3].checked );
+           console.log ( checkboxs[4].checked );
+          */
+
+           for( let i=0; i< checkboxs.length ; i++){            
+              if( checkboxs[i].checked == true){      //  if( checkboxs[i].checked )
+                body.removeChild(  checkboxs[i] );                    
+              }
+           } 
+
+        }
+    </script>
+
+</head>
+<body>
+
+    <input type="checkbox">  
+    <input type="checkbox">  
+    <input type="checkbox">  
+    <input type="checkbox">   
+    <input type="checkbox"> 
+
+    <button  onclick="delCount()"> 선택삭제</button>
+    
+</body>
+</html>

@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./main.css" rel="stylesheet">
+    
+    <style>
+
+        h2{
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .btn_a{
+            background: silver;
+            border: none;
+            width: 80px;
+            height: 30px;
+            border-radius: 5px;
+            font-weight:bold
+        }
+        .btn_b{
+            background: black;
+            color: white;
+            border: none;
+            width: 80px;
+            height: 30px;
+            border-radius: 5px;
+            font-weight:bold
+        }
+        .middle{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .middle h1{
+            text-align: center;
+            font-weight: bold;
+        }
+        .middle_1{
+            width: 800px;
+            margin: 0 auto;
+        }
+        .middle_wrap{
+            display:flex;
+            width: 800px;
+            flex-wrap: wrap;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .btn_wrap{
+            width: 800px;
+            display: flex;
+            margin-bottom: 50px;
+        }
+        .btn:hover{
+            border: 2px solid black;
+        } 
+        .btn{        
+            width: 380px;
+            height:60px;
+            border-radius: 10px;
+            border: 1px solid silver;
+            line-height: 60px;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 0 auto;
+        }
+        #menu_1{
+            width: 800px;
+            display: none;   
+        }
+        #menu_2{
+            width: 800px;
+            display: none;
+        }
+        .btn_1{
+            width: 260px;
+            height:60px;
+            border-radius: 10px;
+            border: 1px solid silver;
+            line-height: 60px;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 0 auto;
+            background-color: white;
+        }
+        .btn_1:hover{
+            border: 2px solid black;
+        }
+        .input_1{
+            width: 800px;
+            height: 50px;
+            display: flex;
+            border-bottom: 0.5px solid silver;
+            margin-top: 20px;
+        }
+        .input input{
+            width: 750px;
+            border: none;
+            outline: none;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .keybordimg{
+            width: 30px;
+            height: 30px;
+            background-image: url("https://www.hyundaicard.com/docfiles/solution/pluginfree/icon/ico_keyboard.png");
+            background-position: center;
+            background-size: cover;
+            cursor:pointer;
+
+        }
+        .input .que{
+            width: 732px;
+            border: none;
+            outline: none;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .question{
+            margin-top: 5px;
+            width: 18px;
+            height: 18px;
+            background-image: url("https://th.bing.com/th/id/OIP.Md21p83-gaZOkf1SVNi8IQAAAA?w=211&h=211&c=7&r=0&o=5&pid=1.7");
+            background-position: center;
+            background-size: cover;
+        }
+        .check{
+            width: 700px;
+            padding: 50px;
+            text-align: center;
+        }
+        .check button{
+            margin: 0 auto;
+            width: 300px;
+            height: 60px;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: none;
+            font-size: 20px;
+            font-weight: bold;
+            color: silver;
+        }
+
+        #input_2{
+            width: 800px;
+            font-size: 21px;
+            font-weight: bold;
+            border: none;
+            border-bottom: 0.5px solid silver;
+        }
+        .jm{
+            width: 800px;
+            display: flex;
+            font-size: 21px;
+            border-bottom: 0.5px solid silver;
+            margin-top: 30px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .jm input{
+            width: 400px;
+            border: none;
+            display: flex;
+            font-size: 21px;
+            font-weight: bold;
+        }
+        .kt button{
+            width: 240px;
+            height: 60px;
+            border-radius: 10px;
+            border: 1px solid silver;
+            background-color: white;
+            font-weight:700;
+            font-size: 20px;
+            margin: 10px;
+        }
+        .kt button:hover{
+            border: 2px solid black;
+        }
+        .checkbox{
+            width: 780px;
+            background-color: #f0f0f0;
+            text-align: left;
+            padding: 10px;
+            font-weight: bold;
+            color: rgb(139, 138, 138);
+            margin-top: 40px;
+        }
+        .chec{
+            font-size: 18px;
+            margin-top: 15px;
+        }
+        .input_3{
+            width: 800px;
+            height: 50px;
+            display: flex;
+            border-bottom: 0.5px solid silver;
+            margin-top: 30px;
+        }
+        .input_3 input{
+            width: 735px;
+            border: none;
+            outline: none;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .question_1{
+            width: 45px;
+            height: 30px;
+            color: silver;
+            border: none;
+            font-weight: bold;
+        }
+        /*--------------------------------------------------*/
+        
+        .footer_1{
+            margin: 0 auto;
+            text-align: left;
+            width: 1200px;
+            display: flex;
+            font-size: 13px;
+        }
+        #avc{
+            color: rgb(80, 79, 79);
+        }
+        .footer_2{
+            width: 300px;
+        }
+        .footer_2 ul{
+            display: flex;
+            list-style: none;
+        }
+        .footer_2 li{
+            width: 150px;
+            text-align: left;
+            margin-left:0px ;
+        }
+        .arrow{
+            position: relative;
+        }
+        .arrow_box {
+            display: none;
+            position: absolute;
+            text-align: left;
+            width: 300px;
+            border-radius: 8px;
+            border: 1px solid silver;
+            background: white;
+            color: rgb(80, 80, 80);
+            bottom: 30px;
+            right: -10px;
+            font-size: 14px;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .arrow_box:after {
+            position: absolute;
+            border-color: rgba(51, 51, 51, 0);
+            border-bottom-color: #333;
+            border-width: 10px;
+        }
+        .question:hover + p.arrow_box {
+            display: block;
+        }
+        #add1{
+            position: relative;
+        }
+        #add1_info{
+            position: absolute;
+            bottom: 90px;
+        }
+        #add2{
+            position: relative;
+        }
+        #add2_info{
+            position: absolute;
+            bottom: 30px;
+        }
+        #add3{
+            position: relative;
+        }
+        #add3_info{
+            position: absolute;
+            bottom: -40px;
+        }
+        #add4{
+            position: relative;
+        }
+        #add4_info{
+            position: absolute;
+            bottom: -110px;
+        }
+        .add_info{
+            display: none;
+        }
+        .add_info img{
+            width: 40px;
+            height: 40px;
+        }
+        .add_info table{
+            width: 280px;
+            height: 200px;
+            background-color: #dfdada;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .add_info th{
+            width: 40px;
+            height: 40px;
+            padding: 3px;
+            border: none;
+        }
+        .add_info td{
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            padding: 3px;
+            border: none;
+        }
+        .add_info tr:nth-child(4) th:nth-child(3){
+            background-color: black;
+            color: white;
+        }
+            
+    </style>
+    <script>
+        
+        function init(){
+            let info_1 = document.getElementById("info_1");
+            let info_2 = document.getElementById("info_2");
+            let menu_1 = document.getElementById("menu_1");
+            let menu_2 = document.getElementById("menu_2");
+            menu_1.style.display = "block"
+            menu_2.style.display = "none"
+            info_1.addEventListener( "click", change_1);
+            info_2.addEventListener( "click", change_2);
+        }
+        function change_1(){
+            menu_1.style.display = "block"
+            menu_2.style.display = "none"
+        }
+        function change_2(){
+            menu_1.style.display = "none"
+            menu_2.style.display = "block"
+        }
+        var checkflag = "false";
+            function check(field) {
+            if (checkflag == "false") {
+            for (i = 0; i < field.length; i++) {
+            field[i].checked = true;}
+            checkflag = "true";
+            return "Uncheck All"; }
+            else {
+            for (i = 0; i < field.length; i++) {
+            field[i].checked = false; }
+            checkflag = "false";
+            return "Check All"; }
+        }
+        function keyboard(){
+            alert(`www.hyundaicard.com 내용:
+                키보드보안 프로그램이 지원되지 않는 환경에서는
+                안전한 거래를 위해 가상키패드(마우스입력기)를
+                반드시 사용하셔야 합니다.`)
+        }
+        function add1_change(){
+            let add1 = document.getElementById("add1");
+            let add1_info = document.getElementById("add1_info");
+            let add2_info = document.getElementById("add2_info");
+            let add3_info = document.getElementById("add3_info");
+            let add4_info = document.getElementById("add4_info");
+            add1_info.style.display = "block"
+            add2_info.style.display = "none"
+            add3_info.style.display = "none"
+            add4_info.style.display = "none"
+        }
+        function add1_close(){
+            let add1 = document.getElementById("add1");
+            let add1_info = document.getElementById("add1_info");
+            add1_info.style.display = "none"
+        }
+        function add2_change(){
+            let add2 = document.getElementById("add2");
+            let add1_info = document.getElementById("add1_info");
+            let add2_info = document.getElementById("add2_info");
+            let add3_info = document.getElementById("add3_info");
+            let add4_info = document.getElementById("add4_info");
+            add1_info.style.display = "none"
+            add2_info.style.display = "block"
+            add3_info.style.display = "none"
+            add4_info.style.display = "none"
+        }
+        function add2_close(){
+            let add2 = document.getElementById("add2");
+            let add2_info = document.getElementById("add2_info");
+            add2_info.style.display = "none"
+        }
+        function add3_change(){
+            let add3 = document.getElementById("add3");
+            let add1_info = document.getElementById("add1_info");
+            let add2_info = document.getElementById("add2_info");
+            let add3_info = document.getElementById("add3_info");
+            let add4_info = document.getElementById("add4_info");
+            add1_info.style.display = "none"
+            add2_info.style.display = "none"
+            add3_info.style.display = "block"
+            add4_info.style.display = "none"
+        }
+        function add3_close(){
+            let add3 = document.getElementById("add3");
+            let add3_info = document.getElementById("add3_info");
+            add3_info.style.display = "none"
+        }
+        function add4_change(){
+            let add4 = document.getElementById("add4");
+            let add1_info = document.getElementById("add1_info");
+            let add2_info = document.getElementById("add2_info");
+            let add3_info = document.getElementById("add3_info");
+            let add4_info = document.getElementById("add4_info");
+            add1_info.style.display = "none"
+            add2_info.style.display = "none"
+            add3_info.style.display = "none"
+            add4_info.style.display = "block"
+        }
+        function add4_close(){
+            let add4 = document.getElementById("add4");
+            let add4_info = document.getElementById("add4_info");
+            add4_info.style.display = "none"
+        }
+
+    </script>
+</head>
+<body onload="init()">
+    <div class="wrap">
+        <!--헤더영역-->
+        <header>
+            <a href="./index.html" class="header_logo"></a>
+            <div class="menu">
+                <!--메뉴-->
+                <ul class="menu_wrap">
+                    <!--상위메뉴-->
+                    <li class="first">
+                        <!--이름영역-->
+                        <div class="menu_item">My Account</div>
+                        
+                        <!--숨김메뉴-->
+                        <div class="item_contents">
+                                <div class="contents_menu">이용내역
+                                    <div class="small">
+                                        <p>이용대금명세서</p>
+                                        <p>카드 이용내역(매출전표조회)</p>
+                                        <p>카드이용알림서비스</p>
+                                        <p>금융 이용내역</p>
+                                        <p>유료상품 가입정보</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">이용대금결제
+                                    <div class="small">
+                                        <p>즉시결제</p>
+                                        <p>분할납부</p>
+                                        <p>결제연기</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">내 카드관리
+                                    <div class="small">
+                                        <p>내 카드 목록</p>
+                                        <p>카드 비밀번호 설정.변경</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">케어 및 안심 서비스
+                                    <div class="small">
+                                        <p>해외이용제한/해제서비스</p>
+                                        <p>해외원화결제차단서비스</p>
+                                        <p>이용내역안내메일서비스</p>
+                                        <p>카드본인확인서비스</p>
+                                        <p>케어서비스</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">한도관리
+                                    <div class="small">
+                                        <p>이용한도 조회.변경</p>
+                                        <p>특별한도 조회.신청</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">생활요금납부서비스
+                                    <div class="small">
+                                        <p>정기결제</p>
+                                        <p>수시결제</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">결제정보 관리
+                                    <div class="small">
+                                        <p>명세서 수신 방법 조회.변경</p>
+                                        <p>결제계좌 조회.변경</p>
+                                        <p>결제일 조회.변경</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">소득공제 및 서류발급
+                                    <div class="small">
+                                        <p>소득공제내역</p>
+                                        <p>입금내역</p>
+                                        <p>개인사업자 이용내역</p>
+                                        <p>서류발급</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </li>
+                    <li class="first">
+                        <!--이름영역-->
+                        <div class="menu_item" onClick="location.href='card.html'">카드</div>
+
+                        <!--숨김메뉴-->
+                        <div class="item_contents">
+                            
+                                <div class="contents_menu">3층 시스템
+                                    <div class="small">
+                                        <p>3층 시스템 안내</p>
+                                        <p>2층구독</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">카드 안내 및 신청
+                                    <div class="small">
+                                        <p>카드 신청</p>
+                                        <p>카드파인더</p>
+                                        <p>바로발급서비스</p>
+                                        <p>카드 발급 조회</p>
+                                        <p>카드 수령 등록</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">기타 카드
+                                    <div class="small">
+                                        <p>가족카드</p>
+                                        <p>Gift카드</p>
+                                        <p>후불하이패스카드</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </li>
+                    
+                    <li class="first">
+                        <!--이름영역-->
+                        <div class="menu_item" onClick="location.href='good.html'">혜택</div>
+
+                        <!--숨김메뉴-->
+                        <div class="item_contents">
+                                <div class="contents_menu">나만의 혜택
+                                    <div class="small">
+                                        <p>포인트</p>
+                                        <p>바우처</p>
+                                        <p>받은 혜택</p>
+                                        <p>Star.Gold Friendship</p>
+                                        <p>the Purple Celeb</p>
+                                        <p>마일리지 긴급충전</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">혜택 안내
+                                    <div class="small">
+                                        <p>M 혜택</p>
+                                        <p>X 혜택</p>
+                                        <p>H-Coin 혜택</p>
+                                        <p>해외 이용 혜택</p>
+                                        <p>현대 자동차.기아<br>
+                                            자동차 구매 프로그램</p>
+                                        <p>이벤트</p>
+                                        <p>클럽서비스</p>
+                                        <p>PRIVIA 여행</p>
+                                        <p>MoMA PASS</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">Premium 혜택
+                                    <div class="small">
+                                        <p>the Black</p>
+                                        <p>the Purple</p>
+                                        <p>the Red</p>
+                                        <p>the Green</p>
+                                        <p>the Pink</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">정부지원 사업
+                                    <div class="small">
+                                        <p>온누리상품권</p>
+                                        <p>한국장학재단 학습특별지원금</p>
+                                        <p>광주광역시 일상회복지원금</p>
+                                        <p>상생소비지원금</p>
+                                        <p>상생 국민지원금</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </li>
+                    
+                    <li class="first">
+                        <!--이름영역-->
+                        <div class="menu_item" onClick="location.href='money.html'">금융</div>
+                        <!--숨김메뉴-->
+                        <div class="item_contents">
+                                <div class="contents_menu">금융
+                                    <div class="small">
+                                        <p>장기카드대출(카드론)</p>
+                                        <p>단기카드대출(현금서비스)</p>
+                                        <p>일부결제금액이월약정(리볼빙)</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </li>
+                    
+                    <li class="first">
+                        <!--이름영역-->
+                        <div class="menu_item">컬처</div>
+
+                        <!--숨김메뉴-->
+                        <div class="item_contents"></div>
+                    </li>
+                    
+                    <li class="first">
+                        <!--이름영역-->
+                        <div class="menu_item">고객지원</div>
+                        
+                        <!--숨김메뉴-->
+                        <div class="item_contents">
+                                <div class="contents_menu">일반 상담 및 문의
+                                    <div class="small">
+                                        <p>홈페이지 상담</p>
+                                        <p>ARS 상담</p>
+                                        <p>카드 도난.분실 신고/해제</p>
+                                        <p>FAQ</p>
+                                        <p>개인신용평가 결과 대응권 신청</p>
+                                        <p>금리인하요구권 신청</p>
+                                        <p>할부 철회.항변 안내</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">소비자 보호
+                                    <div class="small">
+                                        <p>소비자보호 포털</p>
+                                        <p>전자민원 접수</p>
+                                        <p>소비자보호 체계</p>
+                                        <p>소비자보호 우수 사례</p>
+                                        <p>소비자피해 경보 사례</p>
+                                        <p>보이스피싱 예방 안내</p>
+                                        <p>민원 건수 공시/실태평가 결과</p>
+                                        <p>장애인 회원 상담 안내</p>
+                                        <p>금융소비자보호법</p>
+                                        <p>고객 이용약관</p>
+                                        <p>금융소비자 정보 사이트</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">로그인증서 안내
+                                    <div class="small">
+                                        <p>간편번호 등록</p>
+                                        <p>인증서 등록/삭제</p>
+                                        <p>휴대폰 인증서 발급 안내</p>
+                                        <p>모바일 앱용 인증서 복사</p>
+                                        <p>브라우저 인증서 복사</p>
+                                    </div>
+                                </div>
+                                <div class="contents_menu">이용안내
+                                    <div class="small">
+                                        <p>카드 종합 이용 안내</p>
+                                        <p>Digital 현대카드 프로젝트</p>
+                                        <p>온라인/모바일결제서비스</p>
+                                        <p>보안프로그램 설치 안내</p>
+                                        <p>웹사이트 이용 안내</p>
+                                        <p>상품공시실/자료실</p>
+                                        <p>뉴스.공지</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!--nav영역-->
+            <div class="navi">
+                <p>개인사업자</p>
+                <p>법인</p>
+                <p>가맹점</p>
+                <p>|</p>
+                <p>소비자보호 포털</p>
+                <p>상품공시실</p>
+            </div>
+            <div class="search_logo"></div>
+        </header>
+
+        <div class="miniheader">
+            <p>홈</p>
+            <p> > </p>
+            <p>회원가입</p>
+            <button onClick="location.href='joinus.html'">회원가입</button>
+            <button onClick="location.href='login.html'">로그인</button>
+        </div>
+        
+        <!--회원가입영역-->
+        <div class="middle">
+        <div><h1>회원가입</h1></div>
+        <div class="middle_1">
+            <div><h2>본인인증</h2></div>
+            <div class="middle_wrap">
+                <div class="btn_wrap">
+                    <div class="btn" id="info_1" onclick="change_1()">
+                        카드
+                    </div>
+                    <div class="btn" id="info_2" onclick="change_2()">
+                        휴대폰
+                    </div>
+                </div>    
+                <div id="menu_1">
+                    <div>
+                        <button class="btn_1">일반</button>
+                        <button class="btn_1">아멕스</button>
+                        <button class="btn_1">다이너스</button>
+                    </div>
+                    <div class="input">
+                        <div class="input_1">
+                            <input type="password" placeholder="카드번호" id="add1" onclick="add1_change()" maxlength="12" >
+                            <div class="keybordimg" onclick="keyboard()" ></div>
+                        </div>
+                        <div class="input_1">
+                            <input type="text" placeholder="유효기간(mm/yy)" id="add2" onclick="add2_change()" maxlength="4">
+                            <div class="keybordimg" onclick="keyboard()"></div>
+                        </div>
+                        <div class="input_1">
+                            <input type="password" placeholder="CVC번호/(카드 뒷면 3자리)" id="add3"onclick="add3_change()" maxlength="3">
+                            <div class="keybordimg" onclick="keyboard()"></div>
+                        </div>
+                        <div class="input_1">
+                            <input class="que" type="password" placeholder="카드 비밀번호 앞 2자리" id="add4"onclick="add4_change()" maxlength="2">
+                            <div class="arrow">
+                                <div class="question"></div>
+                                <p class="arrow_box">
+                                    카드비밀번호를 모르실 경우 사이트 내의<br>
+                                    카드비밀번호 등록 또는 ARS(1577-6000)을<br>
+                                    통해 비밀번호 재 등록 후 사용하시기 바랍니<br>
+                                    다.
+                                </p>
+                            </div>    
+                            <div class="keybordimg" onclick="keyboard()"></div>
+                        </div>
+                        <div class="add_info" id="add1_info">
+                            <table>
+                                <tr>
+                                    <th colspan="2">가상키패드</th>
+                                    <th colspan="3"></th>
+                                    <th onclick=" add1_close()">X</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <th></th>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td><img onclick="add1_change()" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHUAAAB1CAMAAABH2l6OAAAAZlBMVEX////+/v4AAABubm5KSkpOTk739/cEBAT7+/s+Pj5xcXE3Nze8vLzc3Nz09PRkZGRFRUXs7OxXV1fj4+PMzMyPj4+vr698fHxpaWkPDw8qKiqioqKXl5dcXFzCwsIUFBSFhYUgICDCdq+oAAAFCElEQVRoge1aiZaiOhBNUDYFBFnc0Lb//ydfwk6oSoql25nz5vY5LYRQt24lqSzKWA8OXjI+vIGrj4rhcsyKeNDjT2XlcDlSjLOSwRX/mk+wuL/HNHHEsFofNKe+g9sAZWMxMgo3VZtjdSNWgpkfYN1SKtZa5nb8EGv7QKnXlo3MsEms+hpIsVpu0IHdrArY1tGexf0JfFDvh4CFQenLHM7DsBXQvtaBn1D2AahSN+qV8/AhrdOHv+iFJhbT1Ygu0WsNLY5w84aXhAJp4inlszUPPvub+mrkX5Tlp+PNqnG7n/IgYVh1xGo/hbVhYHxQOolS8oitDm57ccxDBsa6K2Xdv9kR5sHewvD1SKb1Gc9Ss1X90+KOclaqLwoDZ5EITADa4tAl0GmzGOXsgv1ORmsHR4bm0Nkzqp545l10nH2ci842Z07l52kmWc/K0iOJVODchdmr33ku5WQBlVPKDepwRk2LLNZazCAVKKsh1naD63JSV0uj4uKwyG7f2YHxUwb1qLDqSK95SiWeqd1d7xhk14RwrlIFB6NWAJFvue4a2gNAYZTajlP/UgYCRX7AMxRdqwFZ9eb1NXTPe71vBioCKxCBdoKoRnrpDWvWV+FbWqSE/gAQ6NuVPcQwiGq+sXtCcUHLV6R27Qtlfrm74JTRVAj8FRHGUXyH6PQnnXMernFcHYZBopDyU6o/ExOJb0fRqidVHoUpYVoMDP15ZpZg3BN/jR94LRZqp/u2N41saLWSVuVi9tZGeUmWoOGt6VOkOQePuKYtWIlr3S3JwwRIK/iyCtS6Ca2cxGdGuL+intROqns+3q6LV6Z6oUKpLiPvVHUbIdKmY+LI4XrHJo+ivTYVE7WCj0WaqqDUkeE1TDzUPpwe9kPEse/7xwa+H9t2OXDMM82y1JVpbrBT79Pq6h6+t+xYaSvTg5E16+qaF8sXYoSNU6bdO2tmLY0RruWbWP1BZa982rZoe18i9uM43u/tId6JNteQtcZO3823GvoGra5lO5uwzIuwVLoac7X6zvYZtQY6clwrXnqEpmgE1ONaz9E2J7uQZzgrdcRjYjUPde2aL6WFvRjK1/Wm99LT8xEV5Ig2D58iSmqgdrrBTk6fJY5ht/FT/G51yKM4sWsYWG2rdze96M6CKQ8XA0vKprYrDrP+O6Deuq5Pmbdp00NZBck5IsaYUbVa1u3hoSuhan95nMxvxoxmZBWLszgArciNIGPZ/WsiFY0smbVCHHjTV6XlSOy1HgZhy1irw5dbDhyvR3LVdZwKWx/hHt/v13C6TYtzVZyhtjdgrRff9+u7LIqivJzbxfiivDlD69QRwXx2jKlJTZYrWQW+0smhmEqm12qnp/mslEYFZoeG1ZWTuGNekit4ESYlyJFrq1ROL555/zGC5gRQjyaqe6ce9cE3nfOLPmZU+c/KgO+1U1lyNXDVkHkyUaYgYoRl0alR2r4m5NLOv0u+YtkqT3GUFb4jWxc9g3arfHHGz1cnqzVAfmBZT4fxcbCSC84rS/0XbI3ahzkLw8nKR/JqDtCemTa/60aM+bQyzKHzgP2DvHBQ3cBjMfyeWih+5dd796368ZpnESmwDMqQNK1tFL0klT8haH5BwFduYw2c24HY67bF70j744Ap3+ro+v8a1xYLfkTxic76d7Iq9Ujm1uEH9K1m+TFsGbi/Tfvv4F+E/2E7zO8G0yJoI6U1vcDHaRG0UtDa/g+BmTmtsvkmkQAAAABJRU5ErkJggg=="></td>
+                                    <td>Ⅹ</td>
+                                    <th colspan="4" onclick=" add1_close()">닫기</th>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="add_info" id="add2_info">
+                            <table>
+                                <tr>
+                                    <th colspan="2">가상키패드</th>
+                                    <th colspan="3"></th>
+                                    <th onclick=" add2_close()">X</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <th></th>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td><img onclick="add2_change()" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHUAAAB1CAMAAABH2l6OAAAAZlBMVEX////+/v4AAABubm5KSkpOTk739/cEBAT7+/s+Pj5xcXE3Nze8vLzc3Nz09PRkZGRFRUXs7OxXV1fj4+PMzMyPj4+vr698fHxpaWkPDw8qKiqioqKXl5dcXFzCwsIUFBSFhYUgICDCdq+oAAAFCElEQVRoge1aiZaiOhBNUDYFBFnc0Lb//ydfwk6oSoql25nz5vY5LYRQt24lqSzKWA8OXjI+vIGrj4rhcsyKeNDjT2XlcDlSjLOSwRX/mk+wuL/HNHHEsFofNKe+g9sAZWMxMgo3VZtjdSNWgpkfYN1SKtZa5nb8EGv7QKnXlo3MsEms+hpIsVpu0IHdrArY1tGexf0JfFDvh4CFQenLHM7DsBXQvtaBn1D2AahSN+qV8/AhrdOHv+iFJhbT1Ygu0WsNLY5w84aXhAJp4inlszUPPvub+mrkX5Tlp+PNqnG7n/IgYVh1xGo/hbVhYHxQOolS8oitDm57ccxDBsa6K2Xdv9kR5sHewvD1SKb1Gc9Ss1X90+KOclaqLwoDZ5EITADa4tAl0GmzGOXsgv1ORmsHR4bm0Nkzqp545l10nH2ci842Z07l52kmWc/K0iOJVODchdmr33ku5WQBlVPKDepwRk2LLNZazCAVKKsh1naD63JSV0uj4uKwyG7f2YHxUwb1qLDqSK95SiWeqd1d7xhk14RwrlIFB6NWAJFvue4a2gNAYZTajlP/UgYCRX7AMxRdqwFZ9eb1NXTPe71vBioCKxCBdoKoRnrpDWvWV+FbWqSE/gAQ6NuVPcQwiGq+sXtCcUHLV6R27Qtlfrm74JTRVAj8FRHGUXyH6PQnnXMernFcHYZBopDyU6o/ExOJb0fRqidVHoUpYVoMDP15ZpZg3BN/jR94LRZqp/u2N41saLWSVuVi9tZGeUmWoOGt6VOkOQePuKYtWIlr3S3JwwRIK/iyCtS6Ca2cxGdGuL+intROqns+3q6LV6Z6oUKpLiPvVHUbIdKmY+LI4XrHJo+ivTYVE7WCj0WaqqDUkeE1TDzUPpwe9kPEse/7xwa+H9t2OXDMM82y1JVpbrBT79Pq6h6+t+xYaSvTg5E16+qaF8sXYoSNU6bdO2tmLY0RruWbWP1BZa982rZoe18i9uM43u/tId6JNteQtcZO3823GvoGra5lO5uwzIuwVLoac7X6zvYZtQY6clwrXnqEpmgE1ONaz9E2J7uQZzgrdcRjYjUPde2aL6WFvRjK1/Wm99LT8xEV5Ig2D58iSmqgdrrBTk6fJY5ht/FT/G51yKM4sWsYWG2rdze96M6CKQ8XA0vKprYrDrP+O6Deuq5Pmbdp00NZBck5IsaYUbVa1u3hoSuhan95nMxvxoxmZBWLszgArciNIGPZ/WsiFY0smbVCHHjTV6XlSOy1HgZhy1irw5dbDhyvR3LVdZwKWx/hHt/v13C6TYtzVZyhtjdgrRff9+u7LIqivJzbxfiivDlD69QRwXx2jKlJTZYrWQW+0smhmEqm12qnp/mslEYFZoeG1ZWTuGNekit4ESYlyJFrq1ROL555/zGC5gRQjyaqe6ce9cE3nfOLPmZU+c/KgO+1U1lyNXDVkHkyUaYgYoRl0alR2r4m5NLOv0u+YtkqT3GUFb4jWxc9g3arfHHGz1cnqzVAfmBZT4fxcbCSC84rS/0XbI3ahzkLw8nKR/JqDtCemTa/60aM+bQyzKHzgP2DvHBQ3cBjMfyeWih+5dd796368ZpnESmwDMqQNK1tFL0klT8haH5BwFduYw2c24HY67bF70j744Ap3+ro+v8a1xYLfkTxic76d7Iq9Ujm1uEH9K1m+TFsGbi/Tfvv4F+E/2E7zO8G0yJoI6U1vcDHaRG0UtDa/g+BmTmtsvkmkQAAAABJRU5ErkJggg=="></td>
+                                    <td>Ⅹ</td>
+                                    <th colspan="4" onclick=" add2_close()">닫기</th>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="add_info" id="add3_info">
+                            <table>
+                                <tr>
+                                    <th colspan="2">가상키패드</th>
+                                    <th colspan="3"></th>
+                                    <th onclick=" add3_close()">X</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <th></th>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td><img onclick="add3_change()" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHUAAAB1CAMAAABH2l6OAAAAZlBMVEX////+/v4AAABubm5KSkpOTk739/cEBAT7+/s+Pj5xcXE3Nze8vLzc3Nz09PRkZGRFRUXs7OxXV1fj4+PMzMyPj4+vr698fHxpaWkPDw8qKiqioqKXl5dcXFzCwsIUFBSFhYUgICDCdq+oAAAFCElEQVRoge1aiZaiOhBNUDYFBFnc0Lb//ydfwk6oSoql25nz5vY5LYRQt24lqSzKWA8OXjI+vIGrj4rhcsyKeNDjT2XlcDlSjLOSwRX/mk+wuL/HNHHEsFofNKe+g9sAZWMxMgo3VZtjdSNWgpkfYN1SKtZa5nb8EGv7QKnXlo3MsEms+hpIsVpu0IHdrArY1tGexf0JfFDvh4CFQenLHM7DsBXQvtaBn1D2AahSN+qV8/AhrdOHv+iFJhbT1Ygu0WsNLY5w84aXhAJp4inlszUPPvub+mrkX5Tlp+PNqnG7n/IgYVh1xGo/hbVhYHxQOolS8oitDm57ccxDBsa6K2Xdv9kR5sHewvD1SKb1Gc9Ss1X90+KOclaqLwoDZ5EITADa4tAl0GmzGOXsgv1ORmsHR4bm0Nkzqp545l10nH2ci842Z07l52kmWc/K0iOJVODchdmr33ku5WQBlVPKDepwRk2LLNZazCAVKKsh1naD63JSV0uj4uKwyG7f2YHxUwb1qLDqSK95SiWeqd1d7xhk14RwrlIFB6NWAJFvue4a2gNAYZTajlP/UgYCRX7AMxRdqwFZ9eb1NXTPe71vBioCKxCBdoKoRnrpDWvWV+FbWqSE/gAQ6NuVPcQwiGq+sXtCcUHLV6R27Qtlfrm74JTRVAj8FRHGUXyH6PQnnXMernFcHYZBopDyU6o/ExOJb0fRqidVHoUpYVoMDP15ZpZg3BN/jR94LRZqp/u2N41saLWSVuVi9tZGeUmWoOGt6VOkOQePuKYtWIlr3S3JwwRIK/iyCtS6Ca2cxGdGuL+intROqns+3q6LV6Z6oUKpLiPvVHUbIdKmY+LI4XrHJo+ivTYVE7WCj0WaqqDUkeE1TDzUPpwe9kPEse/7xwa+H9t2OXDMM82y1JVpbrBT79Pq6h6+t+xYaSvTg5E16+qaF8sXYoSNU6bdO2tmLY0RruWbWP1BZa982rZoe18i9uM43u/tId6JNteQtcZO3823GvoGra5lO5uwzIuwVLoac7X6zvYZtQY6clwrXnqEpmgE1ONaz9E2J7uQZzgrdcRjYjUPde2aL6WFvRjK1/Wm99LT8xEV5Ig2D58iSmqgdrrBTk6fJY5ht/FT/G51yKM4sWsYWG2rdze96M6CKQ8XA0vKprYrDrP+O6Deuq5Pmbdp00NZBck5IsaYUbVa1u3hoSuhan95nMxvxoxmZBWLszgArciNIGPZ/WsiFY0smbVCHHjTV6XlSOy1HgZhy1irw5dbDhyvR3LVdZwKWx/hHt/v13C6TYtzVZyhtjdgrRff9+u7LIqivJzbxfiivDlD69QRwXx2jKlJTZYrWQW+0smhmEqm12qnp/mslEYFZoeG1ZWTuGNekit4ESYlyJFrq1ROL555/zGC5gRQjyaqe6ce9cE3nfOLPmZU+c/KgO+1U1lyNXDVkHkyUaYgYoRl0alR2r4m5NLOv0u+YtkqT3GUFb4jWxc9g3arfHHGz1cnqzVAfmBZT4fxcbCSC84rS/0XbI3ahzkLw8nKR/JqDtCemTa/60aM+bQyzKHzgP2DvHBQ3cBjMfyeWih+5dd796368ZpnESmwDMqQNK1tFL0klT8haH5BwFduYw2c24HY67bF70j744Ap3+ro+v8a1xYLfkTxic76d7Iq9Ujm1uEH9K1m+TFsGbi/Tfvv4F+E/2E7zO8G0yJoI6U1vcDHaRG0UtDa/g+BmTmtsvkmkQAAAABJRU5ErkJggg=="></td>
+                                    <td>Ⅹ</td>
+                                    <th colspan="4" onclick=" add3_close()">닫기</th>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="add_info" id="add4_info">
+                            <table>
+                                <tr>
+                                    <th colspan="2">가상키패드</th>
+                                    <th colspan="3"></th>
+                                    <th onclick=" add4_close()">X</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <th></th>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td><img onclick="add4_change()" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHUAAAB1CAMAAABH2l6OAAAAZlBMVEX////+/v4AAABubm5KSkpOTk739/cEBAT7+/s+Pj5xcXE3Nze8vLzc3Nz09PRkZGRFRUXs7OxXV1fj4+PMzMyPj4+vr698fHxpaWkPDw8qKiqioqKXl5dcXFzCwsIUFBSFhYUgICDCdq+oAAAFCElEQVRoge1aiZaiOhBNUDYFBFnc0Lb//ydfwk6oSoql25nz5vY5LYRQt24lqSzKWA8OXjI+vIGrj4rhcsyKeNDjT2XlcDlSjLOSwRX/mk+wuL/HNHHEsFofNKe+g9sAZWMxMgo3VZtjdSNWgpkfYN1SKtZa5nb8EGv7QKnXlo3MsEms+hpIsVpu0IHdrArY1tGexf0JfFDvh4CFQenLHM7DsBXQvtaBn1D2AahSN+qV8/AhrdOHv+iFJhbT1Ygu0WsNLY5w84aXhAJp4inlszUPPvub+mrkX5Tlp+PNqnG7n/IgYVh1xGo/hbVhYHxQOolS8oitDm57ccxDBsa6K2Xdv9kR5sHewvD1SKb1Gc9Ss1X90+KOclaqLwoDZ5EITADa4tAl0GmzGOXsgv1ORmsHR4bm0Nkzqp545l10nH2ci842Z07l52kmWc/K0iOJVODchdmr33ku5WQBlVPKDepwRk2LLNZazCAVKKsh1naD63JSV0uj4uKwyG7f2YHxUwb1qLDqSK95SiWeqd1d7xhk14RwrlIFB6NWAJFvue4a2gNAYZTajlP/UgYCRX7AMxRdqwFZ9eb1NXTPe71vBioCKxCBdoKoRnrpDWvWV+FbWqSE/gAQ6NuVPcQwiGq+sXtCcUHLV6R27Qtlfrm74JTRVAj8FRHGUXyH6PQnnXMernFcHYZBopDyU6o/ExOJb0fRqidVHoUpYVoMDP15ZpZg3BN/jR94LRZqp/u2N41saLWSVuVi9tZGeUmWoOGt6VOkOQePuKYtWIlr3S3JwwRIK/iyCtS6Ca2cxGdGuL+intROqns+3q6LV6Z6oUKpLiPvVHUbIdKmY+LI4XrHJo+ivTYVE7WCj0WaqqDUkeE1TDzUPpwe9kPEse/7xwa+H9t2OXDMM82y1JVpbrBT79Pq6h6+t+xYaSvTg5E16+qaF8sXYoSNU6bdO2tmLY0RruWbWP1BZa982rZoe18i9uM43u/tId6JNteQtcZO3823GvoGra5lO5uwzIuwVLoac7X6zvYZtQY6clwrXnqEpmgE1ONaz9E2J7uQZzgrdcRjYjUPde2aL6WFvRjK1/Wm99LT8xEV5Ig2D58iSmqgdrrBTk6fJY5ht/FT/G51yKM4sWsYWG2rdze96M6CKQ8XA0vKprYrDrP+O6Deuq5Pmbdp00NZBck5IsaYUbVa1u3hoSuhan95nMxvxoxmZBWLszgArciNIGPZ/WsiFY0smbVCHHjTV6XlSOy1HgZhy1irw5dbDhyvR3LVdZwKWx/hHt/v13C6TYtzVZyhtjdgrRff9+u7LIqivJzbxfiivDlD69QRwXx2jKlJTZYrWQW+0smhmEqm12qnp/mslEYFZoeG1ZWTuGNekit4ESYlyJFrq1ROL555/zGC5gRQjyaqe6ce9cE3nfOLPmZU+c/KgO+1U1lyNXDVkHkyUaYgYoRl0alR2r4m5NLOv0u+YtkqT3GUFb4jWxc9g3arfHHGz1cnqzVAfmBZT4fxcbCSC84rS/0XbI3ahzkLw8nKR/JqDtCemTa/60aM+bQyzKHzgP2DvHBQ3cBjMfyeWih+5dd796368ZpnESmwDMqQNK1tFL0klT8haH5BwFduYw2c24HY67bF70j744Ap3+ro+v8a1xYLfkTxic76d7Iq9Ujm1uEH9K1m+TFsGbi/Tfvv4F+E/2E7zO8G0yJoI6U1vcDHaRG0UtDa/g+BmTmtsvkmkQAAAABJRU5ErkJggg=="></td>
+                                    <td>Ⅹ</td>
+                                    <th colspan="4" onclick=" add4_close()">닫기</th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="menu_2">
+                    <input type="text" placeholder="이름" id="input_2">
+                    <div class="jm">
+                        <input type="text" placeholder="주민등록번호" maxlength="6">-
+                        <input type="password" placeholder="●******" maxlength="1">
+                    </div>
+                    <div class="kt">
+                        <button>SKT</button>
+                        <button>KT</button>
+                        <button>LG U+</button>
+                        <button>SKT 알뜰폰</button>
+                        <button>KT 알뜰폰</button>
+                        <button>LG U+ 알뜰폰</button>
+                    </div>
+                    <div class="checkbox">
+                        <form name="form">
+                        <span class="chec"><label><input type="checkbox" name="button" value="Check All" onClick="this.value=check(this.form.checkbox)">(필수)휴대폰 인증 약관 동의</label></span><br><br>
+                        <label><input type="checkbox" name="checkbox" value="">개인정보 이용·제공 동의</label><br>
+                        <label><input type="checkbox" name="checkbox"value="">본인확인서비스 이용약관</label><br>
+                        <label><input type="checkbox" name="checkbox" value="">고유식별정보 처리 동의</label><br>
+                        <label><input type="checkbox" name="checkbox" value="">통신사 이용약관 동의</label>
+                        </form>
+                    </div>
+                    <div class="input_3">
+                        <input class="que" type="password" placeholder="휴대폰번호" >
+                        <div class="keybordimg" onclick="keyboard()"></div>
+                        <button class="question_1">요청</button>
+                    </div>
+                </div>
+            </div>
+            <div class="check">
+                <button>확인</button>
+            </div>
+        </div>
+    </div>
+    <!--footer영역-->
+    <footer>
+        <div class="notice">
+            <p>소비자 경보  ></p>
+            <p>유사투자자문업자 주식리딩방<br>
+            '2차 사기' 피해를 주의하세요!</p>
+        </div>
+        <div class="cs">
+            <div class="cs_name">
+                <p>고객센터</p>
+                <p>카드신청</p>
+                <p>금융신청</p>
+                <p>도난분실신고</p>
+                <p>해외</p>
+            </div>
+            <div class="cs_num">
+                <p>1577-6000</p>
+                <p>1577-0100</p>
+                <p>1577-6100</p>
+                <p>1577-6200</p>
+                <p>82-2-3015-9000</p>
+            </div>
+        </div>
+        <div class="company">
+            <div class="com_left">
+                <p>회사소개(한글.ENG)</p>
+                <p>영업점 안내</p>
+                <p>개인정보 처리방침</p>
+                <p>고객권리안내</p>
+                <p>이용약관</p>
+                <p>현대카드 SNS.패밀리.그룹사</p>
+            </div>
+            <div class="com_right">
+                <p>윤리경영</p>
+                <p>업무위탁현황</p>
+                <p>인재모집</p>
+                <p>사이트맵</p>
+            </div>
+        </div>
+        <div class="location">
+            서울시 영등포구 의사당대로 3 현대캐피탈빌딩<br>
+            사업자 등록번호 213-86-15419<br>
+            © Hyundai Card Co., Ltd.
+        </div>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+  
+
+<div id="box"></div>
+<div></div>
+
+<script>
+
+     let box = document.getElementById("box");
+    let move1 =
+    parseInt(box.style.top.substring(0, box.style.top.length - 2)) - 5;
+
+    console.log( move1);
+
+  let move2 = parseInt(
+    box.style.left.substring(0, box.style.left.length - 2)
+  );
+  console.log( move2);
+</script>
+
+</body>
+</html>

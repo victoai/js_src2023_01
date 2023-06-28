@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        width: 100%;
+        position: relative;
+        /* border: solid 3px black; */
+        height: 80px;
+        z-index: 20;
+      }
+      .menu1 {
+        left: 90px;
+        /* border: solid 1px red; */
+        top: 15px;
+        text-align: center;
+        position: fixed;
+        align-items: flex-start;
+      }
+      .mainlogo{
+        /* border: solid 1px green; */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+        position: center;
+      }
+      .menu2 {
+        right: 90px;
+        /* border: solid 1px blue; */
+        top: 15px;
+        text-align: center;
+        position: fixed;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+      }
+      nav li {
+        padding: 0px 25px 3px 0;
+        line-height: 50px;
+        height: 50px;
+        display: inline-block;
+        position: relative;
+        font-size: 13px;
+      }
+      nav a , footer a{
+        text-decoration: none;
+        color: rgb(123, 111, 111);
+        font-weight: bold;
+      }
+      nav a:hover {
+        color: rgb(201, 201, 201);
+        cursor: pointer;
+      }
+      .btn1 {
+        background-color: white;
+        border: solid 0px;
+      }
+      @media screen and (max-width: 1500px) {
+        .menu1,
+        .menu2 {
+          display: none;
+        }
+      }
+      .sidebar {
+        /* border: solid 1px red; */
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        right: 0px;
+      }
+      .sidetext {
+        height: 22px;
+        line-height: 22px;
+      }
+        section{
+            margin: 100px auto;
+        }
+        .wrap{
+            width: 550px;
+            /* border: 1px solid red; */
+            margin: 0 auto;
+        }
+        .memdiff{
+            border-collapse: collapse;
+            font-size: 12px;
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        td{
+            border-top: 0;
+            border-bottom: 1px solid #969696;
+        }
+        td input{
+            width: 12px;
+            height: 12px;
+        }
+        .memdiff td:nth-child(1){
+            width: 35%;
+            padding: 11px 0 10px 18px;
+            border-right:  1px solid #969696;
+        }
+        .memdiff td:nth-child(2){
+            padding: 11px 0 10px 18px;
+            
+        }
+        
+        .wrap .thbox{
+            width: 100%;
+            /* border: 0.1px solid black; */
+            border-collapse: collapse; 
+            margin-bottom: 5px;
+            
+        }
+        .tdbox > input{
+            font-size: 12px;
+            padding-left: 5px;
+        }
+        .tdbox > select{
+            font-size: 12px;
+            appearance: none;
+            width: 40px;
+            height: 30px;
+            padding: 0 4px;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 1px solid #969696;
+            cursor: pointer;
+        }
+        h3{
+            font-size: 13px;
+            margin-bottom: 30px;
+
+        }
+        h3 span{
+            float: right;
+            font-size: 11px;
+            font-weight: 100;
+        }
+        .thbox{
+            margin-top: 20px;
+            font-size: 12px;
+        }
+        .thbox span{
+            float: right;
+            font-size: 11px;
+        }
+        input{
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 0.5px solid #afafaf;
+            height: 30px;
+        }
+        .inputid, .inputpass1, .inputpass2, .inputname, .companyname, .companynum{
+            width: 100%;
+        }
+        .upasslengthcheck{
+            color: red;
+            font-size: 10px;
+            display: none;
+        }
+        .upasssamecheck{
+            color: red;
+            font-size: 10px;
+            display: none;
+        }
+        .comnum, .comname, .companyname, .companynum{
+            display: none;
+        }
+        .adrtext{
+            font-size: 12px;
+        }
+        .adrnum{
+            width: 10%;
+        }
+        .adrr{
+            width: 40%;
+        }
+        #mailnum{
+            margin-left: 10px;
+            font-size: 12px;
+            width: 70px;
+            height: 20px;
+            background-color: #fff;
+            border: 1px solid #5c5c5c;
+            cursor: pointer;
+        }
+        .tdbox button{
+            font-size: 12px;
+        }
+        .telnum{
+            width: 15%;
+        }
+        #business{
+            visibility: collapse;
+        }
+        .joinbtn{
+            background-color: #000;
+            color: rgb(255, 255, 255);
+            width: 150px;
+            height: 40px;
+            font-size: 12px;
+            text-align: center;
+            line-height: 40px;
+            margin: 0 auto;
+            cursor: pointer;
+            transition: all 0.5s;
+        }
+        .joinbtn:hover{
+            background-color: white;
+            color: #000;
+            border: 1px solid black;
+            transform: translateY(1px);
+        }
+        #year{
+            width: 50px;
+            height: 20px;
+            margin-right: 3px;
+        }
+        #month, #day{
+            width: 30px;
+            height: 20px;
+            margin-right: 3px;
+        }
+        #solar{
+            margin-left: 5px;
+        }
+        .addinfo{
+            border-collapse: collapse;
+            font-size: 12px;
+            width: 100%;
+            margin: 50px auto;
+        }
+        .addinfo td:nth-child(1){
+            width: 35%;
+            padding: 11px 0 10px 18px;
+            border-top: 1px solid #969696;
+            border-right: 1px solid #969696;
+        }
+        .addinfo td:nth-child(2){
+            padding: 11px 0 10px 18px;
+            border-top: 1px solid #969696;
+        }
+        .addinfo input[type=radio]{
+            width: 12px;
+            height: 12px;
+        }
+        .addinfo input[type=text]{
+            font-size: 10px;
+            padding: 0 3px;
+            border: 1px solid #353535;
+            border-radius: 2px;
+        }
+        footer{
+        width: 100%;
+        height: 70px;
+        /* border: 1px solid red; */
+        text-align: center;
+        }
+        .inst a{
+            font-weight: normal;
+            color: black;
+            font-size: 13px;
+            padding: 10px;
+        }
+        .inst a:hover{
+            cursor: pointer;
+            color: grey;
+        }
+        .page1{
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            font-size: 12px;
+            color: gray;
+        }
+        .page1 h4{
+            margin-bottom: 10px;
+            color: black;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        function invicheck(){
+            let business = document.getElementById("business");
+            business.style.visibility="collapse";
+            let invidual = document.getElementById("invidual");
+            
+            let companyname = document.querySelector(".companyname");
+            let companynum = document.querySelector(".companynum");
+            let comname = document.querySelector(".comname");
+            let comnum = document.querySelector(".comnum");
+            
+
+            if(invidual.value == "on"){
+                companyname.style.display = "none";
+                companynum.style.display = "none";
+                comname.style.display = "none";
+                comnum.style.display = "none";
+            }
+        }
+        function buscheck(){
+            // alert("선택되었습니다");
+            let business = document.getElementById("business");
+            let juridical = document.getElementById("juridical");
+            let invidual = document.getElementById("invidual");
+            let invidual_bus = document.getElementById("invidual_bus");
+            let companyname = document.querySelector(".companyname");
+            let companynum = document.querySelector(".companynum");
+            let comname = document.querySelector(".comname");
+            let comnum = document.querySelector(".comnum");
+            business.style.visibility="visible";
+            if(juridical.value == "on" & invidual_bus.value == "on"){
+                companyname.style.display = "block";
+                companynum.style.display = "block";
+                comname.style.display = "block";
+                comnum.style.display = "block";
+            }
+            
+
+        }
+        function join(){
+            let uid = document.querySelector(".inputid");
+            let inputpass1 = document.querySelector(".inputpass1");
+            let inputpass2 = document.querySelector(".inputpass2");
+            let inputname = document.querySelector(".inputname");
+            // // 사업자구역
+            // let juridical = document.getElementById("juridical");
+            // let companyname = document.querySelector(".companyname");
+            // let comname = document.querySelector(".comname");
+
+            // let companynum = document.querySelector(".companynum");
+            // // 사업자구역
+            let adrnum = document.querySelector(".adrnum");
+            let adrtext = document.querySelector(".adrr");
+            let telnum = document.querySelector(".pnum");
+            let email = document.querySelector(".emailadr");
+            let year = document.querySelector("#year");
+            let month = document.querySelector("#month");
+            let day = document.querySelector("#day");
+            
+          
+
+            if(uid.value == ""){
+                alert("아이디를 입력해주세요");
+                uid.focus();
+            }
+            else if(inputpass1.value ==""){
+                alert("비밀번호를 입력해주세요");
+                inputpass1.focus();
+            }
+            else if(inputpass2.value ==""){
+                alert("비밀번호를 확인해주세요");
+                inputpass2.focus();
+            }
+            else if(inputname.value ==""){
+                alert("이름을 입력해주세요");
+                inputname.focus();
+            }
+            // else if(juridical.value == "on" & invidual_bus.value == "on"){
+            //     if(companyname.value ==""){
+            //         alert("상호를 입력해주세요");
+            //         companyname.focus();
+            //     }
+            // }
+            // else if(companynum.value ==""){
+            //     alert("사업자번호를 입력해주세요");
+            //     companynum.focus();
+            // }
+            else if(adrnum.value==""){
+                alert("우편번호 입력해주세요");
+                mailnum.focus();
+            }
+            else if(adrtext.value==""){
+                alert("주소를 입력해주세요");
+                adrtext.focus();
+            }
+            else if(telnum.value==""){
+                alert("휴대폰번호를 입력해주세요");
+                telnum.focus();
+            }
+            else if(email.value==""){
+                alert("이메일을 입력해주세요");
+                email.focus();
+            }
+            else if(year.value=="" || month.value=="" || day.value ==""){
+                alert("생년월일을 확인해주세요");
+                year.focus();
+            }
+            else{
+                alert("회원가입이 완료되었습니다.");
+            }
+        }
+        function userpass(){
+            let upass1 = document.querySelector(".inputpass1").value;
+            let upassmsg1 = document.querySelector(".upasslengthcheck");
+            if(upass1.length < 8 & upass1.length >0){
+                upassmsg1.style.display="block";
+            }
+
+            else{
+                upassmsg1.style.display="none";
+            }
+        }
+        function userpasscheck(){
+            let upass1 = document.querySelector(".inputpass1").value;
+            let upass2 = document.querySelector(".inputpass2").value;
+            let upassmsg2 = document.querySelector(".upasssamecheck");
+            if(upass2 != upass1){
+                upassmsg2.style.display="block";
+            }
+            else if(upass1 == upass2 || upass2.length <= 0){
+                upassmsg2.style.display="none";
+            }
+        }
+    </script>
+    
+</head>
+<body>
+    <nav>
+        <div class="menu1">
+            <ul>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="collection.html">COLLECTION</a></li>
+                <li><a href="#">STOCKIST</a></li>
+                <li><a href="#">COMMUNITY</a></li>
+            </ul>
+            </div>
+            <div class="mainlogo">
+            <a href="index.html"><img src="./미디어/toplogo.png" /></a>
+            </div>
+            <div class="menu2">
+            <ul>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="#">MY PAGE</a></li>
+                <li><a href="cart.html">CART</a></li>
+                <li>
+                <button class="btn1">
+                    <img src="./미디어/btn_search_icon.png" width="13px" />
+                </button>
+                </li>
+            </ul>
+            </div>
+    
+            <div class="sidebar">
+            <ul>
+                <li class="sidetext"><a href="섹션부분.html">22FW</a></li>
+                <li class="sidetext"><a href="섹션부분.html">22SS</a></li>
+                <li class="sidetext"><a href="섹션부분.html">New Arrivals</a></li>
+                <li class="sidetext"><a href="섹션부분.html">Outwear</a></li>
+                <li class="sidetext"><a href="섹션부분.html">Top</a></li>
+                <li class="sidetext"><a href="섹션부분.html">Bottom</a></li>
+                <li class="sidetext"><a href="섹션부분.html">Accessories</a></li>
+                <li class="sidetext"><a href="섹션부분.html">Slelcted Brand</a></li>
+                <li class="sidetext"><a href="섹션부분.html">SALE</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section>
+        <div class="wrap">
+            <table class="memdiff">
+                <tr id="member">
+                    <td>회원구분<img src="https://img.echosting.cafe24.com/skin/base/common/ico_required.gif"></td>
+                    <td>
+                        <input type="radio" name="memdiv" id="invidual" checked onclick="invicheck()"><label for="invidual">개인회원</label>
+                        <input type="radio" name="memdiv" id="juridical" onclick="buscheck()"><label for="juridical">사업자회원</label>
+                    </td>
+                </tr>
+                <tr id="business">
+                    <td>사업자구분<img src="https://img.echosting.cafe24.com/skin/base/common/ico_required.gif"></td>
+                    <td>
+                        <input type="radio" name="buidiv" id="invidual_bus" checked><label for="invidual_bus">개인사업자</label> 
+                        <input type="radio" name="buidiv" id="juridical_bus"><label for="juridical_bus">법인사업자</label>
+                    </td>
+                </tr>
+            </table>
+            <h3>기본정보<span><img src="https://img.echosting.cafe24.com/skin/base/common/ico_required.gif">필수입력사항</span></h3>
+            <div class="thbox">
+                아이디<img src="https://img.echosting.cafe24.com/skin/base/common/ico_required.gif">
+                <span>
+                    <img src="https://img.echosting.cafe24.com/skin/base/common/ico_required.gif">
+                    아이디를 입력해주세요
+                </span>
+            </div>
+            <div class="tdbox">
+                <input type="text" class="inputid" required>
+            </div>
+            <div class="thbox">
+                비밀번호<img src="https://img.echosting.cafe24.com/skin/base/common/ico_required.gif">
+                <span>(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 8자~16자)</span>
+            </div>
+            <div class="tdbox">
+                <input type="password" class="inputpass1" onkeyup="userpass()">
+            </div>
+            <span class="upasslengthcheck">비밀번호는 8~16자이어야 합니다.</span>
+            <div class="thbox">
+                비밀번호 확인<img src="https://img.echosting.cafe24.com/skin/base/common/ico_required.gif">
+            </div>
+            <div class="tdbox upass">
+                <input type="password" class="inputpass2" onkeyup="userpasscheck()">
+            </div>
+            <span class="upasssamecheck">비밀번호가 일치하지않습니다.</span>
+            <div class="thbox">
+                이름<img src="https://img.echosting.cafe24.com/skin/base/common/ico_required.gif">
+            </div>
+            <div class="tdbox uname">
+                <input type="text" class="inputname">
+            </div>
+            <!-- 사업자 구역 -->
+            <div class="thbox comname">
+                상호명<img src="https://img.echosting.cafe24.com/skin/base/common/ico_required.gif">
+            </div>
+            <div class="tdbox">
+                <input type="text" class="companyname">
+            </div>
+            <div class="thbox comnum">
+                사업자번호<img src="https://img.echosting.cafe24.com/skin/base/common/ico_required.gif">
+            </div>
+            <div class="tdbox">
+                <input type="text" class="companynum">
+            </div>
+            <!-- 사업자 구역 -->
+            <div class="thbox">
+                주소<img src="https://img.echosting.cafe24.com/skin/base/common/ico_required.gif">
+            </div>
+            <div class="tdbox">
+                <input type="text" class="adrnum">
+                <button id="mailnum">우편번호 > </button>
+            </div>
+            <div class="tdbox">
+                <input type="text" class="adrr">
+                <span class="adrtext">기본주소</span>
+            </div>
+            <div class="tdbox">
+                <input type="text" class="adrr">
+                <span class="adrtext">나머지주소</span>
+            </div>
+            <div class="thbox">일반전화</div>
+            <div class="tdbox">
+                <select name="" id="">
+                    <option value="">02</option>
+                    <option value="">031</option>
+                    <option value="">032</option>
+                    <option value="">041</option>
+                </select>
+                -
+                <input type="text" class="telnum" maxlength="4">
+                -
+                <input type="text" class="telnum" maxlength="4">
+            </div>
+            <div class="thbox">휴대전화<img src="https://img.echosting.cafe24.com/skin/base/common/ico_required.gif"></div>
+            <div class="tdbox">
+                <select name="" id="">
+                    <option value="">010</option>
+                    <option value="">011</option>
+                    <option value="">013</option>
+                    <option value="">016</option>
+                </select>
+                -
+                <input type="text" class="telnum pnum" maxlength="4">
+                -
+                <input type="text" class="telnum pnum" maxlength="4">
+            </div>
+            <div class="thbox">이메일<img src="https://img.echosting.cafe24.com/skin/base/common/ico_required.gif"></div>
+            <div class="tdbox"><input type="email" class="emailadr"></div>
+            <table class="addinfo">
+                <tr>
+                    <td>성별<img src="https://img.echosting.cafe24.com/skin/base/common/ico_required.gif"></td>
+                    <td>
+                        <input type="radio" name="gender" id="man" ><label for="man">남자</label>
+                        <input type="radio" name="gender" id="woman"><label for="woman">여자</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>생년월일<img src="https://img.echosting.cafe24.com/skin/base/common/ico_required.gif"></td>
+                    <td>
+                        <input type="text" maxlength="4" id="year">년
+                        <input type="text" maxlength="2" id="month">월
+                        <input type="text" maxlength="2" id="day">일
+                        <input type="radio" name="calender" id="solar" ><label for="solar">양력</label>
+                        <input type="radio" name="calender" id="lunar"><label for="lunar">음력</label>
+                    </td>
+                </tr>
+            </table>
+            <div class="joinbtn" onclick="join()">회원가입</div>
+        </div>
+    </section>
+    <footer>
+        <div class="last">
+            <div class="inst">
+            <a href="https://www.instagram.com/artifacts_official/"><img src="./미디어/ins2.png" width="17px" /></a>
+            </dlv>
+        <div>
+            <a href="index.html">home</a>
+            <a>shop guide</a>
+            <a>terms df use</a>
+            <a>privacy policy</a>
+        </div>
+        </div>
+    </footer>
+    <div class="page1">
+        <h4>02-6207-0666</h4>
+        <p>국민은행 730601-04-085253 (주)이티씨컴퍼니</p>
+        <p>고객센터 운영시간 MON-FRI AM 11:00 ~ PM 18:00</p>
+        <p>contact@artifacts.co.kr</p>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      width: 100%;
+      position: relative;
+      /* border: solid 3px black; */
+      height: 80px;
+    }
+
+    .menu1 {
+      left: 90px;
+      /* border: solid 1px red; */
+      top: 15px;
+      text-align: center;
+      position: fixed;
+      align-items: flex-start;
+    }
+
+    .mainlogo {
+      /* border: solid 1px green; */
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 25px;
+      position: center;
+    }
+
+    .menu2 {
+      right: 90px;
+      /* border: solid 1px blue; */
+      top: 15px;
+      text-align: center;
+      position: fixed;
+    }
+
+    nav ul{
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav li{
+      padding: 0px 25px 3px 0;
+      line-height: 50px;
+      height: 50px;
+      display: inline-block;
+      position: relative;
+      font-size: 13px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: rgb(123, 111, 111);
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: rgb(176, 176, 176);
+      cursor: pointer;
+    }
+
+    .btn1 {
+      background-color: white;
+      border: solid 0px;
+    }
+
+    /* @media screen and (max-width: 1500px) {
+
+      .menu1,
+      .menu2 {
+        display: none;
+      }
+    } */
+
+    .sidebar {
+      /* border: solid 1px red; */
+      position: absolute;
+      top: 50px;
+      left: 0px;
+      right: 0px;
+    }
+
+    .sidetext {
+      height: 22px;
+      line-height: 22px;
+    }
+
+    .navwrap {
+      /* border: 1px solid purple; */
+      width: 1000px;
+      height: 650px;
+      margin: 0 auto;
+      z-index: 5;
+    }
+
+    .slide-wrap {
+      width: 100%;
+      height: 600px;
+      overflow: hidden;
+      /* 추가 */
+      background-color: rgb(218, 211, 192, 0.4);
+      /* border: 1px solid blue; */
+
+    }
+
+    /* 추가 */
+
+    #img1 {
+      width: 1000px;
+    }
+
+    .slide-wrap li:nth-child(4) {
+      /* vertical-align: middle; */
+      line-height: 600px;
+      /* border: 1px solid red; */
+    }
+
+    #img4 {
+      width: 1000px;
+      vertical-align: middle;
+    }
+
+    /* 추가 */
+    .navwrap ul {
+      position: relative;
+      list-style: none;
+      width: 1000px;
+      height: 350px;
+      animation: slideAni 20s infinite ease-in-out;
+
+    }
+
+    .navwrap li {
+      width: 1000px;
+      height: 750px;
+      float: left;
+    }
+
+    @keyframes slideAni {
+      0% {
+        left: 1000px;
+      }
+
+      25% {
+        left: 0px;
+      }
+
+      50% {
+        left: -1000px;
+      }
+
+      75% {
+        left: 0;
+      }
+
+      100% {
+        left: 1000px;
+      }
+    }
+
+    footer {
+      width: 100%;
+      height: 70px;
+      /* border: 1px solid red; */
+      text-align: center;
+    }
+
+    .inst a {
+      font-weight: normal;
+      color: black;
+      font-size: 13px;
+      padding: 10px;
+    }
+
+    .inst a:hover {
+      cursor: pointer;
+      color: grey;
+    }
+
+    .page1 {
+      width: 100%;
+      height: 100px;
+      text-align: center;
+      font-size: 12px;
+      color: gray;
+    }
+
+    .page1 h4 {
+      margin-bottom: 10px;
+      color: black;
+      font-size: 14px;
+    }
+ 
+    .community > ul{
+      display: none;
+    }
+    .submenu {
+      font-size: 12px;
+      background-color: #fff;
+      display: inline-block;
+      width: 100px;
+      z-index: 10;
+      height: 100%;
+      /* border: 1px solid red;  */
+    }
+
+    .community:hover .submenu {
+      display: block;
+      z-index: 10;
+    } 
+  </style>
+</head>
+
+<body>
+    <nav>
+      <div class="menu1">
+        <ul>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="collection.html">COLLECTION</a></li>
+          <li><a href="#">STOCKIST</a></li>
+          <li class="community"><a href="#">COMMUNITY</a>
+            
+            <ul class="submenu">
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">EVENT</a></li>
+              <li><a href="#">상품Q&A</a></li>
+            </ul>
+          
+          </li>
+        </ul>
+      </div>
+      <div class="mainlogo">
+        <a href="index.html"><img src="./미디어/toplogo.png" /></a>
+      </div>
+      <div class="menu2">
+        <ul>
+          <li><a href="#">LOGIN</a></li>
+          <li><a href="#">MY PAGE</a></li>
+          <li><a href="#">CART</a></li>
+          <li>
+            <button class="btn1">
+              <img src="./미디어/btn_search_icon.png" width="13px" />
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar">
+        <ul>
+          <li class="sidetext"><a href="#">22FW</a></li>
+          <li class="sidetext"><a href="#">22SS</a></li>
+          <li class="sidetext"><a href="#">New Arrivals</a></li>
+          <li class="sidetext"><a href="#">Outwear</a></li>
+          <li class="sidetext"><a href="#">Top</a></li>
+          <li class="sidetext"><a href="#">Bottom</a></li>
+          <li class="sidetext"><a href="#">Accessories</a></li>
+          <li class="sidetext"><a href="#">Slelcted Brand</a></li>
+          <li class="sidetext"><a href="#">SALE</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="navwrap">
+      <div class="slide-wrap">
+        <ul>
+          <li>
+            <a href=""><img src="./미디어/아트이프1.jpg" alt="" id="img1" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./미디어/아트이프2.jpg" alt="" id="img2" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./미디어/아트이프3.jpg" alt="" id="img3" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./미디어/아트이프4.jpg" alt="" id="img4" /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <footer>
+      <div class="last">
+        <div class="inst">
+          <a href="https://www.instagram.com/artifacts_official/"><img src="./미디어/ins2.png" width="17px" /></a>
+          </dlv>
+          <div>
+            <a href="index.html">home</a>
+            <a>shop guide</a>
+            <a>terms df use</a>
+            <a>privacy policy</a>
+          </div>
+        </div>
+    </footer>
+    <div class="page1">
+      <h4>02-6207-0666</h4>
+      <p>국민은행 730601-04-085253 (주)이티씨컴퍼니</p>
+      <p>고객센터 운영시간 MON-FRI AM 11:00 ~ PM 18:00</p>
+      <p>contact@artifacts.co.kr</p>
+
+
+    </div>
+</body>
+
+</html>

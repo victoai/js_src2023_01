@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> 2단출력</h2>
+    <script>
+
+        /* 반복문 없이 2단 출력*/
+        document.write("<h2>2단</h2>");
+         document.write( 2*1 + "<br>");
+         document.write( 2*2 + "<br>");
+         document.write( 2*3 + "<br>");
+         document.write( 2*4 + "<br>");
+         document.write( 2*5 + "<br>");
+         document.write( 2*6 + "<br>");
+         document.write( 2*7 + "<br>");
+         document.write( 2*8 + "<br>");
+         document.write( 2*9 + "<br>");
+  
+      
+        document.write("<h2>3단</h2>");
+        document.write( 3 *1 + "<br>");
+        document.write( 3 *2 + "<br>");
+        document.write( 3 *3 + "<br>");
+        document.write( 3 *4  +"<br>");
+        document.write( 3 *5  +"<br>");
+        document.write( 3 *6  +"<br>");
+        document.write( 3 *7  +"<br>");
+        document.write( 3 *8  +"<br>");
+        document.write( 3 *9  +"<br>");
+
+
+        document.write("<h2>4단 </h2>");
+        document.write(4*1 +"<br>");
+        document.write(4*2 +"<br>");
+        document.write(4*3 +"<br>");
+        document.write(4*4 +"<br>");
+        document.write(4*5 +"<br>");
+        document.write(4*6 +"<br>");
+        document.write(4*7 +"<br>");
+        document.write(4*8 +"<br>");
+        document.write(4*9 +"<br>");
+
+        document.write("<h3>5단</h3>");
+        document.write(5*1 + "<br>");
+        document.write(5*2 + "<br>");
+        document.write(5*3 + "<br>");
+        document.write(5*4 + "<br>");
+        document.write(5*5 + "<br>");
+        document.write(5*6 + "<br>");
+        document.write(5*7 + "<br>");
+        document.write(5*8 + "<br>");
+        document.write(5*9 + "<br>");
+
+
+        //2단 반복문
+
+
+        //3단 반복문
+
+        //4단 반복문
+
+        
+        //5단 반복문
+
+       /* document.write("<h3>5단</h3>");
+        for( let i=1; i<=9 ;i++){                       // i =1    5 *1 
+            document.write(5*i + "<br>");               // i =2    5 *2 
+        }                                               // i=3     5* 3
+                                                        // i=4     5* 4
+                                                        // i=5     5*5
+                                                        // i=6     5*6
+                                                        // i=7     5*7
+                                                        // i=8     5*8      
+                                                        // i=9     5*9
+       */
+
+ 
+ 
+    
+
+       document.write("<h3>2단 </h3>");
+       for( let i=1; i<=9 ; i++){
+            document.write( 2*i +"<br>");
+       }
+
+       document.write("<h3>3단</h3>");
+       for( let i=1 ; i<=9 ; i++){
+            document.write( 3*i + "<br>");
+       }
+
+       document.write("<h3>4단</h3>")                                                    
+       for( let i=1; i<=9; i++)  {
+            document.write( 4*i +  "<br>");
+       }
+
+       document.write("<h3>5단</h3>")                                                 
+       for( let i=1; i<=9 ;i++){                      
+            document.write(5*i + "<br>");               
+       }  
+  
+       for( let j=2; j<=5; j++){
+            //반복내용
+            for( let i=1; i<=9 ;i++){                      
+                document.write(5*i + "<br>");               
+            } 
+       }
+
+
+         /*
+               j=2                         i=1       5*1 
+                                           i=2       5*2
+                                           i=3       5*3
+                                           i=4       5*4
+                                           i=5       5*5
+                                           i=6       5*6
+                                           i=7       5*7
+                                           i=8       5*8
+                                           i=9       5*9
+                                           i=10      안쪽 반복문 종료                                           
+
+               
+               j=3                         i=1         5*1
+                                           i=2         5*2
+                                           i=3         5*3
+                                           i=4         5*4
+                                           i=5         5*5
+                                           i=6         5*6
+                                           i=7         5*7
+                                           i=8         5*8
+                                           i=9         5*9
+                                           i=10        안쪽 반복문 종료 
+
+               j=4                         i=1         5*1
+                                           i=2         5*2
+                                           i=3         5*3
+                                           i=4         5*4
+                                           i=5         5*5
+                                           i=6         5*6
+                                           i=7         5*7
+                                           i=8         5*8
+                                           i=9         5*9                                                           
+                                           i=10       안쪽 반복문 종료
+
+               j=5         
+                                           i=1        5*1 
+                                           i=2        5*2
+                                           i=3        5*3
+                                           i=4        5*4
+                                           i=5        5*5
+                                           i=6        5*6
+                                           i=7        5*7
+                                           i=8        5*8
+                                           i=9        5*9
+                                           i=10       안쪽 반복문 종료
+
+              j=6      바깥쪽 반복문 종료
+                                                                           
+         */  
+         document.write("==2~5 반복문==============================================<br>")
+      
+         for( let j=2; j<=5; j++){
+            //반복내용
+            for( let i=1; i<=9 ;i++){                      
+                document.write(j*i + "<br>");               
+            } 
+         }
+
+            /*
+               j=2                         i=1       2*1 
+                                           i=2       2*2
+                                           i=3       2*3
+                                           i=4       2*4
+                                           i=5       2*5
+                                           i=6       2*6
+                                           i=7       2*7
+                                           i=8       2*8
+                                           i=9       2*9
+                                           i=10      안쪽 반복문 종료                                           
+
+               
+               j=3                         i=1         3*1
+                                           i=2         3*2
+                                           i=3         3*3
+                                           i=4         3*4
+                                           i=5         3*5
+                                           i=6         3*6
+                                           i=7         3*7
+                                           i=8         3*8
+                                           i=9         3*9
+                                           i=10        안쪽 반복문 종료 
+
+               j=4                         i=1         4*1
+                                           i=2         4*2
+                                           i=3         4*3
+                                           i=4         4*4
+                                           i=5         4*5
+                                           i=6         4*6
+                                           i=7         4*7
+                                           i=8         4*8
+                                           i=9         4*9                                                           
+                                           i=10       안쪽 반복문 종료
+
+               j=5         
+                                           i=1        5*1 
+                                           i=2        5*2
+                                           i=3        5*3
+                                           i=4        5*4
+                                           i=5        5*5
+                                           i=6        5*6
+                                           i=7        5*7
+                                           i=8        5*8
+                                           i=9        5*9
+                                           i=10       안쪽 반복문 종료
+
+              j=6      바깥쪽 반복문 종료
+                                                                           
+         */        
+       
+         document.write("<h3>전체구구단</h3>");
+         for( let j=2; j<=9; j++){
+            //반복내용
+            document.write(  j+"단 출력 <br>");
+            for( let i=1; i<=9 ;i++){                      
+                document.write(j*i + "<br>");               
+            } 
+         }
+
+    </script>                                            
+</body>
+</html>

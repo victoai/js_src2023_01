@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+         학생들의 국어점수 중에서 평균점수 보다 높은 점수의 개수를 구하시오
+         입력자료:  
+         출력자료:  평균보다 높은 점수 개수  :  kor_count
+         처리자료:  국어점수총점 : sum ,  국어점수평균  kor_avg  ,  반복제어변수 : i
+         준비자료:  국어점수배열  : kors
+        */
+
+        let kors=[90,70,80,100,50];
+        
+        //1. 국어점수 총점구하기 :반복문으로 해결
+        //2. 국어점수 평균구하기
+        //3. 평균보다 높은 국어점수 개수구하기
+ 
+        // 3.  반복
+        //    3.1  국어점수와 평균을 비교한다
+        //        - 평균보다 높으면 개수를 누적한다
+
+ 
+            
+        let sum =0 ;  // 총점
+        let kor_avg;   // 평균
+        
+        let kor_count=0;  // 개수 
+
+        for(i=0; i<kors.length; i++){
+            sum += kors[i];        
+        }
+
+        /*
+        //  sum  =  kors[0] + kors[1]+ kors[2] +  kors[3] +  kors[4];
+
+          sum  = sum + kors[0];
+          sum  = sum + kors[1];
+          sum  = sum + kors[2];
+          sum  = sum + kors[3];
+          sum  = sum + kors[4]; 
+        */
+        kor_avg = sum / 5;
+        console.log( kor_avg);
+
+       
+        for( let i=0; i< kors.length ; i ++){
+            if(kors[i] > kor_avg){
+                console.log("평균보다 높은 점수"+kors[i]);
+                kor_count++; // kor_count = kor_count+1 ; 
+            }
+        }
+
+        console.log(kor_count );
+        
+         
+         
+
+    </script>
+</body>
+</html>

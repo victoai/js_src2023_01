@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+/*
+        let book= { title: "어린왕자", 
+               price : 7000,
+               author : "앙투안 드 생텍쥐페리",
+               publisher : "갈리마르"
+        };  
+
+*/
+
+        function  showBookInfo( a,b,c,d){  // 책정보를 받아서 출력하는 기능 
+            document.write( " << 책정보 출력 >> <br>");
+            document.write( a);
+            document.write( b);
+            document.write( c);
+            document.write( d); 
+        }
+
+        function  showBookInfo2( book ){  // 책정보를 받아서 출력하는 기능 
+            document.write( " <br> << 책정보 출력 >> <br>");  
+            //document.write( book.title);
+            document.write( book["title"]);
+            document.write( book.price);
+            document.write( book.author);
+            document.write( book.publisher);
+        }
+         
+        showBookInfo( "어린왕자" ,  7000 ,"앙투안 드 생텍쥐페리" ,  "갈리마르"); // 4개 전달       
+
+
+        let mybook ={ title: "어린왕자" , price:7000 ,  author :"앙투안 드 생텍쥐페리"  ,  publisher:"갈리마르"};
+        //함수호출시 값 전달할 때  객체를 사용할 수 있음 ,  우아한 값전달
+        showBookInfo2(mybook);
+
+
+    </script>
+    
+    
+</body>
+</html>

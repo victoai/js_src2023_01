@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let n=0 , sum=0;
+     
+        while(++n <= 10){  // 반복조건                                  //   1   <=10        1 
+            sum = sum  +n;                                             //    2   <=10        3
+            document.write( n + " :"  +  sum + "<br>") ;               //    3   <=10        6
+        }                                                              //    4   <=10       10
+                                                                       //    5   <=10       15 
+       // alert( "1~10까지의 합=" +  sum);                             //    6   <=10       21
+       document.write("1~10까지의 합=" +  sum);                        //    7   <= 10      28 
+                                                                       //    8   <=10       36
+                                                                       //    9  <= 10       45
+                                                                       //   10  <= 10       55
+                                                                    //      11  <= 10      조건불만족
+    </script>                                                           
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            width:400px;
+            height: 180px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        table,table td{
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+         function calPrice(rice){
+            let qty = rice.value;
+            let priceTag = rice.parentElement.previousElementSibling; 
+            let ricePrice = rice.parentElement.nextElementSibling;
+            let price = priceTag.innerHTML;
+         //   alert( price);
+
+            price  = price.substring(0,4);   // 7000원  =>7000
+           // alert( price); 
+
+            ricePrice.innerHTML= price*qty;
+            calTotalPrice();
+
+        }
+        function calTotalPrice(){
+            let totprice=document.querySelector("#order-price");
+
+            let tr=document.querySelectorAll("tr");
+            let sum=0;
+            for(let i=1; i<=tr.length-1; i++){
+                let cell=tr[i];
+                let third=cell.lastElementChild
+                let thirdv=parseInt(third.innerHTML);
+                sum+=thirdv;
+            }
+        totprice.innerHTML=  sum  ;
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend> 백반집 메뉴</legend>
+        <table>
+    
+            <tr>
+                <td>음식</td>
+                <td>단가</td>
+                <td>수량</td>
+                <td>금액</td>
+            </tr>
+            <tr>
+                <td>제육볶음</td>
+                <td>7000원</td>
+                <td><input type="text" value="1" onkeyup="calPrice(this)">개</td>
+                <td>7000</td>
+            </tr>
+            <tr>
+                <td>부대찌개</td>
+                <td>7000원</td>
+                <td><input type="text" value="1" onkeyup="calPrice(this)">개</td>
+                <td>7000</td>
+            </tr>
+            <tr>
+                <td>된장찌개</td>
+                <td> 6000원</td>
+                <td><input type="text" value="1" onkeyup="calPrice(this)">개</td>
+                <td>6000</td>
+            </tr>           
+        </table>
+
+        <p> 
+               총 가격은 <span id="order-price"> 20000 </span> 원 입니다              
+        </p>
+    </fieldset>
+   
+</body>
+</html>

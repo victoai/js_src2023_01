@@ -1,0 +1,28 @@
+.ticketing_box .movie_select .wrap{
+    display:flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+.ticketing_box .movie_select .img{
+    background-position: center;
+    background-size: cover;
+    background-color: brown;
+}
+.ticketing_box .movie_select #left_img{
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+.ticketing_box .movie_select #middle_img{
+    width: 150px;
+    height: 90%;
+}
+.ticketing_box .movie_select #right_img{
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+    margin-right: 5px;
+}

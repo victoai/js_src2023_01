@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    
+
+    <h3>if문</h3>
+
+    if(조건){   <br>
+       명령문 ; <br>
+    }<br>
+
+
+    if(조건){   <br>
+        명령문 ; <br>
+     }<br>
+    else{<br>      <!--else 위의 조건이 아닌 그밖의 모든것 -->   
+        명령문 ;  <br>
+    }<br>
+
+
+
+    if(조건){   <br>
+        명령문 ; <br>
+     }<br>
+    else if(조건){<br>
+        명령문 ;  <br>
+    }<br>
+    else if(조건){<br>
+        명령문 ;  <br>
+    }<br>
+
+
+    <script>
+        let score=82;   //  학점구하기   A,B,C, F
+        if(score >= 90){
+            alert("A"); 
+        }else if( score >=80){
+            alert("b");
+        }else if( score >=70){
+            alert("C");
+        }else{
+            alert("F");
+        }                
+        ////////////////////////
+        // if사용시 주의사항 
+        if( score>=90){
+            alert("A");
+        }         
+        if( score>=80){
+            alert("B");
+        }         
+        if( score>=70){
+            alert("C");
+        }        
+    </script>   
+
+</body>
+</html>

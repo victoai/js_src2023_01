@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        
+        }
+        header{
+            height: 100px;
+            background-color: rgb(245,248,248);
+        }
+        .title{
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }
+        .search{
+            position: absolute;
+            right: 10px;
+            top: 40px;
+            border: 1px solid;
+        }
+        header input{
+            border:none;
+        }
+        .nav{
+            height: 40px;
+            padding: 20px;
+            background-color: rgb(232,243,243);
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        section{
+            display: flex;
+            justify-content: center;
+            height: 600px;         
+           
+        }
+        table{
+            width: 800px;
+            border: 1px solid rgb(227,216,216);
+        }
+        td{
+            border: 1px solid rgb(227,216,216);
+        }
+        
+        table tr{
+            height: 40px;
+            font-size: 12px;
+        }
+        table input , select {
+            width: 150px;
+            height: 30px;
+           
+        }
+        table button{
+            width: 150px;
+            height: 40px;
+            border: 0px;
+        }
+        footer{
+            height: 60px;
+            background-color: rgb(233,239,239);
+            display: flex;
+            justify-content: space-around;
+        }
+        span{
+            color: red;
+        }
+        hr{
+            color: gray;
+            margin: 10px;
+            margin-top: 20px;
+            
+        }
+        .h3{
+            font-size: 20px;
+        }
+        .tdw{
+            height: 70px;
+        }
+        span{
+            margin-left: 50px;
+        }
+        .but1{
+            position: absolute;
+           justify-content: center;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+        
+        td:nth-child(1){
+            text-align: center;
+        }
+
+        tr:nth-child(7){
+            height: 70px;
+        }
+      
+    </style>
+</head>
+<body>
+    <hr>
+    <header>
+        <div class="title">
+        <img src="../images/logo.png" alt="">
+    </div>
+       <div class="search"> <input type="text" class="text1"><img src="../images/검색.png" alt="" width="20px" height="20px">
+    </div>
+</header>
+    <nav class="nav">
+        <button class="but"><a href="login.html">로그인</a></button>
+        <button class="but"><a href="joinus.html">회원가입</a></button>
+        <button class="but"><a href="index.html">홈으로</a></button>    
+    </nav>
+    <section>
+    <table>
+        <caption>회원가입</caption>
+     
+       
+    <tr>
+        <td>이름</td>
+        <td>
+            <input type="text" >
+        </td>
+    </tr>
+   
+    <tr>
+        <td>아이디 </td>
+        <td>
+            <input type="text"><button>중복확인</button>
+        </td>
+    </tr>
+    <tr>
+        <td>비밀번호</td>
+        <td class="tdw">
+            <input type="password" required><br>
+            <span>비밀번호는 8자리이내 영문숫자로 작성해 주세요</span>
+        </td>
+    </tr>
+    <tr>
+        <td>비밀번호 확인</td>
+        <td>
+            <input type="password" required>
+        </td>
+    </tr>
+
+    <tr>
+        <td>이메일 </td>
+        <td>
+            <input type="text">@<input type="text">
+            <select name="email">
+                <option value="selecet" selected >선택하세요</option>
+                <option value="naver">naver.com</option>
+                <option value="gmail">gmail.com</option>
+                <option value="daum">daum.net</option>
+            </select>
+             <button>중복확인</button> 
+        </td>
+    </tr>
+    
+    <tr>
+        
+        <td>학년/반</td>
+        <td class="tdw">
+            <select name="">
+                <option value="selecet" selected >선택하세요</option>
+                <option value="selecet" >1학년</option>
+                <option value="selecet"  >2학년</option>
+                <option value="selecet"  >3학년</option>
+            </select>
+            학년
+            <select name="">
+                <option value="selecet" selected >선택하세요</option>
+                <option value="selecet"  >1반</option>
+                <option value="selecet"  >2반</option>
+                <option value="selecet"  >3반</option>
+            
+            </select>
+            반
+        </td>
+    </tr>
+    
+    <tr>
+        <div class="but1">
+       <td  colspan="2">
+            <button type="submit">가입</button>
+            <button type="reset">취소</button>
+        </td>
+        </div>       
+    </tr> 
+    </table>
+</section>
+
+    <footer>
+        
+        <div class="foot1"><img src="../images/footer_acorn.png" alt=""></div>
+        <div class="foot2">(주)에이콘이츠 에이콘아카데미(홍대)</div>
+        <div class="foot3">COPYRIGHT(C) HBILAB ALL RIGHTS RESERVED</div>
+    </footer>
+</body>
+</html>

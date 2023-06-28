@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            background: url(./images/game1_img.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .all{
+            height: 700px;
+            width: 1200px;
+            margin: 0 auto;
+            margin-top: 150px;
+            position: relative;    
+        }
+        .hel{
+            position: absolute;
+            left: 5%;
+            top: 15%;
+        }
+        h1{
+            font-size: 50px;
+            color: rgb(68, 68, 255);
+            font-weight: 900;
+            
+        }
+        p{
+            font-size: 30px;
+        }
+        .face{
+            display: flex;
+            flex-direction: column;
+            border: solid 1px lightgray;
+            width: 450px;
+            height: 250px;
+            border-radius: 10px;
+            position: absolute;
+            right: 5%;
+            bottom: 25%;
+            background-color: rgb(127, 129, 255);
+        }
+        form{
+            text-align: center;
+        }
+        .id, .pw{
+            width: 400px;
+            height: 40px;
+            margin: 0 auto ;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            border: solid 1px lightgray;
+            padding-left: 7px;
+            outline: 0PX;
+        }
+        .btn{
+            width: 400px;
+            height: 50px;
+            border: 0px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: aliceblue;
+            background-color: rgb(68, 68, 255) ;
+            border-radius: 10px;
+            cursor: pointer;
+            
+        }
+        a{
+            margin: 0 auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: rgb(68, 68, 255);
+            font-weight: bold;
+        }
+        hr{
+            width: 400px;
+            margin: 0 auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .new{
+            border-radius: 10px;
+            width: 200px;
+            height: 50px;
+            font-size: 20px;
+            color: aliceblue;
+            background-color: rgb(44, 168, 33) ;
+            font-weight: bold;
+            margin: 0 auto;
+            margin-top: 10px;
+            cursor: pointer;
+            text-align: center;
+            padding-top: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+    <script>
+        function login(){
+            let frm = document.frm;
+            let userIdTag = frm.userId;
+            let userPwTag = frm.userPw;
+
+            
+            if(userIdTag.value==""){
+                alert("아이디를 입력하세요.");
+                userIdTag.focus();
+            }
+            else if(userPwTag.value==""){
+                alert("비밀번호를 입력하세요");
+                userPwTag.focus();
+            }
+            else if(userIdTag.value=="장의수" && userPwTag.value=="1234"){
+                alert("장의수님 로그인 되었습니다.");
+                location.href="index.html";
+            }
+            else if(userIdTag.value=="이정현" && userPwTag.value=="1234"){
+                alert("이정현님 로그인 되었습니다.");
+                location.href="index.html";
+            }
+            else if(userIdTag.value=="정헌조" && userPwTag.value=="1234"){
+                alert("정헌조님 로그인 되었습니다.");
+                location.href="index.html";
+            }
+            else if(userIdTag.value=="조원근" && userPwTag.value=="1234"){
+                alert("조원근님 로그인 되었습니다.");
+                location.href="index.html";
+            }else{
+                alert("아이디와 비밀번호를 확인하세요.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="all">
+        <div class="hel">
+            <h1>미니게임천국</h1><br>
+            <p>웹에서 즐길 수 있는 게임들을<br>
+            만들고 업로드하는 사이트</p>
+        </div>
+        
+        <div class="face">
+            <form name="frm">
+            <input name="userId" class="id" type="text" placeholder="아이디">
+            <input name="userPw" class="pw" type="password" placeholder="비밀번호">
+            <button type="button" class="btn" onclick="login()">로그인</button>
+            </form>
+            
+        </div>
+    </div>
+    
+</body>
+</html>

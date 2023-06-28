@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            height: 100px;
+            background-color: rgb(245, 248, 248);
+            position: relative;
+        }
+
+        .wrap {
+            padding: 30px;
+
+        }
+
+        #title {
+
+            left: 10px;
+            top: 20px;
+            position: absolute;
+        }
+
+        .search2 {
+            right: 10px;
+            bottom: 20px;
+            position: absolute;
+        }
+
+        #icon {
+            position: absolute;
+            width: 25px;
+            top: 3px;
+            right: 3px;
+        }
+
+        nav {
+            height: 40px;
+            padding: 20px;
+            background-color: rgb(232, 243, 243);
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        section {
+            height: 600px;
+            margin-top: 20px;
+
+        }
+        .log_wrap{
+            width: 400px;
+            padding: 20px;
+            border: 0.5px solid rgb(234, 222, 222);
+            margin: 0 auto;
+        }
+
+        .log_img{
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        footer {
+            height: 60px;
+            background-color: rgb(233, 239, 239);
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .ftbox {
+            width: 33%;
+            height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <div id="title">
+                <img src="../화면구현시험/logotext.png" alt="">
+
+            </div>
+            <div class="search2">
+                <input type="search" name="검색창">
+                <img src="../화면구현시험/searchimo.png" alt="" id="icon">
+            </div>
+        </div>
+    </header>
+    <nav>
+        <a href="login.html">로그인</a>
+        <a href="joinus.html">회원가입</a>
+        <a href="index.html">홈으로</a>
+    </nav>
+    <section>
+
+
+        <div class="log_wrap">
+
+            <div class="log_img">
+                <img src="images/logo_logo.jpg" alt="">
+            </div>
+
+            <div class="log_info">
+                <input type="text" placeholder="아이디"> <br>
+                <input type="text" placeholder="비번"> <br>
+                <button>로그인</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="ftbox">
+            <img src="../화면구현시험/logo.png" alt="">
+        </div>
+
+        <div class="ftbox">
+            (주)에이콘이즈 에이콘아카데미(홍대)
+        </div>
+
+        <div class="ftbox">
+            COPYRIGHT(C) HBILAB. ALL RIGHTS RESERVED
+        </div>
+
+    </footer>
+</body>
+
+</html>

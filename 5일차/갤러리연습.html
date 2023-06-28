@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>   
+    #gallery{
+        width: 300px;
+        height: 300px;
+        border: 3px solid black;
+        background-image: url('media/Chrysanthemum.png');
+        background-size: cover;
+        background-position: center;
+    }
+
+    </style>
+
+    <script>
+        //
+        let index =0;
+        let imgNames= ["Chrysanthemum.png" ,  "Desert.png" , "Hydrangeas.png" ,"Jellyfish.png", "Koala.png"];
+        
+        function changeImage(){
+          //대상선택
+          let gallery  = document.getElementById("gallery");
+
+          index++;
+          if( index  >= imgNames.length)
+             index =0;
+
+          gallery.style.backgroundImage= "url(media/" + imgNames[index] +  " )" ;    
+          
+          gallery.animate( {
+                    transform: [
+                    'translateX(100%)',    //시작
+                    'translateX(0px)'      //도착
+                    ]
+                 },
+                 {
+                     duration:1000               // 위의효과가 0.5초간 지속되도록
+                 });            
+          
+        }
+
+    </script>
+</head>
+<body>
+
+   <div id="wrap">
+        <div  id="gallery">
+        </div>
+        <button onclick="changeImage()">다음</button>
+   </div>
+    
+</body>
+</html>

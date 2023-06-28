@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+        width: 100%;
+        position: relative;
+        /* border: solid 3px black; */
+        height: 80px;
+        z-index: 20;
+      }
+      .menu1 {
+        left: 90px;
+        /* border: solid 1px red; */
+        top: 15px;
+        text-align: center;
+        position: fixed;
+        align-items: flex-start;
+      }
+      .mainlogo{
+        /* border: solid 1px green; */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+        position: center;
+      }
+      .menu2 {
+        right: 90px;
+        /* border: solid 1px blue; */
+        top: 15px;
+        text-align: center;
+        position: fixed;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+      }
+      nav li {
+        padding: 0px 25px 3px 0;
+        line-height: 50px;
+        height: 50px;
+        display: inline-block;
+        position: relative;
+        font-size: 13px;
+      }
+      nav a, footer a {
+        text-decoration: none;
+        color: rgb(123, 111, 111);
+        font-weight: bold;
+      }
+      nav a:hover {
+        color: rgb(201, 201, 201);
+        cursor: pointer;
+      }
+      .btn1 {
+        background-color: white;
+        border: solid 0px;
+      }
+      @media screen and (max-width: 1500px) {
+        .menu1,
+        .menu2 {
+          display: none;
+        }
+      }
+      .sidebar {
+        /* border: solid 1px red; */
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        right: 0px;
+      }
+      .sidetext {
+        height: 22px;
+        line-height: 22px;
+      }
+      section{
+        margin: 100px auto;
+      }
+        section ul{
+            /* border: 1px solid red; */
+            width: 1300px;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+        section ul li{
+            /* border: 1px solid red; */
+            width: 401px;
+            height: 600px;
+            margin: 5px;
+            text-align: center;
+            padding: 10px;
+            
+        }
+        section img{
+            width: 400PX;
+            height: 500px;
+        }
+        section p{
+            font-size: 12px;
+            color: black;
+        }
+        span{
+            font-size: 12px;
+            color: #9e9e9e;
+            text-decoration: line-through;
+        }
+        .price{
+            font-size: 12px;
+            color: #757575;
+        }
+        .imgs{
+            position: relative;
+            margin: 0px auto;
+        }
+        .on{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            opacity: 0;
+            transition: opacity 0.5s linear;
+            /* display: none; */
+        }
+        .imgs:hover .on{
+            opacity: 1;
+            /* display: block; */
+        }
+        footer{
+        width: 100%;
+        height: 70px;
+        /* border: 1px solid red; */
+        text-align: center;
+      }
+      .inst a{
+        font-weight: normal;
+        color: black;
+        font-size: 13px;
+        padding: 10px;
+      }
+      .inst a:hover{
+        cursor: pointer;
+        color: grey;
+      }
+      .page1{
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        font-size: 12px;
+        color: gray;
+      }
+      .page1 h4{
+        margin-bottom: 10px;
+        color: black;
+        font-size: 14px;
+      }
+       
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="menu1">
+          <ul>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="collection.html">COLLECTION</a></li>
+            <li><a href="#">STOCKIST</a></li>
+            <li><a href="#">COMMUNITY</a></li>
+          </ul>
+        </div>
+        <div class="mainlogo">
+          <a href="index.html"><img src="./미디어/toplogo.png" /></a>
+        </div>
+        <div class="menu2">
+          <ul>
+            <li><a href="login.html">LOGIN</a></li>
+            <li><a href="#">MY PAGE</a></li>
+            <li><a href="cart.html">CART</a></li>
+            <li>
+              <button class="btn1">
+                <img src="./미디어/btn_search_icon.png" width="13px" />
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar">
+            <ul>
+              <li class="sidetext"><a href="섹션부분.html">22FW</a></li>
+              <li class="sidetext"><a href="섹션부분.html">22SS</a></li>
+              <li class="sidetext"><a href="섹션부분.html">New Arrivals</a></li>
+              <li class="sidetext"><a href="섹션부분.html">Outwear</a></li>
+              <li class="sidetext"><a href="섹션부분.html">Top</a></li>
+              <li class="sidetext"><a href="섹션부분.html">Bottom</a></li>
+              <li class="sidetext"><a href="섹션부분.html">Accessories</a></li>
+              <li class="sidetext"><a href="섹션부분.html">Slelcted Brand</a></li>
+              <li class="sidetext"><a href="섹션부분.html">SALE</a></li>
+            </ul>
+          </div>
+        </nav>
+    <section>
+        <ul>
+            <li>
+                <div class="imgs">
+            <a href="Cream.html" target="_self">
+                <img src="images/Cream.jpg">
+                <img src="images/Belted Fishtail Shield_Cream.jpg" class="on"></a>
+                </div>
+                <p>Belted Fishtail Shield_Cream</p>
+                <span>258,000원</span>
+                <P class="price">206,400원</P>
+            </li>
+            <li>
+                <div class="imgs">
+            <a href="Navy_dark.html" target="_self">
+                <img src="images/Navy_Dark.jpg">
+                <img src="images/Belted Fishtail Shield_Dark Navy.jpg" class="on"></a>
+                </div>
+                <p>Belted Fishtail Shield_Dark Navy</p>
+                <span>258,000원</span>
+                <p class="price">206,400원</p>
+            </li>
+            <li>
+                <div class="imgs">
+            <a href="Dawn_blue.html" target="_self">        
+                <img src="images/Dawn_Blue.jpg">
+                <img src="images/Cropped Trench Coat_ Dawn Blue.jpg" class="on"></a>
+                </div>
+                <p>Cropped Trench Coat_ Dawn Blue</p>
+                <span>235,000원</span>
+                <p class="price">188,000원</p>
+            </li>
+            <li>
+                <div class="imgs">
+            <a href="Light_grey.html" target="_self">        
+                <img src="images/Light_Grey.jpg">
+                <img src="images/Plain Knit Vest_ Light Grey.jpg" class="on"></a>
+                </div>
+                <p>Plain Knit Vest_ Light Grey</p>
+                <span>89,000원</span>
+                <p class="price">71,200원</p>
+            </li>
+            <li>
+                <div class="imgs">
+            <a href="Navy.html" target="_self">        
+                <img src="images/Navy.jpg">
+                <img src="images/Plain Knit Vest_ Navy.jpg" class="on"></a>
+                </div>
+                <p>Plain Knit Vest_ Navy</p>
+                <span>89,000원</span>
+                <p class="price">71,200원</p>
+            </li>
+            <li>
+                <div class="imgs">
+            <a href="Oatmeal.html" target="_self">        
+                <img src="images/Oatmeal.jpg">
+                <img src="images/Tail Knit Pique Shirt_ Oatmeal.jpg" class="on"></a>
+                </div>
+                <p>Tail Knit Pique Shirt_ Oatmeal</p>
+                <span>98,000원</span>
+                <p class="price">78,400원</p>
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <div class="last">
+            <div class="inst">
+              <a href="https://www.instagram.com/artifacts_official/"><img src="./미디어/ins2.png" width="17px" /></a>
+            </dlv>
+           <div>
+            <a href="index.html">home</a>
+            <a>shop guide</a>
+            <a>terms df use</a>
+            <a>privacy policy</a>
+          </div>
+        </div>
+      </footer>
+      <div class="page1">
+        <h4>02-6207-0666</h4>
+        <p>국민은행 730601-04-085253 (주)이티씨컴퍼니</p>
+        <p>고객센터 운영시간 MON-FRI AM 11:00 ~ PM 18:00</p>
+        <p>contact@artifacts.co.kr</p>
+  
+  
+      </div>
+</body>
+</html>

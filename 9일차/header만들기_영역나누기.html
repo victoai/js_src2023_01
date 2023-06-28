@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        header{
+            display: flex;
+        }
+
+        .c{
+            position: relative;
+            background-color: green;
+            
+        }
+
+        .item{
+            height: 200px;
+            width: 300px;
+            border:1px solid black;
+            
+        }
+        img{
+            width: 30px;
+            height: 30px;
+        }
+        .search{
+            width: 200px;
+            height: 30px;
+            border:1px solid black;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        } 
+        
+        .search-bar{
+            width: 100%;
+            height: 30px;
+            position: relative;
+        }
+
+       .search-bar  input{
+         position: absolute;
+         left: 10px;
+         top:5px;
+       }
+
+       .search-bar  img{
+         position: absolute;
+         right: 0px;
+         top:0px;
+       }
+    </style>
+</head>
+<body>
+
+    <!--  부모역할을 위해서는 부모영역은 크기가 지정되어 있어야 함  !! 주의 사항  -->
+    <header>
+        <div class="a  item">a</div>
+        <div class="b  item">b</div>
+        <div class="c  item">c
+            <div class="search">    
+                <div class="search-bar">
+                    <input type="text">
+                    <img src="검색.png">  
+                </div> 
+            </div>
+        </div>
+    </header>
+</body>
+</html>

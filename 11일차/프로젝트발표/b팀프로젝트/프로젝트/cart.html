@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+        width: 100%;
+        position: relative;
+        /* border: solid 3px black; */
+        height: 80px;
+        z-index: 20;
+      }
+      .menu1 {
+        left: 90px;
+        /* border: solid 1px red; */
+        top: 15px;
+        text-align: center;
+        position: fixed;
+        align-items: flex-start;
+      }
+      .mainlogo{
+        /* border: solid 1px green; */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+        position: center;
+      }
+      .menu2 {
+        right: 90px;
+        /* border: solid 1px blue; */
+        top: 15px;
+        text-align: center;
+        position: fixed;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+      }
+      nav li {
+        padding: 0px 25px 3px 0;
+        line-height: 50px;
+        height: 50px;
+        display: inline-block;
+        position: relative;
+        font-size: 13px;
+      }
+      nav a, footer a {
+        text-decoration: none;
+        color: rgb(123, 111, 111);
+        font-weight: bold;
+      }
+      nav a:hover {
+        color: rgb(201, 201, 201);
+        cursor: pointer;
+      }
+      .btn1 {
+        background-color: white;
+        border: solid 0px;
+      }
+      @media screen and (max-width: 1500px) {
+        .menu1,
+        .menu2 {
+          display: none;
+        }
+      }
+      .sidebar {
+        /* border: solid 1px red; */
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        right: 0px;
+      }
+      .sidetext {
+        height: 22px;
+        line-height: 22px;
+      }
+        section{
+            width: 100%;
+            height: 700px;
+            /* border: 1px solid blue; */
+            margin: 50px auto;
+            position: relative;
+        }
+
+
+        section table {
+            border-collapse: collapse;
+            height: 10px;
+            margin: 0 auto;
+        }
+        
+
+        .table1-2 {
+            background-color: white;
+            list-style: none;
+        }
+
+ 
+
+        section td {
+            /* border: 0.1px solid black; */
+            text-align: center;
+            /* background-color: aliceblue; */
+            height: 70px;
+        }
+
+        section a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .item {
+            font-weight: 100px;
+            font-size: 15px;
+        }
+
+        .imageBox {
+            width: 100px;
+        }
+
+        .image2-1 {
+            height: 100%;
+        }
+
+        .image2-2 {
+            height: 100px;
+            width: 80px;
+        }
+
+        .image2-3 {
+            /* border: 1px solid black; */
+            width: 20px;
+            height: 5px;
+            background-image: url('images/돋보기.png');
+            background-position: center;
+            background-size: cover;
+        }
+
+ 
+        .button1 {
+            width: 100px;
+            margin-bottom: 30px;
+        }
+
+        section p {
+            text-align: center;
+        }
+
+        section .span {
+            font-size: 12px;
+        }
+        .buttonBox{
+            /* border: 1px solid red; */
+            width: 250px;
+            margin: 0 auto;
+        }
+        
+        
+        .button2-1 {
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .button2-3{
+            padding: 10px;
+            margin-left: 10px;
+        }
+        .button2-2{
+            width: 150px;
+            margin: 20px auto;
+        }
+
+        #mainTable {
+            background-color: white;
+        }
+
+        #finalPrice {
+            padding: 10px;
+            margin-top: 50px;
+        }
+
+        .order {
+            line-height: 50px;
+            font-weight: bold;
+            border: 1px solid gray;
+            background-color: lightgray;
+        }
+
+        .table1 {
+            width: 1500px;
+            height: 100px;
+            margin-right: 20%;
+            /* position: absolute;
+            right: 200px;
+            margin: 0 auto;
+            border-top: 1px solid #444444;
+            border-collapse: collapse;*/
+        }
+
+        section th,
+        section td {
+            border-bottom: 0.1px solid #444444;
+            padding: 10px;
+        }
+
+       
+
+        .table2 {
+            width: 1200px;
+            font-weight: bold;
+            height: 80px;
+        
+        }
+
+        .tr2 {
+            background-color: white;
+        }
+
+      
+        section button:hover {
+            background-color: black;
+            color: gray;
+        }
+
+        .order:hover {
+            background-color: black;
+            color: gray;
+        }
+
+        .span2 {
+            font-size: 12px;
+        }
+        footer{
+        width: 100%;
+        height: 70px;
+        /* border: 1px solid red; */
+        text-align: center;
+      }
+      .inst a{
+        font-weight: normal;
+        color: black;
+        font-size: 13px;
+        padding: 10px;
+      }
+      .inst a:hover{
+        cursor: pointer;
+        color: grey;
+      }
+      .page1{
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        font-size: 12px;
+        color: gray;
+      }
+      .page1 h4{
+        margin-bottom: 10px;
+        color: black;
+        font-size: 14px;
+      }
+    </style>
+
+<script>
+    /*   export const numberWithCommas = (order) => {
+           return totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))g, ',');
+       };*/
+
+    //상품 1개당 주문 가격
+    function orderNumber(order) {
+        let number = order.value;
+        let numberClass = order.parentElement;
+        let price = order.parentElement.previousElementSibling;
+        let totalPrice = order.parentElement.nextElementSibling;
+        let priceClass = price.innerHTML;
+        totalPrice.innerHTML = priceClass * number;
+
+
+
+        totalOrderPrice();
+    }
+
+
+
+    // 전체 주문 가격 
+    function totalOrderPrice() {
+        let main = document.querySelector("#mainTable");
+        let finalPrice = document.querySelector("#finalPrice");
+        let rows = main.querySelectorAll("tr");
+
+        let total = 0;
+        for (let i = 0; i < rows.length; i++) {
+            let totalRow = rows[i];
+            let lastRow = totalRow.lastElementChild;
+            let lastRowPrice = parseInt(lastRow.innerHTML);
+            total += lastRowPrice;
+        }
+        finalPrice.innerHTML = total;
+
+
+        /*var numberPoint2 = Number(finalPrice);
+        return numberPoint2.toLocaleString(undefined, {maximumFactionDigits: 3});*/
+    }
+
+    //포인트 할인 기능
+
+    /*방법 1*/
+    function discount(count) {
+        let point = count.value;  // 사용포인트 금액
+
+        /* 전체금액얻어오기 */
+        let finalPriceTag = document.querySelector("#finalPrice");
+        let finalPrice = finalPriceTag.innerHTML;
+
+        let realPrice = finalPrice - point;
+
+        /* 실제금액 설정하기*/
+        let realPriceTag = document.querySelector("#realPrice");
+        realPriceTag.innerHTML = realPrice;
+
+
+        /*방법2*/
+        /*
+        function discount() {
+       
+       let discountPoint = document.querySelector("#discountPoint");
+       let main = document.querySelector("#mainTable");
+       let finalPrice = document.querySelector("#finalPrice");
+       let rows = main.querySelectorAll("tr");
+
+       let total = 0;
+       for (let i = 0; i < rows.length; i++) {
+           let totalRow = rows[i];
+           let lastRow = totalRow.lastElementChild;
+           let lastRowPrice = parseInt(lastRow.innerHTML.split(",").join("")); 
+           
+           total += lastRowPrice;
+       }
+       let finalfinalprice = total - discountPoint.value;
+       finalPrice.innerHTML = finalfinalprice.toLocaleString("ko-KR");
+       
+   }최종=> 166,000  166000
+   
+
+        // 
+        /* 
+        let numberClass = count.parentElement;
+        let price = count.parentElement.nextElementSibling;
+        let priceClass = parseInt(price.innerHTML)
+        priceClass = priceClass - number;
+        */
+    }
+
+    // 선택 항목 삭제
+    function removeRow() {
+        let mainBox = document.getElementById("mainTable");
+        let boxes = mainBox.querySelectorAll(".check");
+
+        for (let i = 0; i < boxes.length; i++) {
+            let checkbox = boxes[i];
+            let row = checkbox.parentElement.parentElement;
+            if (checkbox.checked) {
+                // let row = checkbox.parentElement.parentElement;
+                mainBox.removeChild(row);
+                mainBox.removeChild(boxes);
+            }
+        }
+        totalOrderPrice();
+    }
+</script>
+</head>
+
+<body>
+    <nav>
+        <div class="menu1">
+          <ul>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="collection.html">COLLECTION</a></li>
+            <li><a href="#">STOCKIST</a></li>
+            <li><a href="#">COMMUNITY</a></li>
+          </ul>
+        </div>
+        <div class="mainlogo">
+          <a href="index.html"><img src="./미디어/toplogo.png" /></a>
+        </div>
+        <div class="menu2">
+          <ul>
+            <li><a href="login.html">LOGIN</a></li>
+            <li><a href="#">MY PAGE</a></li>
+            <li><a href="cart.html">CART</a></li>
+            <li>
+              <button class="btn1">
+                <img src="./미디어/btn_search_icon.png" width="13px" />
+              </button>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="sidebar">
+          <ul>
+            <li class="sidetext"><a href="섹션부분.html">22FW</a></li>
+            <li class="sidetext"><a href="섹션부분.html">22SS</a></li>
+            <li class="sidetext"><a href="섹션부분.html">New Arrivals</a></li>
+            <li class="sidetext"><a href="섹션부분.html">Outwear</a></li>
+            <li class="sidetext"><a href="섹션부분.html">Top</a></li>
+            <li class="sidetext"><a href="섹션부분.html">Bottom</a></li>
+            <li class="sidetext"><a href="섹션부분.html">Accessories</a></li>
+            <li class="sidetext"><a href="섹션부분.html">Slelcted Brand</a></li>
+            <li class="sidetext"><a href="섹션부분.html">SALE</a></li>
+          </ul>
+        </div>
+      </nav>
+    <section>
+        <div class="box">
+
+            <div class="box1">
+
+                <table id="table1">
+                    <thead>
+                        <tr class="table1-2">
+                            <th>선택</th>
+                            <th width="30px">이미지</th>
+                            <th>상품정보</th>
+                            <th>적립금</th>
+                            <th>배송구분</th>
+                            <th>배송비</th>
+                            <th>판매가<br><span class="span">(단위:원)</span></th>
+                            <th>수량</th>
+                            <!--<th>배송구분</th>
+                            <th>배송비</th>-->
+                            <th>합계<br><span class="span">(단위:원)</span></th>
+                            <!-- <th>전체금액<span id="span">(단위:원)</span></th> -->
+                        </tr>
+                    </thead>
+
+                    <tbody id="mainTable">
+                        <tr>
+                            <td width="70px"><input type="checkbox" class="check" value="check1"></td>
+                            <td class="image" width="30px">
+                                <div class="image2-1">
+                                    <div class="image2-2">
+                                        <img src="images/Navy.jpg" width="200px" height="30px" class="image2-2">
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="item">
+                                    <p>Shawl Collar Zipup Knit Cardigan_ Galaxy Navy<br>
+                                        [옵션: M]
+                                    </p>
+                                </div>
+                            </td>
+                            <td>-</td>
+                            <td>기본배송<br>(해외배송 가능)</td>
+                            <td>무료</td>
+                            <td id="firstPrice">
+                                35000
+                            </td>
+                            <td width="80px"><input type="text" value="1" onkeyup="orderNumber(this)"
+                                    id="orderNumberId"></td>
+                            <td>35000</td>
+                            <!-- <td rowspan="4">
+                                <p id="finalPrice">135000</p>
+                            </td>-->
+                        </tr>
+                        <tr>
+                            <td width="70px"><input type="checkbox" class="check" value="check2"></td>
+                            <td class="image" width="30px">
+                                <div class="image2-1">
+                                    <div class="image2-2">
+                                        <img src="images/Oatmeal.jpg" width="200px" height="30px"
+                                            class="image2-2">
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="item">
+                                    <p>Tail Knit Pique Shirt_Oatmeal<br>
+                                        [옵션: L]</p>
+                                </div>
+                            </td>
+                            <td>-</td>
+                            <td>기본배송<br>(해외배송 가능)</td>
+                            <td>무료</td>
+                            <td>
+                                100000
+                            </td>
+                            <td width="70px"><input type="text" value="1" onkeyup="orderNumber(this)"></td>
+                            <td>100000</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+         
+                <div class="buttonBox">
+                    <button class="button2-1" onclick="removeRow()">선택 상품 취소</button>
+                    <button class="button2-3">장바구니 비우기</button>
+                </div>
+           
+            </div>
+
+            <div class="box3">
+
+                <table class="table2" onload="discount()" width="1500px">
+                    <tr class="tr2">
+                        <th width="130px">총 상품금액</th>
+                        <th width="130px">총 배송비</th>
+                        <th width="130px">사용할 포인트</th>
+                        <th width="350px">결제예정금액</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span id="finalPrice">135000</span><span class="span2">원</span></p>
+                        </td>
+                        <td>0원</td>
+                        <td><label><input type="text" onkeyup="discount(this)" id="discountPoint"></label></td>
+                        <td>
+                            <p><span id="realPrice">135000</span><span class="span2">원</span></p>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="button2-2">
+                    <p class=order>주문</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <div class="last">
+            <div class="inst">
+              <a href="https://www.instagram.com/artifacts_official/"><img src="./미디어/ins2.png" width="17px" /></a>
+            </dlv>
+           <div>
+            <a href="index.html">home</a>
+            <a>shop guide</a>
+            <a>terms df use</a>
+            <a>privacy policy</a>
+          </div>
+        </div>
+      </footer>
+      <div class="page1">
+        <h4>02-6207-0666</h4>
+        <p>국민은행 730601-04-085253 (주)이티씨컴퍼니</p>
+        <p>고객센터 운영시간 MON-FRI AM 11:00 ~ PM 18:00</p>
+        <p>contact@artifacts.co.kr</p>
+  
+  
+      </div>
+</body>
+
+</html>

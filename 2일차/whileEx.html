@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>while 반복문</h3>
+    while(조건) { <br>
+        명령;  <br>
+    } <br>
+
+    조건이 만족할 동안 반복하기  
+
+    <script>
+      let n=0, sum=0;
+      while( n<10){
+         n++;       // n= n+1 ;
+         sum+= n;    //  sum= sum+n;
+      }
+      document.write( sum);
+    </script>
+    
+    <script>
+      // 문제) "stop" 문자열이 입력되기 전까지 입력한 내용을 출력하는 문제 
+      //     != "stop"      
+      // 1.  while(조건 ){   }  
+      // 2.  while(true) {   탈출조건  break; } 
+
+      // 1.
+
+      document.write("stop아닐동안 이름출력하기 <br>");
+      let str;
+      str= prompt("이름을 입력하세요");
+      while( str  != "stop"){
+        document.write (str);
+        str=prompt("이름을 입력하세요") ;
+      }
+
+      //2. 
+       let str2 ;
+        while(true){
+            if(str2=="stop") break;
+            str2 = prompt("문자 입력 2")
+            alert(str2);
+        }
+
+    </script>
+    
+</body>
+</html>

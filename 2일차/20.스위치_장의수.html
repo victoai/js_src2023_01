@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+</head>
+<body>
+    <script>
+        let num1=0, num2=0;
+        let sign="", result_Phrases="";
+
+        num1=prompt("수를 2개 입력하세요 (첫번째 수)");
+        num1=parseInt(num1);  
+
+        num2=prompt("수를 2개 입력하세요 (두번째 수)");
+        num2=parseInt(num2);  
+
+        sign=prompt("다음 기호중 하나를 입력하세요(+,-,/,*,^)");  
+
+        switch(sign){ 
+            case "+":
+            result_Phrases="두 수의 합은"+(num1+num2)+"입니다.";
+                break;
+            case "-":
+            result_Phrases="두 수의 차는"+Math.abs(num1+num2)+"입니다.(절댓값)";
+                break;
+            case "/":
+                if(num2==0){
+                    result_Phrases= "0으로는 나눌 수 없습니다! (Divided By Zero)";
+                }else{
+                    result_Phrases="첫번째 수로 두번째 수를 나누면"+num1/num2+"입니다.";
+                }
+                break;
+            case "*":
+                    result_Phrases= "두수의 곱은"+num1*num2+"입니다.";
+                break;
+            case "^":
+                    result_Phrases= "첫번째 수의 두번째수 거듭제곱은"+Math.pow(num1,num2)+"입니다.";
+                break;
+            default:
+            result_Phrases="(+,-,/,*)중에 입력해주세요.";
+        }
+        alert(result_Phrases);
+        
+    </script>
+</body>
+</html>

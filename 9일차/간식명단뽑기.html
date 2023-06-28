@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function makeNames(){
+            let names=[ '강병준' , '김민아' ,  '김선명', '김세희' , '박근현' , '박민주' , '박인혜' , '박준성' , '박혜리', '윤성혁' , '이광일' , '이소민' , '이승원' , '이유진' ,'이정현' ,'장의수', '정헌조' ,'조원근' ,  '차수민', '최범준' , '최인호' , '홍정원'] ;           
+            //alert("dkfkfk");
+
+
+            let number, index;
+
+            for( let i=1; i<=4 ; i++){  
+                number = Math.random()*22;  // 0.0~21.99999999
+                index = Math.floor( number);  // 0 ~21 
+                let name =  names[index];
+                alert( name);
+            }
+
+        }
+
+        /*간식 3종 세트  : 말랑카우, 초코우유, 빼빼로 */
+         /* 난수 : 임의의 수 */
+
+        /*
+        1.반복  //4명 뽑기
+           1.1 난수 얻어오기  ( 배열의  index로 사용할 )
+           1.2 난수번째 이름 얻어오기
+           1.3 이름 출력하기
+        */
+ 
+
+
+
+    </script>
+
+   
+</head>
+<body>
+
+
+
+    <button  onclick="makeNames()"> 간식은 누구에게</button>
+
+    <div wrap="name-list">
+
+
+    </div>
+    
+</body>
+</html>

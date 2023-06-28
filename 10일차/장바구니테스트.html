@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+         function orderNumber(order) {
+            
+
+            //수량
+            let qty = order.value;
+            alert(qty);
+
+            //단가     unit
+            let originalPrice= order.parentElement.previousElementSibling; 
+            alert(originalPrice);         
+            let unit = originalPrice.firstElementChild.innerHTML;
+            alert(unit);
+            // 금액변경
+            let priceTd   = order.parentElement.nextElementSibling.firstElementChild.innerHTML  =   qty * unit;
+            
+          
+           alert("금액구하기 성공");
+
+         totalPrice();
+
+        }
+
+
+        function totalPrice(){
+            alert("합계금액구하기");
+            let totalPrice  = document.querySelector("#totalPrice");
+            let cart = document.querySelector("#cart");
+            let trs  = cart.querySelectorAll("tr");
+           // alert( trs.length);
+
+            let sum=0;
+            for( let i=0; i< trs.length ; i++){
+                let tr  = trs[i];                
+                let td  = tr.lastElementChild;
+                alert( "td=" + td.innerHTML); 
+                let amount  =  parseInt(td.firstElementChild.innerHTML); 
+                alert( "금액" +  amount);
+                sum = sum + amount;            
+            }
+            totalPrice.innerHTML  = sum;        
+
+        }
+
+
+        
+    </script>
+</head>
+<body>
+    <button  onclick="totalPrice()">합계</button>
+
+    <table >
+        <thead>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+        
+        <tbody  id="cart">
+                
+            <tr>
+                <td></td>
+                <td><span>35000</span>원</td>
+                <td><input type="text"  onkeyup="orderNumber(this)"></td>
+                <td> <span class="amount">20</span>원</td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><span>35000</span>원</td>
+                <td><input type="text"  onkeyup="orderNumber(this)"></td>
+                <td> <span class="amount">30</span>원</td>
+            </tr>
+        </tbody>
+    </table>
+ <div>
+    전체합계    <span  id="totalPrice"> 35000  </span>
+ </div>
+</body>
+</html>

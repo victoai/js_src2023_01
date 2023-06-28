@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeImage1(){
+            //alert("call");
+            let imgTag  = document.getElementById("imgTag");
+           // alert( imgTag);
+            imgTag.src="media/banana.png";
+        }
+
+        function changeImage2(){
+            //alert("call");
+            let imgTag  = document.getElementById("imgTag");
+           // alert( imgTag);
+            imgTag.src="media/apple.png";
+        }
+    </script>
+</head>
+<body>    
+    <img   id="imgTag" src="media/apple.png" alt="사과 이미지"  onmouseover="changeImage1()"   onmouseout="changeImage2()" >
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        width: 100%;
+        position: relative;
+        /* border: solid 3px black; */
+        height: 80px;
+        z-index: 20;
+      }
+      .menu1 {
+        left: 90px;
+        /* border: solid 1px red; */
+        top: 15px;
+        text-align: center;
+        position: fixed;
+        align-items: flex-start;
+      }
+      .mainlogo{
+        /* border: solid 1px green; */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+        position: center;
+      }
+      .menu2 {
+        right: 90px;
+        /* border: solid 1px blue; */
+        top: 15px;
+        text-align: center;
+        position: fixed;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+      }
+      nav li {
+        padding: 0px 25px 3px 0;
+        line-height: 50px;
+        height: 50px;
+        display: inline-block;
+        position: relative;
+        font-size: 13px;
+      }
+      nav a, footer a {
+        text-decoration: none;
+        color: rgb(123, 111, 111);
+        font-weight: bold;
+      }
+      nav a:hover {
+        color: rgb(201, 201, 201);
+        cursor: pointer;
+      }
+      .btn1 {
+        background-color: white;
+        border: solid 0px;
+      }
+      @media screen and (max-width: 1500px) {
+        .menu1,
+        .menu2 {
+          display: none;
+        }
+      }
+      .sidebar {
+        /* border: solid 1px red; */
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        right: 0px;
+      }
+      .sidetext {
+        height: 22px;
+        line-height: 22px;
+      }
+        /* .container{
+            border: 1px solid red;
+        } */
+        .con_ul{
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            margin: 0 auto;
+            width: 1200px;
+            
+        }
+        .con_li img{
+            width: 540px;
+            height: 809px;
+            margin: 30px;
+        }
+        .con_text{
+            font-size: 15px;
+            line-height: 18px;
+            /* border: 1px solid red; */
+            padding: 10px;
+            margin-top: -34px;
+        }
+
+        .btn2{
+            text-align: center;
+            /* border: 1px solid red; */
+            margin-top: 30px;
+            padding: 30px;
+        }
+        .btn2 a{
+            text-decoration: none;
+            color: gray;
+            margin: 15px;
+            font-size: 18px;
+        }
+        .number{
+            border-bottom: 1px solid #555;
+            font-size: 24px;
+            color: black;
+            /* border: 1px solid red; */
+        }
+        
+    </style>
+</head>
+<body>
+  <nav>
+    <div class="menu1">
+      <ul>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="collection.html">COLLECTION</a></li>
+        <li><a href="#">STOCKIST</a></li>
+        <li><a href="#">COMMUNITY</a></li>
+      </ul>
+    </div>
+    <div class="mainlogo">
+      <a href="index.html"><img src="./미디어/toplogo.png" /></a>
+    </div>
+    <div class="menu2">
+      <ul>
+        <li><a href="login.html">LOGIN</a></li>
+        <li><a href="#">MY PAGE</a></li>
+        <li><a href="cart.html">CART</a></li>
+        <li>
+          <button class="btn1">
+            <img src="./미디어/btn_search_icon.png" width="13px" />
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="sidebar">
+      <ul>
+        <li class="sidetext"><a href="섹션부분.html">22FW</a></li>
+        <li class="sidetext"><a href="섹션부분.html">22SS</a></li>
+        <li class="sidetext"><a href="섹션부분.html">New Arrivals</a></li>
+        <li class="sidetext"><a href="섹션부분.html">Outwear</a></li>
+        <li class="sidetext"><a href="섹션부분.html">Top</a></li>
+        <li class="sidetext"><a href="섹션부분.html">Bottom</a></li>
+        <li class="sidetext"><a href="섹션부분.html">Accessories</a></li>
+        <li class="sidetext"><a href="섹션부분.html">Slelcted Brand</a></li>
+        <li class="sidetext"><a href="섹션부분.html">SALE</a></li>
+      </ul>
+    </div>
+  </nav>
+    <section>
+    <div class="container">
+        <ul class="con_ul">
+            <li class="con_li">
+                <img src="프젝 수정/images/11.jpg">
+                <div class="con_text">2022 Fall/Winter Collection</div>
+            </li>
+
+            <li class="con_li">
+                <img src="프젝 수정/images/22.jpg">
+                <div class="con_text">2022 Spring/Summer Collection</div>
+            </li>
+
+            <li class="con_li">
+                <img src="프젝 수정/images/33.jpg">
+                <div class="con_text">2022 Spring/Summer Campaign Book</div>
+            </li>
+
+            <li class="con_li">
+                <img src="프젝 수정/images/44.jpg">
+                <div class="con_text">2021 Fall/Winter Collection</div>
+            </li>
+
+            <li class="con_li">
+                <img src="프젝 수정/images/55.jpg">
+                <div class="con_text">2021 Spring/Summer Collection</div>
+            </li>
+
+            <li class="con_li">
+                <img src="프젝 수정/images/66.jpg">
+                <div class="con_text">2020 Fall/Winter Collection</div>
+            </li>
+
+            <li class="con_li">
+                <img src="프젝 수정/images/77.jpg">
+                <div class="con_text">2020 Spring/Summer Collection</div>
+            </li>
+
+            <li class="con_li">
+                <img src="프젝 수정/images/88.jpg">
+                <div class="con_text">2019 Fall/Winter Collection</div>
+            </li>
+        </ul>
+
+        <div class="btn2">
+            <a href=""><<</a>
+            <a href=""><</a>
+            <a href="" class="number">1</a>
+            <a href="">></a>
+            <a href="">>></a>
+        </div>
+    </div>
+    </section>
+</body>
+</html>

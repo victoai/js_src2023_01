@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* 영역 넓이 조정 */ 
+.sell_wrap{
+    width: 1200px;            
+    margin: 0 auto;
+    padding: 50px;
+    display: flex;
+}
+
+/* 3등분 나누기 */
+.sell_info{
+    width: 300px;
+    padding: 10px;
+    border: 1px solid rgb(230, 227, 227);
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+/* 상단 글씨와 더보기 */
+.sell_top{
+    display: flex;
+    position: relative;
+    height: 50px;            
+}
+.sell_top div:nth-child(1){
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.sell_top div:nth-child(2){
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: 0.5px solid rgb(238, 237, 237);
+    border-radius: 20px;
+    font-size: 10px;
+    padding: 5px 10px 5px 10px;
+}        
+
+/* 티켓부분 */
+.ticket_info{
+    padding: 10px 10px 20px 10px;            
+    display: flex;
+}
+.ticket_info div:nth-child(1){
+    width: 100px;
+    height: 75px;
+               
+}
+
+/* 티켓영역 왼쪽 이미지 */
+#ticket1{
+    background-image: url("http://img.cgv.co.kr/GiftStore/Product/Pc/Detail/16094706931690.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#ticket2{
+    background-image: url("http://img.cgv.co.kr/GiftStore/Product/Pc/Detail/15458911955580.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#ticket3{
+    background-image: url("http://img.cgv.co.kr/GiftStore/Product/Pc/Detail/16105061094000.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#ticket4{
+    background-image: url("http://img.cgv.co.kr/GiftStore/Product/Pc/Detail/15814124362500.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#ticket5{
+    background-image: url("http://img.cgv.co.kr/GiftStore/Product/Pc/Detail/15814158043490.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#ticket6{
+    background-image: url("http://img.cgv.co.kr/GiftStore/Product/Pc/Detail/15814162231780.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#ticket7{
+    background-image: url("http://img.cgv.co.kr/GiftStore/Product/Pc/Detail/15463252014310.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#ticket8{
+    background-image: url("http://img.cgv.co.kr/GiftStore/Product/Pc/Detail/15463251542560.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#ticket9{
+    background-image: url("http://img.cgv.co.kr/GiftStore/Product/Pc/Detail/15464065566830.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+/* 티켓영역 우측 설명부분 */
+.ticket_info div:nth-child(2){
+    font-size: 14px;
+    font-weight: bold;
+    padding: 15px 0 0 15px;
+}
+.ticket_info div:nth-child(2) span{
+    font-size: 16px;
+}
